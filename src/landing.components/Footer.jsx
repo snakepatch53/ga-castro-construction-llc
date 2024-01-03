@@ -4,24 +4,23 @@ import socials from "./../mooks/social.json";
 export default function Footer() {
     return (
         <>
-            <footer className="bg-[var(--color2-bg)] p-[var(--padding)] ">
+            <footer className="--color2-bg p-[var(--padding)] ">
                 <div className=" container ">
+                    <section className=""></section>
                     <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
                         <div className="flex flex-col ">
                             <a href="#">
                                 <img src="/img/logo.png" />
                             </a>
-                            <p className="flex  text-sm opacity-75 text-[var(--color2-txt)]">
+                            <p className="flex  text-sm opacity-75 --color2-txt">
                                 Your trusted roofing and construction experts in Fairfield County.
                                 Serving Stamford, Bridgeport, Norwalk, and surrounding areas. © 2023
                                 All rights reserved.
                             </p>
                         </div>
                         <div className="flex flex-col gap-2  ">
-                            <h3 className="text-xl font-title2 text-[var(--color2-txt1)]">
-                                Social Networks
-                            </h3>
-                            <div className="flex flex-col gap-1 text-sm opacity-75 text-[var(--color2-txt)]">
+                            <h3 className="text-xl font-title2 --color2-txt1">Social Networks</h3>
+                            <div className="flex flex-col gap-1 text-sm opacity-75 --color2-txt">
                                 {/* sm - md - lg - xl - 2xl- 3xl */}
                                 {socials.map(({ id, url, name, icon, color }) => (
                                     <a
@@ -44,10 +43,8 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 ">
-                            <h3 className="text-xl font-title2 text-[var(--color2-txt1)]">
-                                Services
-                            </h3>
-                            <div className="flex flex-col gap-1 text-sm opacity-75 text-[var(--color2-txt)]">
+                            <h3 className="text-xl font-title2 --color2-txt1">Services</h3>
+                            <div className="flex flex-col gap-1 text-sm opacity-75 --color2-txt">
                                 <Link className="hover:underline" to="/">
                                     Reclamos de Seguro
                                 </Link>
@@ -69,10 +66,8 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 ">
-                            <h3 className="text-xl font-title2 text-[var(--color2-txt1)]">
-                                Services
-                            </h3>
-                            <div className="flex flex-col gap-1 text-sm  opacity-75 text-[var(--color2-txt)]">
+                            <h3 className="text-xl font-title2 --color2-txt1">Services</h3>
+                            <div className="flex flex-col gap-1 text-sm  opacity-75 --color2-txt">
                                 <Link className="hover:underline" to="/">
                                     Reclamos de Seguro
                                 </Link>

@@ -3,24 +3,36 @@
 @tailwind utilities;
 
 :root {
-    --color1-bg: #ffa830;
-    --color1-txt: #000000;
-    --color1-txt1: #ffffff;
-
-    --color2-bg: #141422;
-    --color2-txt: #ffffff;
-    --color2-txt1: #ffa830;
-
-    --color3-bg: #ffffff;
-    --color3-txt: #000000;
-    --color3-txt1: #ffa830;
-
     --max-w: 1200px;
     --padding: 40px;
     --before-header-height: 35px;
     --header-height: 70px;
     --headers-height: calc(var(--header-height) + var(--before-header-height));
     --heigh-not-headers: calc(100vh - var(--header-height) - var(--before-header-height));
+}
+
+.--max-w {
+    max-width: var(--max-w);
+}
+
+.--padding {
+    padding: var(--padding);
+}
+
+.--before-header-height {
+    height: var(--before-header-height);
+}
+
+.--header-height {
+    height: var(--header-height);
+}
+
+.--headers-height {
+    height: var(--headers-height);
+}
+
+.--heigh-not-headers {
+    height: var(--heigh-not-headers);
 }
 
 @font-face {
@@ -43,8 +55,8 @@
 
 @media (prefers-color-scheme: dark) {
     body {
-        /* background-color: #1f2937; */
-        /* color: #fff; */
+        background-color: #1f2937;
+        color: #fff;
     }
 }
 
