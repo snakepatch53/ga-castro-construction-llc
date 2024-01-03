@@ -29,7 +29,7 @@ export default function Footer() {
                                         href={url}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex gap-1"
+                                        className="flex gap-1 hover:underline"
                                     >
                                         <div className="h-full max-h-4 aspect-square flex mt-1">
                                             <div

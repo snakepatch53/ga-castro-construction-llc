@@ -39,7 +39,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <header className="bg-[var(--color1-bg)] text-[var(--color1-txt)] h-[var(--header-height)] px-[var(--padding)] sticky -top-1">
+            <header className="bg-[var(--color1-bg)] text-[var(--color1-txt)] h-[var(--header-height)] px-[var(--padding)] sticky top-0">
                 <div className="container h-full py-0 flex gap-1 items-center justify-between">
                     <Link to="/" className="h-full aspect-[2/1] ">
                         <img
