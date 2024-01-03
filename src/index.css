@@ -1,3 +1,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color1-bg: #ffa830;
+    --color1-txt: #000000;
+    --color1-txt1: #ffffff;
+
+    --color2-bg: #141422;
+    --color2-txt: #ffffff;
+    --color2-txt1: #ffa830;
+
+    --color3-bg: #ffffff;
+    --color3-txt: #000000;
+    --color3-txt1: #ffa830;
+
+    --max-w: 1200px;
+    --padding: 40px;
+    --before-header-height: 35px;
+    --header-height: 70px;
+    --headers-height: calc(var(--header-height) + var(--before-header-height));
+    --heigh-not-headers: calc(100vh - var(--header-height) - var(--before-header-height));
+}
+
+@font-face {
+    src: url("./assets/fonts/Oswald-VariableFont_wght.ttf");
+    font-family: link;
+}
+
+@font-face {
+    src: url("./assets/fonts/BlackOpsOne-Regular.ttf");
+    font-family: title2;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        /* background-color: #1f2937; */
+        /* color: #fff; */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--header-height);
+}
+
+img {
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+    * {
+        --padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        --padding: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        --padding: 5px;
+    }
+}
+
+/* _____________ SCROLL _ STYLES ________________ */
+.scroll-style::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+    background: var(--color1-bg);
+    border-radius: 4px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb:hover {
+    background: var(--color1-bg);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-style::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}

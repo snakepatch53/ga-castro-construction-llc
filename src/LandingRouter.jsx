@@ -9,11 +9,13 @@ export default function LandingRouter() {
         <>
             <Router>
                 <Header />
-                <AnimatePresence>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                    </Routes>
-                </AnimatePresence>
+                <div className="min-h-[var(--heigh-not-headers)]">
+                    <AnimatePresence>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                        </Routes>
+                    </AnimatePresence>
+                </div>
                 <Footer />
             </Router>
         </>
