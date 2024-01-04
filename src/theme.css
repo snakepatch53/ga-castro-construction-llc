@@ -1,9 +1,11 @@
 :root {
-    --color1-bg: #ffa830;
+    --color1-bg: #ff9500;
+    --color1-bg1: #ff950062;
     --color1-txt: #000000;
     --color1-txt1: #ffffff;
 
     --color2-bg: #141422;
+    --color2-bg1: #14142257;
     --color2-txt: #ffffff;
     --color2-txt1: #ffa830;
 

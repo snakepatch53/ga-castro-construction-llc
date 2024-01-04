@@ -39,7 +39,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <header className="bg-[var(--color1-bg)] text-[var(--color1-txt)] h-[var(--header-height)] px-[var(--padding)] sticky top-0">
+            <header className="bg-[var(--color1-bg)] text-[var(--color1-txt)] h-[var(--header-height)] sticky top-0 z-10 px-4 lg:px-0">
                 <div className="container h-full py-0 flex gap-1 items-center justify-between">
                     <Link to="/" className="h-full aspect-[2/1] ">
                         <img
@@ -56,7 +56,7 @@ export default function Header() {
                             
                             fixed flex-col w-full max-w-60
                             bg-[var(--color2-bg)] shadow-2xl p-10 text-[var(--color2-txt)] fill-[var(--color2-txt)]
-                            ${show ? "-right-full" : "right-0"} 
+                            ${!show ? "-right-full" : "right-0"} 
                             transition-right duration-200 ease-in-out
                             
                             header-landing-component ${headerFloat}
@@ -80,7 +80,8 @@ export default function Header() {
 
                     <Button
                         text="Consigue una Cotización"
-                        className="ml-auto mr-4 lg:ml-0 lg:mr-0"
+                        className="hidden sm:flex ml-auto mr-4 lg:ml-0 lg:mr-0"
+                        style="2"
                     />
 
                     <button

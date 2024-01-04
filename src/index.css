@@ -55,8 +55,8 @@
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #1f2937;
-        color: #fff;
+        /* background-color: #1f2937;
+        color: #fff; */
     }
 }
 
@@ -70,19 +70,19 @@ img {
 }
 
 @media (max-width: 500px) {
-    * {
+    :root {
         --padding: 25px;
     }
 }
 
 @media (max-width: 400px) {
-    * {
+    :root {
         --padding: 10px;
     }
 }
 
 @media (max-width: 300px) {
-    * {
+    :root {
         --padding: 5px;
     }
 }
