@@ -1,7 +1,7 @@
 /*  without slider */
 .header-landing-component:not(.with-slider) {
     background: var(--color1-bg);
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header-landing-component:not(.with-slider) a {
