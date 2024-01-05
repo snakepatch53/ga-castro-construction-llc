@@ -1,72 +1,16 @@
-.header-landing-component {
-    background-image: linear-gradient(#000, rgba(0, 0, 0, 0.5), transparent);
-}
-
-.header-landing-component .landing-header-option-component {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-}
-
-.header-landing-component a {
-    color: #fff;
-    fill: #fff;
-    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
-}
-
-.header-landing-component a.landing-button-component {
+/*  without slider */
+.header-landing-component:not(.with-slider) {
     background: var(--color1-bg);
-    color: var(--color1-txt);
-    opacity: 1;
-    opacity: 0.5;
-    border: none;
-    text-shadow: none;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-.header-landing-component a.landing-button-component:hover {
-    opacity: 1;
-}
-
-.header-landing-component .button-menu {
-    fill: #fff;
-    background: rgba(0, 0, 0, 0.15);
-}
-
-/* semi-float */
-.header-landing-component.semi-float {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-}
-.header-landing-component.semi-float a {
-    border: none;
-    color: var(--color1-bg);
-    fill: var(--color1-bg);
-}
-
-.header-landing-component.semi-float a.landing-button-component {
-    background: var(--color1-bg);
-    color: var(--color1-txt);
-    opacity: 0.5;
-    border: none;
-    text-shadow: none;
-}
-
-.header-landing-component.semi-float a.landing-button-component:hover {
-    opacity: 1;
-}
-
-/*  open and float */
-.header-landing-component.float {
-    background: var(--color1-bg);
-    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.3);
-}
-
-.header-landing-component.float a {
+.header-landing-component:not(.with-slider) a {
     color: var(--color1-txt);
     fill: var(--color1-txt);
     text-shadow: none;
 }
 
-.header-landing-component.float a.landing-button-component {
+.header-landing-component:not(.with-slider) a.landing-button-component {
     background: var(--color1-bg);
     color: var(--color1-txt);
     opacity: 0.5;
@@ -74,13 +18,17 @@
     text-shadow: none;
 }
 
-.header-landing-component.float a.landing-button-component:hover {
+.header-landing-component:not(.with-slider) a.landing-button-component:hover {
     opacity: 1;
 }
 
-.header-landing-component.float .landing-header-option-component {
+.header-landing-component:not(.with-slider) .landing-header-option-component {
     background: var(--color2-bg);
     backdrop-filter: none;
+}
+
+.header-landing-component:not(.with-slider) .landing-header-option-component a {
+    color: var(--color1-bg);
 }
 
 .header-landing-component.open .landing-header-option-component a {
@@ -88,31 +36,132 @@
     fill: var(--color2-txt1);
 }
 
-.header-landing-component.float .button-menu {
+.header-landing-component:not(.with-slider) .button-menu {
+    fill: var(--color1-txt);
+    background: transparent;
+}
+
+/* with slider */
+
+.header-landing-component.with-slider {
+    background-image: linear-gradient(#000, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.header-landing-component.with-slider .landing-header-option-component {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.header-landing-component.with-slider a {
+    color: #fff;
+    fill: #fff;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.header-landing-component.with-slider a.landing-button-component {
+    background: var(--color1-bg);
+    color: var(--color1-txt);
+    opacity: 1;
+    opacity: 0.5;
+    border: none;
+    text-shadow: none;
+}
+
+.header-landing-component.with-slider a.landing-button-component:hover {
+    opacity: 1;
+}
+
+.header-landing-component.with-slider .button-menu {
+    fill: #fff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* semi-float */
+.header-landing-component.with-slider.semi-float {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.header-landing-component.with-slider.semi-float a {
+    border: none;
+    color: var(--color1-bg);
+    fill: var(--color1-bg);
+}
+
+.header-landing-component.with-slider.semi-float a.landing-button-component {
+    background: var(--color1-bg);
+    color: var(--color1-txt);
+    opacity: 0.5;
+    border: none;
+    text-shadow: none;
+}
+
+.header-landing-component.with-slider.semi-float a.landing-button-component:hover {
+    opacity: 1;
+}
+
+/*  open and float */
+.header-landing-component.with-slider.float {
+    background: var(--color1-bg);
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-landing-component.with-slider.float a {
+    color: var(--color1-txt);
+    fill: var(--color1-txt);
+    text-shadow: none;
+}
+
+.header-landing-component.with-slider.float a.landing-button-component {
+    background: var(--color1-bg);
+    color: var(--color1-txt);
+    opacity: 0.5;
+    border: none;
+    text-shadow: none;
+}
+
+.header-landing-component.with-slider.float a.landing-button-component:hover {
+    opacity: 1;
+}
+
+.header-landing-component.with-slider.float .landing-header-option-component {
+    background: var(--color2-bg);
+    backdrop-filter: none;
+}
+
+.header-landing-component.with-slider.float .landing-header-option-component a {
+    color: var(--color2-txt2);
+}
+
+.header-landing-component.with-slider.open .landing-header-option-component a {
+    color: var(--color2-txt1);
+    fill: var(--color2-txt1);
+}
+
+.header-landing-component.with-slider.float .button-menu {
     fill: var(--color1-txt);
     background: transparent;
 }
 
 @media (width < 1024px) {
-    .header-landing-component.open {
+    .header-landing-component.with-slider.open {
         background: var(--color1-bg);
         box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.3);
     }
 
-    .header-landing-component.open a {
+    .header-landing-component.with-slider.open a {
         color: var(--color1-txt);
         fill: var(--color1-txt);
         text-shadow: none;
     }
 
-    .header-landing-component.open a.landing-button-component {
+    .header-landing-component.with-slider.open a.landing-button-component {
         background: var(--color1-bg);
         color: var(--color1-txt);
         opacity: 1;
         border: none;
     }
 
-    .header-landing-component.open a.landing-button-component:hover {
+    .header-landing-component.with-slider.open a.landing-button-component:hover {
         background: var(--color2-bg);
         color: var(--color2-txt);
     }
@@ -127,5 +176,20 @@
         color: var(--color2-txt);
         fill: var(--color2-txt);
         letter-spacing: 0.1px;
+    }
+
+    .header-landing-component:not(.with-scroll) {
+        --before-header-height-scroll: 0px;
+    }
+
+    .header-landing-component:not(.with-scroll) .landing-header-options {
+        top: calc(var(--before-header-height-scroll) + var(--header-height));
+        height: calc(100vh - var(--before-header-height-scroll) - var(--header-height));
+        transition: all 0.3s ease, top 0s, height 0s;
+    }
+
+    .header-landing-component.open.header-landing-component.with-slider .landing-header-options {
+        height: calc(100vh - var(--header-height));
+        top: var(--header-height);
     }
 }

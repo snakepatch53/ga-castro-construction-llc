@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import socials from "./../mooks/social.json";
 import ArrowRightIcon from "../icons/ArrowRightIcon";
 import Button from "./Button";
+import SocialItem from "./SocialItem";
 
 export default function Footer() {
     return (
@@ -46,23 +47,8 @@ export default function Footer() {
                             <h3 className="text-xl font-title2 --color2-txt1">Social Networks</h3>
                             <div className="flex flex-col gap-1 text-sm opacity-75 --color2-txt">
                                 {/* sm - md - lg - xl - 2xl- 3xl */}
-                                {socials.map(({ id, url, name, icon, color }) => (
-                                    <a
-                                        key={id}
-                                        href={url}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="flex gap-1 hover:underline"
-                                    >
-                                        <div className="h-full max-h-4 aspect-square flex mt-1">
-                                            <div
-                                                dangerouslySetInnerHTML={{ __html: icon }}
-                                                className="icon"
-                                                style={{ fill: color }}
-                                            />
-                                        </div>
-                                        <span>{name}</span>
-                                    </a>
+                                {socials.map((social) => (
+                                    <SocialItem key={social.id} type="2" {...social} />
                                 ))}
                             </div>
                         </div>

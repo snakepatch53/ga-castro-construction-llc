@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "rol": "Backend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Jose Arizaga",
+        "rol": "Frontend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Juan Perez",
+        "rol": "Backend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Maria Rodriguez",
+        "rol": "Frontend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pedro Perez",
+        "rol": "Backend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Luisa Rodriguez",
+        "rol": "Frontend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Cristian Villavicencio",
+        "rol": "Backend Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
+        "photo": "7.jpg"
+    }
+]
