@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Carousel.css";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
-import ArrowLeftIcon from "../icons/ArrowLeftIcon";
+// import ArrowRightIcon from "../icons/ArrowRightIcon";
+// import ArrowLeftIcon from "../icons/ArrowLeftIcon";
 import Button from "./Button";
 
 export default function Carousel({ data, autoPlay = true, delay = 5000, direction = "left" }) {
