@@ -1,74 +1,38 @@
 [
     {
         "id": 1,
-        "title": "Slider 1",
-        "description": "Description 1",
+        "title": "Our Services",
+        "description": "Discover the best services for your business",
         "image": "1.jpg",
-        "selected": false
+        "to": "/services"
     },
     {
         "id": 2,
-        "title": "Slider 2",
-        "description": "Description 2",
+        "title": "Our Products",
+        "description": "Discover the best products for your business",
         "image": "2.jpg",
-        "selected": false
+        "to": "/products"
     },
     {
         "id": 3,
-        "title": "Slider 3",
-        "description": "Description 3",
+        "title": "Our Clients",
+        "description": "See our client testimonials",
         "image": "3.jpg",
-        "selected": false
+        "to": "/clients"
     },
 
     {
         "id": 4,
-        "title": "Slider 4",
-        "description": "Description 4",
+        "title": "Contact Us",
+        "description": "Contact us for more information",
         "image": "4.jpg",
-        "selected": false
+        "to": "/contact"
     },
     {
         "id": 5,
-        "title": "Slider 5",
-        "description": "Description 5",
+        "title": "Prices",
+        "description": "We have a wide range of prices for your business",
         "image": "5.jpg",
-        "selected": false
-    },
-    {
-        "id": 6,
-        "title": "Slider 6",
-        "description": "Description 6",
-        "image": "1.jpg",
-        "selected": false
-    },
-    {
-        "id": 7,
-        "title": "Slider 7",
-        "description": "Description 7",
-        "image": "2.jpg",
-        "selected": false
-    },
-    {
-        "id": 8,
-        "title": "Slider 8",
-        "description": "Description 8",
-        "image": "3.jpg",
-        "selected": false
-    },
-
-    {
-        "id": 9,
-        "title": "Slider 9",
-        "description": "Description 9",
-        "image": "4.jpg",
-        "selected": false
-    },
-    {
-        "id": 10,
-        "title": "Slider 10",
-        "description": "Description 10",
-        "image": "5.jpg",
-        "selected": false
+        "to": "/prices"
     }
 ]

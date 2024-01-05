@@ -1,3 +1,4 @@
+import "./Header.css";
 import { Link } from "react-router-dom";
 import contacts from "./../mooks/contacts.json";
 import socials from "./../mooks/social.json";
@@ -7,15 +8,20 @@ import Button from "./Button";
 import BarsIcon from "../icons/BarsIcon";
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({ className = "" }) {
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(!show);
 
     const [headerFloat, setHeaderFloat] = useState("");
-    window.onscroll = () => setHeaderFloat(window.scrollY > 30 ? "float" : "");
+    window.onscroll = () => {
+        const height = window.innerHeight - 70;
+        if (window.scrollY > 1 && window.scrollY < height) setHeaderFloat("semi-float");
+        else if (window.scrollY > height) setHeaderFloat("float");
+        else setHeaderFloat("");
+    };
     return (
         <>
-            <div className="bg-[var(--color2-bg)] text-[var(--color2-txt1)] fill-[var(--color2-txt1)] flex items-center h-[var(--before-header-height)]">
+            {/* <div className="bg-[var(--color2-bg)] text-[var(--color2-txt1)] fill-[var(--color2-txt1)] flex items-center h-[var(--before-header-height)]">
                 <div className="flex h-full flex-1">
                     <div className="bg-[var(--color1-bg)] flex-1 h-full"></div>
                 </div>
@@ -37,9 +43,15 @@ export default function Header() {
                 <div className="flex-1 h-full">
                     <div className="h-full aspect-square"></div>
                 </div>
-            </div>
+            </div> */}
 
-            <header className="bg-[var(--color1-bg)] text-[var(--color1-txt)] h-[var(--header-height)] sticky top-0 z-10 px-4 lg:px-0">
+            <header
+                className={`
+                    fixed top-0 w-full bg-transparent text-[var(--color1-txt)] h-[var(--header-height)] z-20 px-4 lg:px-0 
+                    header-landing-component ${headerFloat} ${show ? "open" : ""} 
+                    ${className}
+                `}
+            >
                 <div className="container h-full py-0 flex gap-1 items-center justify-between">
                     <Link to="/" className="h-full aspect-[2/1] ">
                         <img
@@ -55,11 +67,9 @@ export default function Header() {
                             
                             
                             fixed flex-col w-full max-w-60
-                            bg-[var(--color2-bg)] shadow-2xl p-10 text-[var(--color2-txt)] fill-[var(--color2-txt)]
+                            bg-[var(--color2-bg)] shadow-2xl p-10 text-[var(--color2-txt)] fill-[var(--color2-txt)] top-[var(--header-height)] h-[var(--heigh-not-header)]
                             ${!show ? "-right-full" : "right-0"} 
                             transition-right duration-200 ease-in-out
-                            
-                            header-landing-component ${headerFloat}
                         `}
                     >
                         <HeaderOption name="Home" to="/" />
@@ -79,16 +89,17 @@ export default function Header() {
                     </div>
 
                     <Button
-                        text="Consigue una Cotización"
+                        text="Free Estimate"
                         className="hidden sm:flex ml-auto mr-4 lg:ml-0 lg:mr-0"
                         style="2"
+                        type="2"
                     />
 
                     <button
                         onClick={handleShow}
-                        className="h-full max-h-8 aspect-square cursor-pointer opacity-80 hover:opacity-100 transition-background duration-150 flex items-center justify-center lg:hidden hover:bg-gray-200/20 p-2 rounded-sm"
+                        className="button-menu h-full max-h-[35px] aspect-square cursor-pointer opacity-80 hover:opacity-100 transition-background duration-150 flex items-center justify-center lg:hidden hover:bg-gray-200/20 p-2 rounded-sm"
                     >
-                        <BarsIcon className="fill-[var(--color1-txt)]" />
+                        <BarsIcon />
                     </button>
                 </div>
             </header>

@@ -5,10 +5,11 @@
 :root {
     --max-w: 1200px;
     --padding: 40px;
-    --before-header-height: 35px;
+    /* --before-header-height: 35px; */
     --header-height: 70px;
-    --headers-height: calc(var(--header-height) + var(--before-header-height));
-    --heigh-not-headers: calc(100vh - var(--header-height) - var(--before-header-height));
+    --heigh-not-header: calc(100vh - var(--header-height));
+    /* --headers-height: calc(var(--header-height) + var(--before-header-height)); */
+    /* --heigh-not-headers: calc(100vh - var(--header-height) - var(--before-header-height)); */
 }
 
 .--max-w {

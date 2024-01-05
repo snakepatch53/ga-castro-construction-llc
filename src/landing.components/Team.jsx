@@ -3,12 +3,10 @@ import social from "./../mooks/social.json";
 export default function Team() {
     return (
         <>
-            <div className="container grid grid-cols-4 gap-4">
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-            </div>
+            <Item />
+            <Item />
+            <Item />
+            <Item />
         </>
     );
 }
@@ -40,7 +38,7 @@ function Item() {
                     </p>
                 </div>
 
-                <diiv className="w-full h-0.5 bg-gray-200 my-2"></diiv>
+                <div className="w-full h-0.5 bg-gray-200 my-2"></div>
 
                 <div className="flex items-center justify-center gap-4">
                     {social.map(({ id, url, color, icon }) => (
