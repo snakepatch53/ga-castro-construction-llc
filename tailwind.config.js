@@ -5,7 +5,9 @@ export default {
         extend: {
             fontFamily: {
                 link: ["link", "sans-serif"],
+                title: ["title", "sans-serif"],
                 title2: ["title2", "sans-serif"],
+                content: ["content", "sans-serif"],
             },
         },
     },

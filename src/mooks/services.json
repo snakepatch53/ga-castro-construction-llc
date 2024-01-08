@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Insurance Claims",
+        "src": "/services/1.jpg",
+        "to": "/services/insurance-claims"
+    },
+    {
+        "id": 2,
+        "title": "Roofing",
+        "src": "/services/2.jpg",
+        "to": "/services/roofing"
+    },
+    {
+        "id": 3,
+        "title": "Death Ways",
+        "src": "/services/3.jpg",
+        "to": "/services/death-ways"
+    },
+    {
+        "id": 4,
+        "title": "Canals",
+        "src": "/services/4.jpg",
+        "to": "/services/canals"
+    },
+    {
+        "id": 5,
+        "title": "Carpentry",
+        "src": "/services/5.jpg",
+        "to": "/services/carpentry"
+    },
+    {
+        "id": 6,
+        "title": "Paint",
+        "src": "/services/6.jpg",
+        "to": "/services/paint"
+    }
+]

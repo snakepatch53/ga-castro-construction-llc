@@ -93,18 +93,18 @@ export default function Header({ className = "", withSliderIn = [] }) {
                     >
                         <HeaderOption name="Home" to="/" />
                         <HeaderOption name="Services" to="/services">
-                            <HeaderOption name="Reclamos de Seguro" to="/reclamos-de-seguro" />
-                            <HeaderOption name="Techumbre" to="/techumbre" />
-                            <HeaderOption name="Vía Muerta" to="/via-muerta" />
-                            <HeaderOption name="Canal" to="/canal" />
-                            <HeaderOption name="Carpintería" to="/carpintería" />
-                            <HeaderOption name="Pintar" to="/pintar" />
+                            <HeaderOption name="Insurance Claims" to="/services/insurance-claims" />
+                            <HeaderOption name="Roofing" to="/services/roofing" />
+                            <HeaderOption name="Death way" to="/services/death-way" />
+                            <HeaderOption name="Canals" to="/services/canals" />
+                            <HeaderOption name="Carpentry" to="/services/carpentry" />
+                            <HeaderOption name="Paint" to="/services/paint" />
                         </HeaderOption>
-                        <HeaderOption name="Financiación" to="/financiacion" />
-                        <HeaderOption name="Areas de Servicios" to="/areas-de-servicios" />
-                        <HeaderOption name="Gallery" to="/galeria" />
-                        <HeaderOption name="About Us" to="/sobre-nosotros" />
-                        <HeaderOption name="Contact Us" to="/contactus" />
+                        <HeaderOption name="Financing" to="/financing" />
+                        <HeaderOption name="Services Areas" to="/service-areas" />
+                        <HeaderOption name="Gallery" to="/gallery" />
+                        <HeaderOption name="About Us" to="/about-us" />
+                        <HeaderOption name="Contact Us" to="/contact-us" />
                     </div>
 
                     <Button

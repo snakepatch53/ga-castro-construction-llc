@@ -2,8 +2,12 @@ import SocialItem from "../landing.components/SocialItem";
 import AnimatedElement from "../components/AnimatedElement";
 
 import socials from "./../mooks/social.json";
+import { useEffect } from "react";
 
-export default function Contact() {
+export default function ContactUs() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <AnimatedElement>
             <br />

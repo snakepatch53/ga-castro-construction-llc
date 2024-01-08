@@ -7,7 +7,7 @@ import SocialItem from "./SocialItem";
 export default function Footer() {
     return (
         <>
-            <footer className="--color2-bg p-[var(--padding)] relative pt-32 mt-2">
+            <footer className="--color2-bg p-[var(--padding)] relative pt-32 mt-36">
                 <div className=" container ">
                     <section
                         className="w-full h-auto p-5  pb-12 lg:p-12 absolute left-0 font-bold"

@@ -7,3 +7,7 @@ body {
     height: 100%;
     fill: unset;
 }
+
+.swiper-pagination-progressbar-fill {
+    background-color: var(--color1-bg) !important;
+}
