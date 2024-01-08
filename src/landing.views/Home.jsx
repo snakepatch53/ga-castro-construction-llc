@@ -15,7 +15,7 @@ import Services from "../landing.components/Services";
 
 export default function Home() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <>

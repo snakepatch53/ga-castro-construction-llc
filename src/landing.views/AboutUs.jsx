@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 export default function AboutUs() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
