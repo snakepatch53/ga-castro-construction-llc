@@ -36,14 +36,25 @@
     height: var(--heigh-not-headers);
 }
 
+/* FONTS */
 @font-face {
     src: url("./assets/fonts/Oswald-VariableFont_wght.ttf");
     font-family: link;
 }
 
 @font-face {
+    src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
+    font-family: title;
+}
+
+@font-face {
     src: url("./assets/fonts/BlackOpsOne-Regular.ttf");
     font-family: title2;
+}
+
+@font-face {
+    src: url("./assets/fonts/poppins/Poppins-Thin.ttf");
+    font-family: content;
 }
 
 .container {
@@ -54,12 +65,12 @@
 
 /* dark mode */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
-        /* background-color: #1f2937;
-        color: #fff; */
+        background-color: #1f2937;
+        color: #fff;
     }
-}
+} */
 
 html {
     scroll-behavior: smooth;

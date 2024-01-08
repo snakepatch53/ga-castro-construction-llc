@@ -38,7 +38,12 @@ export default function SocialItem({
         );
     if (type == 3)
         return (
-            <a className="group relative w-[60px] h-[60px] rounded-[60px] cursor-pointer flex justify-center items-center shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-all duration-[0.5s] hover:w-[180px] hover:shadow-[0_10px_25px_rgba(0,0,0,0)]">
+            <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative w-[60px] h-[60px] rounded-[60px] cursor-pointer flex justify-center items-center shadow-[0_10px_25px_rgba(0,0,0,0.1)] transition-all duration-[0.5s] hover:w-[180px] hover:shadow-[0_10px_25px_rgba(0,0,0,0)]"
+            >
                 <div
                     className="absolute inset-0 rounded-[50px] opacity-0 transition-all duration-[0.5s] group-hover:opacity-100"
                     style={{
