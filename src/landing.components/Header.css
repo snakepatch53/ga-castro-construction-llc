@@ -11,15 +11,17 @@
 }
 
 .header-landing-component:not(.with-slider) a.landing-button-component {
-    background: var(--color1-bg);
-    color: var(--color1-txt);
-    opacity: 0.5;
+    background: var(--color2-bg);
+    color: var(--color2-txt);
+    /* opacity: 0.5; */
+    opacity: 1;
     border: none;
     text-shadow: none;
 }
 
 .header-landing-component:not(.with-slider) a.landing-button-component:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .header-landing-component:not(.with-slider) .landing-header-option-component {
@@ -62,13 +64,17 @@
     background: var(--color1-bg);
     color: var(--color1-txt);
     opacity: 1;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     border: none;
     text-shadow: none;
+
+    font-family: title2;
+    letter-spacing: 0.5px;
 }
 
 .header-landing-component.with-slider a.landing-button-component:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .header-landing-component.with-slider .button-menu {
@@ -90,13 +96,15 @@
 .header-landing-component.with-slider.semi-float a.landing-button-component {
     background: var(--color1-bg);
     color: var(--color1-txt);
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    opacity: 1;
     border: none;
     text-shadow: none;
 }
 
 .header-landing-component.with-slider.semi-float a.landing-button-component:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 /*  open and float */
@@ -112,15 +120,17 @@
 }
 
 .header-landing-component.with-slider.float a.landing-button-component {
-    background: var(--color1-bg);
-    color: var(--color1-txt);
-    opacity: 0.5;
+    background: var(--color2-bg);
+    color: var(--color2-txt);
+    /* opacity: 0.5; */
+    opacity: 1;
     border: none;
     text-shadow: none;
 }
 
 .header-landing-component.with-slider.float a.landing-button-component:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .header-landing-component.with-slider.float .landing-header-option-component {
@@ -129,7 +139,7 @@
 }
 
 .header-landing-component.with-slider.float .landing-header-option-component a {
-    color: var(--color2-txt2);
+    color: var(--color2-txt1);
 }
 
 .header-landing-component.with-slider.open .landing-header-option-component a {
@@ -155,8 +165,8 @@
     }
 
     .header-landing-component.with-slider.open a.landing-button-component {
-        background: var(--color1-bg);
-        color: var(--color1-txt);
+        background: var(--color2-bg);
+        color: var(--color2-txt);
         opacity: 1;
         border: none;
     }
@@ -173,9 +183,10 @@
 
     .header-landing-component.open a,
     .header-landing-component.open .landing-header-option-component a {
-        color: var(--color2-txt);
-        fill: var(--color2-txt);
+        color: var(--color2-txt) !important;
+        fill: var(--color2-txt) !important;
         letter-spacing: 0.1px;
+        font-family: title2;
     }
 
     .header-landing-component:not(.with-scroll) {
