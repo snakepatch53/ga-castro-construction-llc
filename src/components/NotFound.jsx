@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import AnimatedElement from "./AnimatedElement";
+import { useEffect } from "react";
 
 export default function NotFound() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <AnimatedElement className="w-full min-h-[var(--heigh-not-headers)] flex items-center">
             <div className="container flex flex-col justify-center items-center">

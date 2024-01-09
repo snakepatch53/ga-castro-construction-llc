@@ -6,6 +6,7 @@ import Footer from "./landing.components/Footer";
 import ContactUs from "./landing.views/ContactUs";
 import AboutUs from "./landing.views/AboutUs";
 import NotFound from "./components/NotFound";
+import Services from "./landing.views/Services";
 
 export default function LandingRouter() {
     return (
@@ -16,6 +17,7 @@ export default function LandingRouter() {
                     <AnimatePresence>
                         <Routes>
                             <Route path="/" element={<Home />} />
+                            <Route path="/services" element={<Services />} />
                             <Route path="/about-us" element={<AboutUs />} />
                             <Route path="/contact-us" element={<ContactUs />} />
                             <Route path="*" element={<NotFound />} />

@@ -48,7 +48,8 @@
 }
 
 @font-face {
-    src: url("./assets/fonts/BlackOpsOne-Regular.ttf");
+    /* src: url("./assets/fonts/BlackOpsOne-Regular.ttf"); */
+    src: url("./assets/fonts/poppins/Poppins-Regular.ttf");
     font-family: title2;
 }
 
