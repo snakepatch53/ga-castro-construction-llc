@@ -11,3 +11,17 @@ body {
 .swiper-pagination-progressbar-fill {
     background-color: var(--color1-bg) !important;
 }
+
+.brigth-animation {
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+    animation: brigth-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes brigth-animation {
+    from {
+        background-position: -500px;
+    }
+    to {
+        background-position: 500px;
+    }
+}
