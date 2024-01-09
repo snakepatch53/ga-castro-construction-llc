@@ -12,10 +12,11 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Services from "../landing.components/Services";
+import Button from "../landing.components/Button";
 
 export default function Home() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <>
@@ -24,11 +25,14 @@ export default function Home() {
                     <Carousel data={slides} withSlider={true} />
                 </div>
 
-                <div className="px-10 mt-32">
+                <div className="px-10 mt-32 flex flex-col">
                     <h2 className="mb-14 text-3xl text-center font-title2">Our Services</h2>
                     <div className="container">
                         <Services />
                     </div>
+                    <Button to="/services" style="3" type="2">
+                        <span>See more of our services</span> <span>&rarr;</span>
+                    </Button>
                 </div>
 
                 <div className="mt-24 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
@@ -66,6 +70,9 @@ export default function Home() {
                                     ))}
                                 </Swiper>
                             </div>
+                            <Button to="/about-us" style="4" type="2">
+                                <span>learn more about us</span> <span>&rarr;</span>
+                            </Button>
                         </div>
                     </div>
                     <svg viewBox="0 0 1440 320">
@@ -73,13 +80,16 @@ export default function Home() {
                     </svg>
                 </div>
 
-                <div className="px-5 sm:px-10 mb-56">
+                <div className="px-5 sm:px-10 mb-56 flex flex-col">
                     <h2 className="mb-10 text-3xl text-center font-title2">Contact Us</h2>
                     <div className="container flex justify-center gap-5">
                         {socials.map(({ ...social }) => (
                             <SocialItem key={social.id} type="3" {...social} />
                         ))}
                     </div>
+                    <Button to="/contact-us" style="3" type="2">
+                        <span>Do you need more info?</span> <span>&rarr;</span>
+                    </Button>
                 </div>
             </AnimatedElement>
         </>

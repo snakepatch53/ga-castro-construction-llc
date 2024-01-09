@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import AnimatedElement from "./AnimatedElement";
 
 export default function NotFound() {
     return (
-        <div className="w-full min-h-[var(--heigh-not-headers)] flex items-center">
+        <AnimatedElement className="w-full min-h-[var(--heigh-not-headers)] flex items-center">
             <div className="container flex flex-col justify-center items-center">
                 <h1 className="text-[7rem] font-title leading-[7rem]">404</h1>
                 <h2 className="text-[2.6rem] font-title leading-3">Not Found</h2>
@@ -17,6 +18,6 @@ export default function NotFound() {
                     Go to Home
                 </Link>
             </div>
-        </div>
+        </AnimatedElement>
     );
 }
