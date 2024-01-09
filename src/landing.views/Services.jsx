@@ -20,7 +20,7 @@ export default function Services() {
                         We provide the best services for you
                     </p>
                     <div className="w-full mt-10">
-                        <div className="relative w-full aspect-[3/1]">
+                        <div className="relative w-full aspect-[4/1]">
                             <img
                                 src="/img/services.jpg"
                                 alt="Imagen de portada de servicios"

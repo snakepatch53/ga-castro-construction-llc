@@ -73,7 +73,7 @@ export default function Header({ className = "", withSliderIn = [] }) {
                 <div className="container h-full py-0 flex gap-1 items-center justify-between">
                     <Link to="/" className="h-full aspect-[2/1] ">
                         <img
-                            src="img/logo.png"
+                            src="/img/logo.png"
                             alt="Logo of GA Castro Construction"
                             className="h-full w-full object-contain"
                         />

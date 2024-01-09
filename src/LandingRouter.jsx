@@ -7,6 +7,7 @@ import ContactUs from "./landing.views/ContactUs";
 import AboutUs from "./landing.views/AboutUs";
 import NotFound from "./components/NotFound";
 import Services from "./landing.views/Services";
+import ServiceInfo from "./landing.views/ServiceInfo";
 
 export default function LandingRouter() {
     return (
@@ -18,6 +19,7 @@ export default function LandingRouter() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/services" element={<Services />} />
+                            <Route path="/services/:title" element={<ServiceInfo />} />
                             <Route path="/about-us" element={<AboutUs />} />
                             <Route path="/contact-us" element={<ContactUs />} />
                             <Route path="*" element={<NotFound />} />
