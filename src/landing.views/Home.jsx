@@ -13,16 +13,48 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Services from "../landing.components/Services";
 import Button from "../landing.components/Button";
+import ReactCompareImage from "react-compare-image";
 
 export default function Home() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <>
             <AnimatedElement>
                 <div className="w-full h-screen">
                     <Carousel data={slides} withSlider={true} />
+                </div>
+
+                <div className="w-full mt-32">
+                    <div className="container">
+                        <h2 className="mb-14 text-3xl text-center font-title2">
+                            Make a change of appearance
+                        </h2>
+                        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-cente">
+                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
+                                <ReactCompareImage
+                                    leftImage="/img/before.png"
+                                    rightImage="/img/after.png"
+                                    className="w-full h-full [&:hover>img]:scale-110"
+                                />
+                            </div>
+                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
+                                <ReactCompareImage
+                                    leftImage="/img/before.png"
+                                    rightImage="/img/after.png"
+                                    className="w-full h-full [&:hover>img]:scale-110"
+                                />
+                            </div>
+                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
+                                <ReactCompareImage
+                                    leftImage="/img/before.png"
+                                    rightImage="/img/after.png"
+                                    className="w-full h-full [&:hover>img]:scale-110"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="px-10 mt-32 flex flex-col">
