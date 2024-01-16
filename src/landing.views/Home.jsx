@@ -62,7 +62,7 @@ export default function Home() {
                     <div className="container">
                         <Services />
                     </div>
-                    <Button to="/services" style="3" type="2">
+                    <Button to="/services" style="3" type="2" className="mt-10 mx-auto">
                         <span>See more of our services</span> <span>&rarr;</span>
                     </Button>
                 </div>
@@ -102,7 +102,7 @@ export default function Home() {
                                     ))}
                                 </Swiper>
                             </div>
-                            <Button to="/about-us" style="4" type="2">
+                            <Button to="/about-us" style="4" type="2" className="mt-10 mx-auto">
                                 <span>learn more about us</span> <span>&rarr;</span>
                             </Button>
                         </div>
@@ -119,7 +119,7 @@ export default function Home() {
                             <SocialItem key={social.id} type="3" {...social} />
                         ))}
                     </div>
-                    <Button to="/contact-us" style="3" type="2">
+                    <Button to="/contact-us" style="3" type="2" className="mt-10 mx-auto">
                         <span>Do you need more info?</span> <span>&rarr;</span>
                     </Button>
                 </div>
