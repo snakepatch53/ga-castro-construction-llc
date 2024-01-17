@@ -11,7 +11,7 @@ import Services from "./landing.views/Services";
 import ServiceCarpentry from "./landing.views/ServiceCarpentry";
 import ServiceInsuranceClaims from "./landing.views/ServiceInsuranceClaims";
 import ServiceRoofing from "./landing.views/ServiceRoofing";
-import ServiceDeathWay from "./landing.views/ServiceDeathWay";
+import ServiceSiding from "./landing.views/ServiceSiding";
 import ServiceCanals from "./landing.views/ServiceCanals";
 import ServicePaint from "./landing.views/ServicePaint";
 
@@ -33,7 +33,7 @@ export default function LandingRouter() {
                                 element={<ServiceInsuranceClaims />}
                             />
                             <Route path="/services/roofing" element={<ServiceRoofing />} />
-                            <Route path="/services/death-way" element={<ServiceDeathWay />} />
+                            <Route path="/services/death-way" element={<ServiceSiding />} />
                             <Route path="/services/canals" element={<ServiceCanals />} />
                             <Route path="/services/paint" element={<ServicePaint />} />
 
