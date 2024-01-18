@@ -4,14 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faAngleLeft,
     faSnowflake,
-    faPaperPlane,
     faHouse,
     faAngleRight,
     faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
-import SocialItem from "../landing.components/SocialItem";
-import socials from "./../mooks/social.json";
+
 import ReactCompareImage from "react-compare-image";
+import SectionContact from "../landing.components/SectionContact";
 
 export default function ServiceRoofing() {
     return (
@@ -19,7 +18,7 @@ export default function ServiceRoofing() {
             <section>
                 <div className="container">
                     <div className="flex flex-col px-20 pt-20">
-                        <div className="flex gap-3 w-full">
+                        <div className="flex flex-col gap-5 w-full lg:flex-row">
                             <div className="flex-1 flex flex-col gap-5 justify-center">
                                 <h3 className="text-4xl text-balance">
                                     Roofing Services{" "}
@@ -69,28 +68,23 @@ export default function ServiceRoofing() {
                             style={{ height: "calc(100% + 10px)" }}
                         />
                     </div>
-                    <div className="relative h-96">
-                        <svg
-                            viewBox="0 0 1440 320"
-                            className="absolute left-0 right-0 top-0 fill-[#fc8811] bg-[#0b0c1e]"
-                        >
-                            <path d="M0,320L40,298.7C80,277,160,235,240,234.7C320,235,400,277,480,266.7C560,256,640,192,720,144C800,96,880,64,960,58.7C1040,53,1120,75,1200,96C1280,117,1360,139,1400,149.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-                        </svg>
-                    </div>
                 </div>
                 <div className="container relative z-10 py-10">
                     <div className=" flex flex-col w-full gap-14  items-center overflow-hidden rounded-md">
-                        <h3 className="text-4xl p-10 text-[--color1-txt1]">
+                        <h3
+                            className="text-4xl p-10 text-[--color1-txt1]"
+                            style={{ textShadow: "0 0 10px #000" }}
+                        >
                             PROJECT CHALLENGES IN ROOFING
                         </h3>
                         <div className="flex w-full">
                             {/* <div className="absolute inset-0 backdrop-blur-sm" /> */}
-                            <div className=" flex items-center w-full px-5 py-3 gap-2 mx-40 rounded-2xl bg-[#171640]/60 text-[var(--color1-txt1)] shadow-xl ">
-                                <div className="text-xl">
+                            <div className=" flex items-center w-full px-1 sm:px-5 py-3 gap-2 mx-5 md:mx-20 lg:mx-40 rounded-2xl bg-[#171640]/60 text-[var(--color1-txt1)] shadow-xl ">
+                                <div className="text-xl cursor-pointer">
                                     <FontAwesomeIcon icon={faAngleLeft} className="text-[2.5rem]" />
                                 </div>
-                                <div className=" w-full flex justify-center">
-                                    <div className="  grid grid-cols-3 h-full gap-20 ">
+                                <div className=" w-full flex justify-center items-center">
+                                    <div className="grid grid-cols-3 h-full sm:gap-10 md:gap-20 ">
                                         <ItemBanner
                                             title="Sustainability"
                                             icon={faHandHoldingDollar}
@@ -103,7 +97,7 @@ export default function ServiceRoofing() {
                                         <ItemBanner title="Thermal isolation" icon={faSnowflake} />
                                     </div>
                                 </div>
-                                <div>
+                                <div className="text-xl cursor-pointer">
                                     <FontAwesomeIcon
                                         icon={faAngleRight}
                                         className="text-[2.5rem]"
@@ -111,8 +105,12 @@ export default function ServiceRoofing() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex w-full py-60 ">
-                            <div className="grid w-full gap-5 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-2 ">
+                    </div>
+                </div>
+                <div className="container relative z-10">
+                    <div className="flex w-full pt-72 ">
+                        <div className="grid w-full gap-5 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-2 ">
+                            <div className="flex flex-col w-full items-center gap-3">
                                 <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
                                     <ReactCompareImage
                                         leftImage="/img/before.png"
@@ -120,6 +118,11 @@ export default function ServiceRoofing() {
                                         className="w-full h-full [&:hover>img]:scale-110"
                                     />
                                 </div>
+                                <span className="text-lg">
+                                    Project done for a family somew here in New Haven
+                                </span>
+                            </div>
+                            <div className="flex flex-col w-full items-center gap-3">
                                 <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
                                     <ReactCompareImage
                                         leftImage="/img/before.png"
@@ -127,65 +130,40 @@ export default function ServiceRoofing() {
                                         className="w-full h-full [&:hover>img]:scale-110"
                                     />
                                 </div>
+                                <span className="text-lg">
+                                    Project done for a family somew here in New Haven
+                                </span>
                             </div>
                         </div>
-                        <div className="text-white">falta item</div>
                     </div>
                 </div>
             </section>
+            <section className="relative bg-[#0b0c1e] py-60">
+                <div className=" h-20">
+                    <svg
+                        viewBox="0 0 1440 320"
+                        className="absolute left-0 right-0 -top-0 fill-[#fc8811] bg-[#0b0c1e]"
+                    >
+                        <path d="M0,320L40,298.7C80,277,160,235,240,234.7C320,235,400,277,480,266.7C560,256,640,192,720,144C800,96,880,64,960,58.7C1040,53,1120,75,1200,96C1280,117,1360,139,1400,149.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+                    </svg>
+                </div>
+                <div className="container text-white ">falta item</div>
+            </section>
 
-            <section className="container">
-                <div className="flex w-full p-16 ">
-                    <div className="flex flex-col gap-10 items-center w-1/2 justify-center">
-                        <h3 className="text-3xl ">Contact Us</h3>
-                        <div className="px-5 sm:px-10">
-                            <div className="container flex justify-center gap-5">
-                                {socials.map(({ ...social }) => (
-                                    <SocialItem key={social.id} type="3" {...social} />
-                                ))}
-                            </div>
-                        </div>
-                        <div>
-                            <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                <span>Do you need more info?</span> <span>&rarr;</span>
-                            </Button>
-                        </div>
-                    </div>
-                    <div className="flex flex-col w-1/2 px-8 py-5 gap-3 rounded-lg bg-[#171640] ">
-                        <h3 className=" text-xl pb-3 text-[var(--color1-txt1)]">
-                            Send us a message
-                        </h3>
-                        <Input placeholder="Your name" />
-                        <Input placeholder="Your e-mail" />
-                        <Input placeholder="Address home" />
-                        <Input placeholder="Phone Number" />
-                        <Input placeholder="Enter your name" type="textarea" />
-
-                        <div className="flex text-[#171640] w-full justify-center ">
-                            <button className="flex bg-white px-5 py-1 gap-2  items-center rounded-md ">
-                                <span className="font-bold">Send</span>
-                                <FontAwesomeIcon icon={faPaperPlane} className="text-sm" />
-                            </button>
-                        </div>
-                    </div>
+            <section className="p-[var(--padding)]">
+                <div className="container w-full md:pt-20">
+                    <SectionContact />
                 </div>
             </section>
         </AnimatedElement>
     );
 }
 
-function Input({ type = "text", placeholder, className = "" }) {
-    const classNameInput = "py-2 px-4 rounded-md " + className;
-    if (type != "textarea")
-        return <input type={type} placeholder={placeholder} className={classNameInput} />;
-    return <textarea placeholder={placeholder} className={classNameInput} />;
-}
-
 function ItemBanner({ title, icon }) {
     return (
-        <div className="flex flex-col  content-center py-1 px-5 rounded-xl gap-2 shadow-3xl">
-            <FontAwesomeIcon className="text-6xl" icon={icon} />
-            <h3 className="text-center text-xl max-w-36">{title}</h3>
+        <div className="flex flex-col  content-center items-center py-1  sm:px-5 rounded-xl sm:gap-2 shadow-3xl">
+            <FontAwesomeIcon className="text-4xl md:text-6xl" icon={icon} />
+            <h3 className="text-center text-lg md:text-xl sm:max-w-36">{title}</h3>
         </div>
     );
 }

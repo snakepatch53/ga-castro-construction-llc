@@ -1,9 +1,6 @@
 import AnimatedElement from "../components/AnimatedElement";
 import Button from "../landing.components/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import SocialItem from "../landing.components/SocialItem";
-import socials from "./../mooks/social.json";
+import SectionContact from "../landing.components/SectionContact";
 
 export default function ServiceSiding() {
     return (
@@ -33,12 +30,12 @@ export default function ServiceSiding() {
                             className="w-full  text-end"
                             style={{ textShadow: "var(--textShadow)" }}
                         >
-                            Renew Ypur Style
+                            Renew Your Style
                         </span>
                     </div>
                 </div>
             </section>
-            <section className="relative pb-28 pt-20">
+            <section className="relative pb-28 pt-20 ">
                 <div className="absolute left-0 right-0 bottom-0 ">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +60,7 @@ export default function ServiceSiding() {
             <section className="relative bg-[#ff9500]">
                 <div className="relative z-10 container">
                     <div className="flex flex-col px-20 pt-10 ">
-                        <div className="flex gap-3 w-full">
+                        <div className="flex flex-col gap-5 w-full lg:flex-row">
                             <div className="flex-1 flex flex-col gap-5 justify-center">
                                 <h3 className="text-4xl text-balance">Protection and</h3>
                                 <span className="text-3xl">A modern finish for your facade</span>
@@ -110,51 +107,11 @@ export default function ServiceSiding() {
                 </svg>
             </section>
 
-            <section>
-                <div className="container ">
-                    <div className="flex w-full px-16 pb-10 ">
-                        <div className="flex flex-col gap-10 items-center w-1/2 justify-center">
-                            <h3 className="text-3xl ">Contact Us</h3>
-                            <div className="px-5 sm:px-10">
-                                <div className="container flex justify-center gap-5">
-                                    {socials.map(({ ...social }) => (
-                                        <SocialItem key={social.id} type="3" {...social} />
-                                    ))}
-                                </div>
-                            </div>
-                            <div>
-                                <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                    <span>Do you need more info?</span> <span>&rarr;</span>
-                                </Button>
-                            </div>
-                        </div>
-                        <div className="flex flex-col w-1/2 px-8 py-5 gap-3 rounded-lg bg-[#171640] ">
-                            <h3 className=" text-xl pb-3 text-[var(--color1-txt1)]">
-                                Send us a message
-                            </h3>
-                            <Input placeholder="Your name" />
-                            <Input placeholder="Your e-mail" />
-                            <Input placeholder="Address home" />
-                            <Input placeholder="Phone Number" />
-                            <Input placeholder="Enter your name" type="textarea" />
-
-                            <div className="flex text-[#171640] w-full justify-center ">
-                                <button className="flex bg-white px-5 py-1 gap-2  items-center rounded-md ">
-                                    <span className="font-bold">Send</span>
-                                    <FontAwesomeIcon icon={faPaperPlane} className="text-sm" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <section className="p-[var(--padding)]">
+                <div className="container w-full">
+                    <SectionContact />
                 </div>
             </section>
         </AnimatedElement>
     );
-}
-
-function Input({ type = "text", placeholder, className = "" }) {
-    const classNameInput = "py-2 px-4 rounded-md " + className;
-    if (type != "textarea")
-        return <input type={type} placeholder={placeholder} className={classNameInput} />;
-    return <textarea placeholder={placeholder} className={classNameInput} />;
 }
