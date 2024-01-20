@@ -11,8 +11,12 @@ import {
 import ReactCompareImage from "react-compare-image";
 import SectionContact from "../landing.components/SectionContact";
 import BannerItem from "../landing.components/BannerItem";
+import { useEffect } from "react";
 
 export default function ServiceRoofing() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <AnimatedElement>
             <section>

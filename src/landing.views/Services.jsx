@@ -11,7 +11,7 @@ import { faTrowelBricks, faUsersGear, faStopwatch } from "@fortawesome/free-soli
 export default function Services() {
     const [servicios, setServicios] = useState(null);
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         setTimeout(() => {
             setServicios(services);
         }, 0);

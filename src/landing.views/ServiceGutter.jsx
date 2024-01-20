@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 
 export default function ServiceGutter() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <AnimatedElement>
             <section>
