@@ -34,10 +34,10 @@ export default function Header({ withSliderIn = [] }) {
                         className={`
                             fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-screen rounded-none flex-col bg-[#050504]/90 backdrop-blur-sm
                             flex gap-5 justify-center items-center 
-                            lg:px-5 lg:static lg:w-auto lg:h-auto lg:flex-row lg:rounded-full lg:overflow-visible lg:left-0 lg:top-0 lg:translate-y-0 lg:translate-x-0 lg:max-h-none lg:backdrop-blur-0 lg:bg-transparent
+                            lg:px-5 lg:static lg:w-auto lg:h-auto lg:flex-row lg:rounded-full lg:overflow-visible lg:left-0 lg:top-0 lg:translate-y-0 lg:translate-x-0 lg:max-h-none lg:backdrop-blur-0 
                             ${/*isTop && isSliderIn ? "bg-transparent" : "lg:bg-[#050504]" */ ""} 
-                            lg:bg-[#050504]
-                            transition-all duration-200 overflow-hidden 
+                            lg:bg-[#050504] 
+                            transition-all duration-200 overflow-hidden lg:backdrop-blur-0 
                             ${isOpen ? "max-h-screen" : "max-h-0"}
                         `}
                     >
