@@ -95,8 +95,8 @@ export default function Header({ className = "", withSliderIn = [] }) {
                         <HeaderOption name="Services" to="/services">
                             <HeaderOption name="Insurance Claims" to="/services/insurance-claims" />
                             <HeaderOption name="Roofing" to="/services/roofing" />
-                            <HeaderOption name="Siding" to="/services/death-way" />
-                            <HeaderOption name="Gutter" to="/services/canals" />
+                            <HeaderOption name="Siding" to="/services/siding" />
+                            <HeaderOption name="Gutter" to="/services/gutter" />
                             <HeaderOption name="Carpentry" to="/services/carpentry" />
                             <HeaderOption name="Paint" to="/services/paint" />
                         </HeaderOption>

@@ -1,4 +1,5 @@
 import AnimatedElement from "../components/AnimatedElement";
+import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 
@@ -24,30 +25,14 @@ export default function ServiceCarpentry() {
             </section>
             <section className="relative inset-0">
                 <div className="relative container z-10">
-                    <div className="flex flex-col px-20 pt-20">
-                        <div className="flex flex-col gap-5 w-full lg:flex-row">
-                            <div className="flex-1 flex flex-col gap-5 justify-center">
-                                <h3 className="text-4xl text-balance">
-                                    Expert Carpentry{" "}
-                                    <span className="text-[var(--color3-txt1)]">
-                                        Services in Stamford
-                                    </span>
-                                </h3>
-                                <span className="text-3xl">
-                                    Maximize your coverage with our expert help
-                                </span>
-                            </div>
-
-                            <div className="flex-1 flex flex-col justify-center items-center ">
-                                <div className="flex h-full w-full rounded-xl overflow-hidden  ">
-                                    <img src="/img/services.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex pb-5 pt-2 justify-end font-content font-bold text-x">
-                            <span className="text-white">Structure for a constrution project</span>
-                        </div>
-                    </div>
+                    <BannerItem
+                        title="Expert Carpentry"
+                        title2="Services in Stamford"
+                        subtitle="Maximize your coverage with our expert help"
+                        imgSrc="/img/services.jpg"
+                        imgText="Structure for a constrution project"
+                        showButton={false}
+                    />
                 </div>
                 <div className="absolute w-full -bottom-16">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

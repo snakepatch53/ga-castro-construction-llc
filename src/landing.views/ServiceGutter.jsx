@@ -1,36 +1,20 @@
 import AnimatedElement from "../components/AnimatedElement";
+import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 
-export default function ServiceCanals() {
+export default function ServiceGutter() {
     return (
         <AnimatedElement>
             <section>
                 <div className="container">
-                    <div className="flex flex-col px-20 pt-20">
-                        <div className="flex flex-col gap-5 w-full lg:flex-row">
-                            <div className="flex-1 flex flex-col gap-5 justify-center">
-                                <h3 className="text-4xl text-balance">
-                                    Redirects{" "}
-                                    <span className="text-[var(--color3-txt1)]">Excess Rain</span>
-                                </h3>
-                                <span className="text-3xl">
-                                    Conduct rainwater with the best materials
-                                </span>
-                                <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                    <span>Contact us now</span> <span>&rarr;</span>
-                                </Button>
-                            </div>
-                            <div className="flex-1 flex flex-col justify-center items-center ">
-                                <div className="flex h-full w-full rounded-xl overflow-hidden  ">
-                                    <img src="/img/services.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex pb-5 pt-2 justify-end font-content font-bold text-x">
-                            <span>Maintenance of gutters in a home</span>
-                        </div>
-                    </div>
+                    <BannerItem
+                        title="Redirects"
+                        title2="Excess Rain"
+                        subtitle="Conduct rainwater with the best materials"
+                        imgSrc="/img/services.jpg"
+                        imgText="Maintenance of gutters in a home"
+                    />
                 </div>
             </section>
             <section className="bg-[#171640]">

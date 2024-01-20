@@ -1,5 +1,4 @@
 import AnimatedElement from "../components/AnimatedElement";
-import Button from "../landing.components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faAngleLeft,
@@ -11,39 +10,20 @@ import {
 
 import ReactCompareImage from "react-compare-image";
 import SectionContact from "../landing.components/SectionContact";
+import BannerItem from "../landing.components/BannerItem";
 
 export default function ServiceRoofing() {
     return (
         <AnimatedElement>
             <section>
                 <div className="container">
-                    <div className="flex flex-col px-20 pt-20">
-                        <div className="flex flex-col gap-5 w-full lg:flex-row">
-                            <div className="flex-1 flex flex-col gap-5 justify-center">
-                                <h3 className="text-4xl text-balance">
-                                    Roofing Services{" "}
-                                    <span className="text-[var(--color3-txt1)]">
-                                        in Stamford, CT
-                                    </span>
-                                </h3>
-                                <span className="text-3xl">
-                                    Maximize your coverage with our expert help
-                                </span>
-                                <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                    <span>Contact us now</span> <span>&rarr;</span>
-                                </Button>
-                            </div>
-
-                            <div className="flex-1 flex flex-col justify-center items-center ">
-                                <div className="flex h-full w-full rounded-xl overflow-hidden  ">
-                                    <img src="/img/services.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex pb-5 pt-2 justify-end font-content font-bold text-x">
-                            <span>Claims couseling process</span>
-                        </div>
-                    </div>
+                    <BannerItem
+                        title="Roofing Services"
+                        title2="in Stamford, CT"
+                        subtitle="Maximize your coverage with our expert help"
+                        imgSrc="/img/services.jpg"
+                        imgText="Claims couseling process"
+                    />
                 </div>
             </section>
 

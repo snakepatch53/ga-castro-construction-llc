@@ -1,47 +1,19 @@
 import AnimatedElement from "../components/AnimatedElement";
-import Button from "../landing.components/Button";
+import BannerItem from "../landing.components/BannerItem";
 import SectionContact from "../landing.components/SectionContact";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServicePaint() {
     return (
         <AnimatedElement>
             <section>
                 <div className="container">
-                    <div className="flex flex-col px-20 pt-20">
-                        <div className="flex flex-col gap-5 w-full lg:flex-row">
-                            <div className="flex-1 flex flex-col gap-5 justify-center font-title">
-                                <div className="flex flex-col gap-5 pl-3">
-                                    <h3 className="text-6xl text-balance ">
-                                        expert painting{" "}
-                                        <span className="text-[var(--color3-txt1)] ">services</span>
-                                    </h3>
-                                    <span className="text-4xl ">
-                                        Flawless finishes and transformative results.
-                                    </span>
-                                </div>
-                                <Button
-                                    to="/about-us"
-                                    style="3"
-                                    type="2"
-                                    className="mt-2 mr-auto gap-3 px-5 items-center"
-                                >
-                                    <span className="text-xl font-title">Contact us now</span>{" "}
-                                    <FontAwesomeIcon className="text-xl " icon={faRightLong} />
-                                </Button>
-                            </div>
-
-                            <div className="flex-1 flex flex-col pt-10 justify-center items-center md:pt-0">
-                                <div className="flex h-full w-full rounded-xl overflow-hidden  ">
-                                    <img src="/img/services.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex pb-5 pt-2 justify-end  font-title2 text-xl">
-                            <span>Selection of paint to suit the client.</span>
-                        </div>
-                    </div>
+                    <BannerItem
+                        title="expert painting"
+                        title2="services"
+                        subtitle="Flawless finishes and transformative results."
+                        imgSrc="/img/services.jpg"
+                        imgText="Selection of paint to suit the client."
+                    />
                 </div>
             </section>
             <section className="relative">

@@ -1,4 +1,5 @@
 import AnimatedElement from "../components/AnimatedElement";
+import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 
@@ -59,25 +60,13 @@ export default function ServiceSiding() {
             </section>
             <section className="relative bg-[#ff9500]">
                 <div className="relative z-10 container">
-                    <div className="flex flex-col px-20 pt-10 ">
-                        <div className="flex flex-col gap-5 w-full lg:flex-row">
-                            <div className="flex-1 flex flex-col gap-5 justify-center">
-                                <h3 className="text-4xl text-balance">Protection and</h3>
-                                <span className="text-3xl">A modern finish for your facade</span>
-                                <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                    <span>Free Estimate</span> <span>&rarr;</span>
-                                </Button>
-                            </div>
-                            <div className="flex-1 flex flex-col justify-center items-center ">
-                                <div className="flex h-full w-full rounded-xl overflow-hidden  ">
-                                    <img src="/img/services.jpg" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex pb-5 pt-2 justify-end font-content font-bold text-[--color1-txt1]">
-                            <span>Siding work for a home in Stamford</span>
-                        </div>
-                    </div>
+                    <BannerItem
+                        title="Protection and"
+                        subtitle="A modern finish for your facade"
+                        imgSrc="/img/services.jpg"
+                        imgText="Siding work for a home in Stamford"
+                        buttonText="Free Estimate"
+                    />
                 </div>
                 <div className=" w-full ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
