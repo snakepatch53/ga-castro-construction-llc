@@ -6,13 +6,13 @@ import SectionContact from "../landing.components/SectionContact";
 export default function ServiceSiding() {
     return (
         <AnimatedElement>
-            <section className="relative ">
+            <section className="relative shadow-xl">
                 <div className="absolute flex inset-0 -z-1 ">
-                    <img src="/img/services.jpg" className="w-full h-full object-cover" />
+                    <img src="/image/siding-banner.jpg" className="w-full h-full object-cover" />
                 </div>
-                <div className="container relative z-10">
+                <div className="container relative z-10 py-24">
                     <div
-                        className="flex flex-col py-10 gap-10 text-5xl shadow-xl  "
+                        className="flex flex-col py-10 gap-10 text-5xl  "
                         style={{ "--textShadow": "-4px 2px 8px #000" }}
                     >
                         <span
@@ -38,11 +38,7 @@ export default function ServiceSiding() {
             </section>
             <section className="relative pb-28 pt-20 ">
                 <div className="absolute left-0 right-0 bottom-0 ">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1440 320"
-                        className="fill-[#ff9500]"
-                    >
+                    <svg viewBox="0 0 1440 320" className="fill-[#ff9500]">
                         <path d="M0,224L48,234.7C96,245,192,267,288,266.7C384,267,480,245,576,245.3C672,245,768,267,864,266.7C960,267,1056,245,1152,202.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                 </div>
@@ -63,7 +59,7 @@ export default function ServiceSiding() {
                     <BannerItem
                         title="Protection and"
                         subtitle="A modern finish for your facade"
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/banner-siding-2.jpg"
                         imgText="Siding work for a home in Stamford"
                         buttonText="Free Estimate"
                     />

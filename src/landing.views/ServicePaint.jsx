@@ -11,7 +11,7 @@ export default function ServicePaint() {
                         title="expert painting"
                         title2="services"
                         subtitle="Flawless finishes and transformative results."
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/paint-1.jpg"
                         imgText="Selection of paint to suit the client."
                     />
                 </div>
@@ -19,7 +19,7 @@ export default function ServicePaint() {
             <section className="relative">
                 <img
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="/img/services.jpg"
+                    src="/image/paint-2.png"
                 />
                 <div className="absolute inset-0 backdrop-blur-sm" />
                 <div className=" container flex  w-full  h-[500px] items-center justify-center font-title2">

@@ -13,7 +13,7 @@ export default function ServiceInsuranceClaims() {
                         title="Stamford y"
                         title2="Fairfield"
                         subtitle="Maximize your coverage with our expert help"
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/insurance-claims-1.jpg"
                         imgText="Claims couseling process"
                     />
                 </div>
@@ -21,17 +21,17 @@ export default function ServiceInsuranceClaims() {
             <section className="relative">
                 <img
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="/img/services.jpg"
+                    src="/image/insurance-claims-2.jpg"
                 />
                 <div className="absolute inset-0 backdrop-blur-sm" />
-                <div className="container relative flex w-full min-h-96 h-96  items-center overflow-hidden rounded-md">
+                <div className="container relative flex w-full min-h-96 py-48 items-center overflow-hidden rounded-md">
                     <div className="flex items-center px-5 py-10 gap-2 mx-10 sm:mx-20 md:mx-40  rounded-2xl bg-[#ff7c00]/60 text-[var(--color1-txt1)] shadow-xl ">
                         <button className="text-xl cursor-pointer">
                             <FontAwesomeIcon icon={faAngleLeft} className="text-[2.5rem]" />
                         </button>
                         <div>
                             <p
-                                className="text-lg text-center"
+                                className="font-title tracking-wider lg:px-10 text-balance text-lg text-center"
                                 style={{ textShadow: "0 0 10px #000" }}
                             >
                                 &quot;An insuranVe claim is a formal request by a policyholder to an

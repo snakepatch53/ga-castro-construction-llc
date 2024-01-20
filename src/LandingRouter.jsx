@@ -20,7 +20,9 @@ export default function LandingRouter() {
     return (
         <>
             <Router>
-                <Header withSliderIn={["/", "/services"]} />
+                <Header
+                    withSliderIn={["/", "/services", "/services/siding", "/services/carpentry"]}
+                />
                 <div className="min-h-[var(--heigh-not-header)]">
                     <AnimatePresence>
                         <Routes>

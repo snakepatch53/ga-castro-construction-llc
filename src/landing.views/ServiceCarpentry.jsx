@@ -8,7 +8,7 @@ export default function ServiceCarpentry() {
         <AnimatedElement>
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full">
-                    <img src="/img/services.jpg" className="w-full h-full object-cover" />
+                    <img src="/image/carpentry-1.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div className="relative container">
                     <div className="flex flex-col items-center text-white p-52 gap-14 ">
@@ -29,7 +29,7 @@ export default function ServiceCarpentry() {
                         title="Expert Carpentry"
                         title2="Services in Stamford"
                         subtitle="Maximize your coverage with our expert help"
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/carpentry-2.jpg"
                         imgText="Structure for a constrution project"
                         showButton={false}
                     />

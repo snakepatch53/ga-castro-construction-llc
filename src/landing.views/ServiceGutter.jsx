@@ -12,7 +12,7 @@ export default function ServiceGutter() {
                         title="Redirects"
                         title2="Excess Rain"
                         subtitle="Conduct rainwater with the best materials"
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/gutter-1.jpg"
                         imgText="Maintenance of gutters in a home"
                     />
                 </div>
