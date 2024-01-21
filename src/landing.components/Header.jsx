@@ -115,8 +115,8 @@ function Option({ children, name, to, ...props }) {
             {children && (
                 <div
                     className={`
-                        lg:absolute lg:top-[calc(100%+5px)] lg:left-[50%] lg:translate-x-[-50%] lg:bg-[#050504] lg:text-[var(--color2-txt1)]  lg:p-4 lg:rounded-3xl lg:shadow-lg lg:max-h-0 
-                        lg:group-hover:max-h-[300px] lg:transition-all lg:opacity-0 lg:group-hover:opacity-100 lg:duration-500
+                        lg:absolute lg:top-[calc(100%+5px)] lg:left-[50%] lg:translate-x-[-50%] lg:bg-[#050504] lg:text-[var(--color2-txt1)]  lg:p-0 lg:rounded-3xl lg:shadow-lg lg:max-h-0 lg:overflow-hidden lg:opacity-0
+                        lg:transition-all lg:group-hover:max-h-[300px] lg:group-hover:opacity-100 lg:duration-500 lg:group-hover:p-4
                         lg:mt-0 lg:gap-2
                         transition-none
                         justify-center items-center flex flex-col gap-3 mt-2

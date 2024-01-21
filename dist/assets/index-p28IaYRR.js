@@ -847,8 +847,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 lg:flex-row lg:h-full 
                 group items-center font-title2 text-white
             `,...r,children:[d.jsxs(we,{to:n,className:`flex gap-1 text-md transition-all px-3 rounded-full duration-200 hover:opacity-100 text-nowrap justify-center items-center ${s?"opacity-100 bg-[#ef8f17]":"opacity-60"}`,children:[t,e&&d.jsxs("div",{className:"relative w-[0.7rem] hidden lg:block",children:[d.jsx(me,{icon:PE,className:"w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-300"}),d.jsx(me,{icon:TE,className:"absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"})]})]}),e&&d.jsx("div",{className:`
-                        lg:absolute lg:top-[calc(100%+5px)] lg:left-[50%] lg:translate-x-[-50%] lg:bg-[#050504] lg:text-[var(--color2-txt1)]  lg:p-4 lg:rounded-3xl lg:shadow-lg lg:max-h-0 
-                        lg:group-hover:max-h-[300px] lg:transition-all lg:opacity-0 lg:group-hover:opacity-100 lg:duration-500
+                        lg:absolute lg:top-[calc(100%+5px)] lg:left-[50%] lg:translate-x-[-50%] lg:bg-[#050504] lg:text-[var(--color2-txt1)]  lg:p-0 lg:rounded-3xl lg:shadow-lg lg:max-h-0 lg:overflow-hidden lg:opacity-0
+                        lg:transition-all lg:group-hover:max-h-[300px] lg:group-hover:opacity-100 lg:duration-500 lg:group-hover:p-4
                         lg:mt-0 lg:gap-2
                         transition-none
                         justify-center items-center flex flex-col gap-3 mt-2
