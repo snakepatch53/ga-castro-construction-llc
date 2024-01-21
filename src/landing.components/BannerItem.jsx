@@ -12,13 +12,15 @@ export default function BannerItem({
     buttonText = "Contact us now",
     buttonIcon = faRightLong,
     showButton = true,
+    imgTextClassName = "",
+    titleClassName = "",
 }) {
     return (
         <div className="flex flex-col px-20 pt-20">
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">
-                        <h3 className="text-6xl text-balance ">
+                        <h3 className={"text-6xl text-balance " + titleClassName}>
                             {title} <span className="text-[var(--color3-txt1)] ">{title2}</span>
                         </h3>
                         <span className="text-4xl ">{subtitle}</span>
@@ -30,19 +32,19 @@ export default function BannerItem({
                             type="2"
                             className="mt-2 mr-auto gap-3 px-5 items-center"
                         >
-                            <span className="text-xl font-title">{buttonText}</span>{" "}
+                            <span className="text-xl font-title2">{buttonText}</span>{" "}
                             <FontAwesomeIcon className="text-xl " icon={buttonIcon} />
                         </Button>
                     )}
                 </div>
 
-                <div className="flex-1 flex flex-col pt-10 justify-center items-center md:pt-0">
+                <div className="flex-1 flex flex-col pt-10 justify-center items-end md:pt-0">
                     <div className="flex h-full aspect-square rounded-xl overflow-hidden  ">
                         <img src={imgSrc} alt={imgAlt} className="object-cover" />
                     </div>
                 </div>
             </div>
-            <div className="flex pb-5 pt-2 justify-end  font-title2 text-xl">
+            <div className={"flex pb-5 pt-2 justify-end  font-title2 text-xl " + imgTextClassName}>
                 <span>{imgText}</span>
             </div>
         </div>

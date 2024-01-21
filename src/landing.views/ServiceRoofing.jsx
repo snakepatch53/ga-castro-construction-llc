@@ -53,7 +53,7 @@ export default function ServiceRoofing() {
                         />
                     </div>
                 </div>
-                <div className="container relative z-10 py-10">
+                <div className="container relative z-10 py-10 font-title2">
                     <div className=" flex flex-col w-full gap-14  items-center overflow-hidden rounded-md">
                         <h3
                             className="text-4xl p-10 text-[--color1-txt1]"
@@ -91,7 +91,7 @@ export default function ServiceRoofing() {
                         </div>
                     </div>
                 </div>
-                <div className="container relative z-10">
+                <div className="container relative z-10 font-title2">
                     <div className="flex w-full pt-72 ">
                         <div className="grid w-full gap-5 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-2 ">
                             <div className="flex flex-col w-full items-center gap-3">

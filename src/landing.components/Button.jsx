@@ -18,6 +18,8 @@ export default function Button({ children = false, text = "", style = 1, type = 
             "flex justify-center px-10 py-3 bg-[var(--color3-bg)] text-[var(--color3-txt)] text-md font-content font-bold tracking-widest rounded-full transition-all duration-300 gap-1 hover:gap-3 hover:scale-105";
     }
 
+    classStyle += " shadow-[0_2px_10px_3px_rgba(0,0,0,0.6)]";
+
     if (type == 1) {
         return (
             <>

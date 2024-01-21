@@ -3,6 +3,8 @@ import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServiceGutter() {
     useEffect(() => {
@@ -28,9 +30,9 @@ export default function ServiceGutter() {
                         d="M0,192L48,197.3C96,203,192,213,288,186.7C384,160,480,96,576,64C672,32,768,32,864,69.3C960,107,1056,181,1152,186.7C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
                     ></path>
                 </svg>
-                <div className="container">
-                    <div className="flex flex-col w-full items-center px-56 gap-10 text-white ">
-                        <h3 className="text-5xl text-center">
+                <div className="container font-title2 p-[var(--padding)]">
+                    <div className="flex flex-col w-full items-center lg:px-56 gap-10 text-white">
+                        <h3 className="text-5xl text-center text-balance">
                             Get advice from the best and avoid accidents in these rainy seasons.
                         </h3>
                         <div className="flex">
@@ -38,10 +40,13 @@ export default function ServiceGutter() {
                                 to="/about-us"
                                 style="3"
                                 type="2"
-                                className="mt-2 mr-auto bg-white "
+                                className="mt-2 mr-auto bg-white font-title2 px-5  items-center"
                             >
-                                <span className="text-[#171640]">Contact us now</span>{" "}
-                                <span className="text-[#171640]">&rarr;</span>
+                                <span className="text-[#171640] text-xl">Contact us now</span>{" "}
+                                <FontAwesomeIcon
+                                    className="text-xl text-[#171640]"
+                                    icon={faRightLong}
+                                />
                             </Button>
                         </div>
                     </div>

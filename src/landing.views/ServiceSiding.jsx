@@ -3,6 +3,8 @@ import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ServiceSiding() {
     useEffect(() => {
@@ -10,14 +12,14 @@ export default function ServiceSiding() {
     }, []);
     return (
         <AnimatedElement>
-            <section className="relative shadow-xl">
+            <section className="relative shadow-xl font-title">
                 <div className="absolute flex inset-0 -z-1 ">
                     <img src="/image/siding-banner.jpg" className="w-full h-full object-cover" />
                 </div>
-                <div className="container relative z-10 py-24">
+                <div className="container relative z-10 py-28 px-10">
                     <div
-                        className="flex flex-col py-10 gap-10 text-5xl  "
-                        style={{ "--textShadow": "-4px 2px 8px #000" }}
+                        className="flex flex-col py-10 text-5xl gap-24 "
+                        style={{ "--textShadow": "-10px 8px 25px #000" }}
                     >
                         <span
                             className="w-full  text-start"
@@ -40,20 +42,26 @@ export default function ServiceSiding() {
                     </div>
                 </div>
             </section>
-            <section className="relative pb-28 pt-20 ">
+            <section className="relative pb-10 pt-20 ">
                 <div className="absolute left-0 right-0 bottom-0 ">
                     <svg viewBox="0 0 1440 320" className="fill-[#ff9500]">
                         <path d="M0,224L48,234.7C96,245,192,267,288,266.7C384,267,480,245,576,245.3C672,245,768,267,864,266.7C960,267,1056,245,1152,202.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                 </div>
-                <div className="container relative z-10 flex flex-col w-full px-40 py-20 gap-5 justify-center items-center">
-                    <p className="text-4xl text-center">
-                        We have expert staff in remodelin and changing siding bot outdoors and
+                <div className="container relative z-10 flex flex-col w-full py-20 gap-5 justify-center items-center">
+                    <p className="text-5xl text-center font-title max-w-[700px]">
+                        We have expert staff in remodeling and changing siding both outdoors and
                         indoors.
                     </p>
                     <div>
-                        <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                            <span>Contact us now</span> <span>&rarr;</span>
+                        <Button
+                            to="/about-us"
+                            style="3 "
+                            type="2"
+                            className="mt-2 mr-auto font-title2 items-center py-5 px-5"
+                        >
+                            <span className="text-2xl ">Contact us now</span>{" "}
+                            <FontAwesomeIcon icon={faRightLong} className="text-2xl" />
                         </Button>
                     </div>
                 </div>
@@ -66,6 +74,8 @@ export default function ServiceSiding() {
                         imgSrc="/image/banner-siding-2.jpg"
                         imgText="Siding work for a home in Stamford"
                         buttonText="Free Estimate"
+                        imgTextClassName="text-white"
+                        titleClassName="pb-28"
                     />
                 </div>
                 <div className=" w-full ">
@@ -77,7 +87,7 @@ export default function ServiceSiding() {
                     </svg>
                 </div>
             </section>
-            <section className="relative bg-[#171640]">
+            <section className="relative bg-[#171640] ">
                 <div className="container">
                     <h1 className=" text-white">Agregar item de google</h1>
                     <br />
@@ -88,16 +98,16 @@ export default function ServiceSiding() {
                     <br />
                     <br />
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path
-                        fill="#ffffff"
-                        d="M0,192L80,165.3C160,139,320,85,480,96C640,107,800,181,960,202.7C1120,224,1280,192,1360,176L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-                    ></path>
-                </svg>
             </section>
 
-            <section className="p-[var(--padding)]">
-                <div className="container w-full">
+            <section>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path
+                        fill="#171640"
+                        d="M0,288L48,277.3C96,267,192,245,288,224C384,203,480,181,576,176C672,171,768,181,864,181.3C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                    ></path>
+                </svg>
+                <div className="container w-full p-[var(--padding)]">
                     <SectionContact />
                 </div>
             </section>

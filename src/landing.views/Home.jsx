@@ -11,13 +11,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Services from "../landing.components/Services";
+import OurServices from "../landing.components/OurServices";
 import Button from "../landing.components/Button";
 import ReactCompareImage from "react-compare-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <>
@@ -26,45 +28,71 @@ export default function Home() {
                     <Carousel data={slides} withSlider={true} />
                 </div>
 
-                <div className="w-full mt-32">
-                    <div className="container">
-                        <h2 className="mb-14 text-3xl text-center font-title2">
-                            Make a change of appearance
-                        </h2>
-                        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-cente">
-                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
-                                <ReactCompareImage
-                                    leftImage="/img/before.png"
-                                    rightImage="/img/after.png"
-                                    className="w-full h-full [&:hover>img]:scale-110"
-                                />
+                <div className="w-full mt-10">
+                    <div className="container p-[var(--padding)]">
+                        <div className="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center ">
+                            <div className="flex flex-col w-full h-full justify-center items-center gap-8">
+                                <div className="flex flex-col gap-8 max-w-72 ">
+                                    <div className="flex flex-col gap-3 pl-2">
+                                        <h3 className="font-title text-5xl">
+                                            Be the{" "}
+                                            <span className="text-[--color2-txt1]">Difference</span>
+                                        </h3>
+                                        <p className="font-title text-3xl">
+                                            Just a sample of our changees
+                                        </p>
+                                    </div>
+                                    <div className="flex ">
+                                        <Button
+                                            to="/about-us"
+                                            style="3"
+                                            type="2"
+                                            className="mt-2 mr-auto font-title2 px-5  items-center text-xl"
+                                        >
+                                            <span>Let&apos;s go for more</span>{" "}
+                                            <FontAwesomeIcon icon={faRightLong} />
+                                        </Button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
-                                <ReactCompareImage
-                                    leftImage="/img/before.png"
-                                    rightImage="/img/after.png"
-                                    className="w-full h-full [&:hover>img]:scale-110"
-                                />
-                            </div>
-                            <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
-                                <ReactCompareImage
-                                    leftImage="/img/before.png"
-                                    rightImage="/img/after.png"
-                                    className="w-full h-full [&:hover>img]:scale-110"
-                                />
+                            <div className="flex flex-col gap-2">
+                                <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
+                                    <ReactCompareImage
+                                        leftImage="/img/before.png"
+                                        rightImage="/img/after.png"
+                                        className="w-full h-full [&:hover>img]:scale-110"
+                                    />
+                                </div>
+                                <div className="flex w-full">
+                                    <span className="w-full text-end">
+                                        Project done for family somewhere in New Haven
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="px-10 mt-32 flex flex-col">
-                    <h2 className="mb-14 text-3xl text-center font-title2">Our Services</h2>
-                    <div className="container">
-                        <Services />
+                <div className="relative px-10 mt-32 flex flex-col">
+                    <div className="absolute inset-0 w-full max-h-96">
+                        <div className="relative w-full h-full">
+                            <img
+                                src="/img/services.jpg"
+                                className="h-full w-full object-cover"
+                                alt="Imagen de los servicios de GA Castro Constructions LLC"
+                            />
+                            <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
+                        </div>
                     </div>
-                    <Button to="/services" style="3" type="2" className="mt-10 mx-auto">
-                        <span>See more of our services</span> <span>&rarr;</span>
-                    </Button>
+                    <div className="container relative z-10">
+                        <h2
+                            className="mb-14 mt-44 text-5xl text-center font-title text-[--color1-txt1]"
+                            style={{ textShadow: "0 2px 5px #000" }}
+                        >
+                            Our Services
+                        </h2>
+                        <OurServices />
+                    </div>
                 </div>
 
                 <div className="mt-24 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">

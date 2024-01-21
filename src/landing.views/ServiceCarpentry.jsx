@@ -3,6 +3,8 @@ import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServiceCarpentry() {
     useEffect(() => {
@@ -11,17 +13,23 @@ export default function ServiceCarpentry() {
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden">
-                <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 w-full h-full ">
                     <img src="/image/carpentry-1.jpg" className="w-full h-full object-cover" />
                 </div>
-                <div className="relative container">
-                    <div className="flex flex-col items-center text-white p-52 gap-14 ">
+                <div className="relative container font-title">
+                    <div className="flex flex-col w-full items-center text-white py-52 md:p-52 gap-14 ">
                         <h3 className="text-5xl " style={{ textShadow: "-4px 2px 8px #000" }}>
                             Make everything fit
                         </h3>
                         <div className="flex">
-                            <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                <span>Discover more</span> <span>&rarr;</span>
+                            <Button
+                                to="/about-us"
+                                style="3"
+                                type="2"
+                                className="mt-2 mr-auto items-center gap-3 px-5 text-xl"
+                            >
+                                <span>Discover more</span>{" "}
+                                <FontAwesomeIcon className="text-xl " icon={faRightLong} />
                             </Button>
                         </div>
                     </div>
@@ -36,6 +44,7 @@ export default function ServiceCarpentry() {
                         imgSrc="/image/carpentry-2.jpg"
                         imgText="Structure for a constrution project"
                         showButton={false}
+                        imgTextClassName="text-white"
                     />
                 </div>
                 <div className="absolute w-full -bottom-16">
@@ -48,15 +57,21 @@ export default function ServiceCarpentry() {
                 </div>
             </section>
             <section className="bg-[--color1-bg]">
-                <div className="container pt-20">
-                    <div className="flex flex-col items-center px-32 gap-8">
-                        <p className="text-center text-4xl">
+                <div className="relative z-10 container  font-title p-[var(--padding)] pt-0">
+                    <div className="flex flex-col items-center  md:px-60 gap-8">
+                        <p className="text-center text-5xl">
                             We have expert staff in remodelin and changing siding both outdoors and
                             indoors.
                         </p>
                         <div className="flex">
-                            <Button to="/about-us" style="3" type="2" className="mt-2 mr-auto">
-                                <span>Contact us now</span> <span>&rarr;</span>
+                            <Button
+                                to="/about-us"
+                                style="3"
+                                type="2"
+                                className="mt-2 mr-auto items-center px-5 text-xl gap-3"
+                            >
+                                <span className="font-content ">Contact us now</span>{" "}
+                                <FontAwesomeIcon className="text-xl " icon={faRightLong} />
                             </Button>
                         </div>
                     </div>
