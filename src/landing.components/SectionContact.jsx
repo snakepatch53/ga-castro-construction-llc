@@ -34,10 +34,15 @@ export default function SectionContact() {
                     <Input placeholder="Enter your name" type="textarea" />
 
                     <div className="flex text-[#171640] w-full justify-center ">
-                        <button className="flex bg-white px-5 py-1 gap-2  items-center rounded-md ">
-                            <span className="font-bold">Send</span>
-                            <FontAwesomeIcon icon={faPaperPlane} className="text-sm" />
-                        </button>
+                        <Button
+                            to="/about-us"
+                            style="5"
+                            type="2"
+                            className="bg-white  gap-2  items-center "
+                        >
+                            <span className=" font-title2">Send</span>{" "}
+                            <FontAwesomeIcon className="text-sm " icon={faPaperPlane} />
+                        </Button>
                     </div>
                 </div>
             </div>

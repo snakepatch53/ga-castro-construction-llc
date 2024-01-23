@@ -5,7 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Header({ withSliderIn = [] }) {
     const { pathname } = useLocation();
-    const isSliderIn = withSliderIn.includes(pathname) ? true : false;
+    const isSliderIn = withSliderIn.find((path) => path.includes(pathname)) ? true : false;
+    // console.log(pathname);
 
     const [isOpen, setIsOpen] = useState(false);
     // const [isTop, setIsTop] = useState(true);

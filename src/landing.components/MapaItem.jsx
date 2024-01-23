@@ -12,22 +12,22 @@ export default function MapaItem() {
     const [map, setMap] = useState(map1);
     return (
         <div className="">
-            <div className="container flex flex-col items-center font-title">
-                <h3 className="text-6xl ">
+            <div className="container flex flex-col items-center font-title ">
+                <h3 className="text-5xl sm:text-6xl text-center">
                     We&apos;ve got you <span className="text-[--color2-txt1]">covered!</span>
                 </h3>
             </div>
             <svg viewBox="0 0 1440 320" className="w-full fill-[var(--color1-bg)] translate-y-1">
-                <path d="M0,192L34.3,202.7C68.6,213,137,235,206,234.7C274.3,235,343,213,411,181.3C480,149,549,107,617,106.7C685.7,107,754,149,823,160C891.4,171,960,149,1029,128C1097.1,107,1166,85,1234,69.3C1302.9,53,1371,43,1406,37.3L1440,32L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z" />
+                <path d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,133.3C672,139,768,117,864,122.7C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>{" "}
             </svg>
-            <div className="bg-[--color1-bg]">
-                <div className="container p-[--padding]">
+            <div className="bg-[--color1-bg] ">
+                <div className="container px-[--padding]">
                     <div className="flex flex-col gap-10 md:flex-row w-full items-center justify-center">
                         <div className="flex flex-col w-full md:w-1/2 items-center gap-5">
-                            <h3 className="text-[--color2-txt] text-3xl text-center font-title">
+                            <h3 className="text-[--color2-txt] text-4xl text-center font-title max-w-[500px]">
                                 Get to know our locations and contacts{" "}
                             </h3>
-                            <div className="flex flex-row gap-10">
+                            <div className="flex flex-row gap-2 sm:gap-10">
                                 <div className="flex flex-col items-center gap-10">
                                     <Option
                                         name="Main office"
@@ -35,7 +35,9 @@ export default function MapaItem() {
                                         icon={faLocationDot}
                                         onClick={() => setMap(map1)}
                                         className={
-                                            map === map1 ? "border border-solid border-black" : ""
+                                            map === map1
+                                                ? "border md:border-2 border-solid border-black"
+                                                : ""
                                         }
                                     />
                                     <a
@@ -58,7 +60,9 @@ export default function MapaItem() {
                                         onClick={() => setMap(map2)}
                                         icon2={faEnvelope}
                                         className={
-                                            map === map2 ? "border border-solid border-black" : ""
+                                            map === map2
+                                                ? "border md:border-2 border-solid border-black"
+                                                : ""
                                         }
                                     />
                                     <a
@@ -83,7 +87,7 @@ export default function MapaItem() {
                 </div>
             </div>
             <svg viewBox="0 0 1440 320" className="w-full fill-[var(--color1-bg)] -translate-y-1">
-                <path d="M0,320L34.3,304C68.6,288,137,256,206,234.7C274.3,213,343,203,411,170.7C480,139,549,85,617,74.7C685.7,64,754,96,823,122.7C891.4,149,960,171,1029,154.7C1097.1,139,1166,85,1234,80C1302.9,75,1371,117,1406,138.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" />
+                <path d="M0,160L80,138.7C160,117,320,75,480,58.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>{" "}
             </svg>
         </div>
     );
@@ -91,10 +95,10 @@ export default function MapaItem() {
 
 function Option({ name, description, icon, className = "", ...props }) {
     return (
-        <div className="flex flex-col justify-center items-center gap-10">
+        <div className="flex flex-col justify-center items-center">
             <button
                 className={
-                    "flex flex-col max-w-36 py-2 gap-3 items-center bg-[--color3-bg] rounded-md " +
+                    "flex flex-col max-w-36 w-full py-2 gap-3 items-center bg-[--color3-bg] rounded-md " +
                     className
                 }
                 {...props}

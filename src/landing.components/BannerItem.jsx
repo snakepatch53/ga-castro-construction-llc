@@ -16,24 +16,30 @@ export default function BannerItem({
     titleClassName = "",
 }) {
     return (
-        <div className="flex flex-col px-20 pt-20">
+        <div className="flex flex-col px-10 sm:px-20 pt-20">
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">
-                        <h3 className={"text-6xl text-balance " + titleClassName}>
-                            {title} <span className="text-[var(--color3-txt1)] ">{title2}</span>
+                        <h3 className={"text-4xl sm:text-6xl text-balance " + titleClassName}>
+                            {title}{" "}
+                            <span
+                                className="text-[var(--color3-txt1)]"
+                                style={{ textShadow: "0 1px 3px #000" }}
+                            >
+                                {title2}
+                            </span>
                         </h3>
-                        <span className="text-4xl ">{subtitle}</span>
+                        <span className="text-2xl sm:text-4xl ">{subtitle}</span>
                     </div>
                     {showButton && (
                         <Button
                             to="/about-us"
                             style="3"
                             type="2"
-                            className="mt-2 mr-auto gap-3 px-5 items-center"
+                            className="mt-2 mr-auto sm:gap-3 py-5 px-5 items-center"
                         >
-                            <span className="text-xl font-title2">{buttonText}</span>{" "}
-                            <FontAwesomeIcon className="text-xl " icon={buttonIcon} />
+                            <span className=" sm:text-xl font-title2">{buttonText}</span>{" "}
+                            <FontAwesomeIcon className=" sm:text-xl " icon={buttonIcon} />
                         </Button>
                     )}
                 </div>
@@ -45,7 +51,14 @@ export default function BannerItem({
                 </div>
             </div>
             <div className={"flex pb-5 pt-2 justify-end  font-title2 text-xl " + imgTextClassName}>
-                <span>{imgText}</span>
+                <span
+                    style={{
+                        textShadow:
+                            "1px 0 3px rgba(0, 0, 0, 0.5), -1px 0 3px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.5), 0 -1px 3px rgba(0, 0, 0, 0.5)",
+                    }}
+                >
+                    {imgText}
+                </span>
             </div>
         </div>
     );
