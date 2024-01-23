@@ -50,9 +50,10 @@ export default function Header({ withSliderIn = [] }) {
                             <Option name="Carpentry" to="/services/carpentry" />
                             <Option name="Paint" to="/services/paint" />
                         </Option>
+                        <Option name="Financing" to="/financing" />
                         <Option name="Gallery" to="/gallery" />
-                        <Option name="About Us" to="/aboutus" />
-                        <Option name="Contact Us" to="/contactus" />
+                        <Option name="About Us" to="/about-us" />
+                        <Option name="Contact Us" to="/contact-us" />
                     </div>
                     <div className="flex justify-center items-center">
                         <Link

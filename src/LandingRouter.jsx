@@ -12,16 +12,24 @@ import ServiceCarpentry from "./landing.views/ServiceCarpentry";
 import ServiceInsuranceClaims from "./landing.views/ServiceInsuranceClaims";
 import ServiceRoofing from "./landing.views/ServiceRoofing";
 import ServiceSiding from "./landing.views/ServiceSiding";
-
 import ServicePaint from "./landing.views/ServicePaint";
 import ServiceGutter from "./landing.views/ServiceGutter";
+import Gallery from "./landing.views/Gallery";
+import Financing from "./landing.views/Financing";
 
 export default function LandingRouter() {
     return (
         <>
             <Router>
                 <Header
-                    withSliderIn={["/", "/services", "/services/siding", "/services/carpentry"]}
+                    withSliderIn={[
+                        "/",
+                        "/services",
+                        "/services/siding",
+                        "/services/carpentry",
+                        "/financing",
+                        "/contact-us",
+                    ]}
                 />
                 <div className="min-h-[var(--heigh-not-header)]">
                     <AnimatePresence>
@@ -40,6 +48,8 @@ export default function LandingRouter() {
                             <Route path="/services/gutter" element={<ServiceGutter />} />
                             <Route path="/services/paint" element={<ServicePaint />} />
 
+                            <Route path="/financing" element={<Financing />} />
+                            <Route path="/gallery" element={<Gallery />} />
                             <Route path="/about-us" element={<AboutUs />} />
                             <Route path="/contact-us" element={<ContactUs />} />
                             <Route path="*" element={<NotFound />} />
