@@ -27,7 +27,7 @@ export default function Financing() {
                 </div>
             </section>
             <section className="flex relative h-[500px] justify-center">
-                <div className="absolute container -top-20 flex flex-row  gap-20 p-[--padding] justify-center">
+                <div className="absolute container -top-20 flex flex-row gap-5 xl:gap-20 p-[--padding] justify-center">
                     <div className="flex flex-col bg-[--color3-bg]  max-w-[540px] rounded-3xl py-10 px-7 gap-5 shadow-2xl">
                         <h3 className="sm:text-4xl xl:text-6xl font-title ">Looking for</h3>
                         <span className=" sm:text-4xl xl:text-6xl font-title  text-[--color3-txt1] ">
@@ -38,7 +38,7 @@ export default function Financing() {
                         </span>
                         <div className="flex  w-full justify-center ">
                             <button className="flex bg-[#17163d] p-5 gap-2  items-center rounded-full ">
-                                <span className="font-bold smtext-xl xl:text-2xl text-[--color2-txt]">
+                                <span className="font-bold sm:text-base xl:text-2xl text-[--color2-txt]">
                                     Finance it now
                                 </span>
                                 <FontAwesomeIcon
