@@ -7,7 +7,7 @@ import Button from "../landing.components/Button";
 
 export default function ContactUs() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>

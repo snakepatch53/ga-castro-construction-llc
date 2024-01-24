@@ -7,8 +7,12 @@ import {
     faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../landing.components/Button";
+import { useEffect } from "react";
 
 export default function Financing() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <AnimatedElement>
             <section className="relative ">
@@ -16,7 +20,7 @@ export default function Financing() {
                 <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
 
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
-                    <div className="relative flex flex-row items-center rounded-tr-3xl rounded-bl-3xl border-solid border-4 gap-5 px-5 py-3">
+                    <div className="relative flex flex-row items-center  rounded-tr-3xl rounded-bl-3xl border-solid border-4 gap-5 px-5 py-3">
                         <FontAwesomeIcon
                             className="text-3xl sm:text-4xl text-[--color2-txt]"
                             icon={faMagnifyingGlass}
@@ -32,20 +36,20 @@ export default function Financing() {
                 </div>
             </section>
 
-            <section className="flex relative h-[300px] sm:h-[550px] justify-center">
-                <div className="absolute container -top-20 flex flex-row gap-5 xl:gap-20 p-[--padding] justify-center">
-                    <div className="flex flex-col bg-[--color3-bg]  max-w-[540px] rounded-3xl p-4 sm:py-14 sm:px-7 gap-2 sm:gap-5 shadow-2xl">
-                        <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-title ">
+            <section className="flex justify-center px-[var(--padding)]">
+                <div className=" container -translate-y-20 flex flex-col lg:flex-row gap-5 xl:gap-20 items-center justify-center">
+                    <div className="lg:flex-2 flex flex-col w-full lg:w-auto h-full bg-[--color3-bg] rounded-3xl p-4 sm:py-14 sm:px-7 gap-2 sm:gap-5 shadow-2xl">
+                        <h3 className="text-4xl sm:text-5xl md:text-6xl font-title ">
                             Looking for
                         </h3>
-                        <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-title  text-[--color3-txt1] ">
+                        <span className="text-4xl sm:text-5xl md:text-6xl font-title  text-[--color3-txt1] ">
                             the best for you
                         </span>
-                        <span className="font-bold sm:text-xl md:text-4xl lg:text-4xl  text-balance">
+                        <span className="font-bold text-xl  sm:text-2xl md:text-4xl  text-balance">
                             Financing experience at your fingertips
                         </span>
-                        <div className="flex  w-full justify-center py-5">
-                            <button className="flex bg-[#17163d] py-1 px-5 sm:py-5 gap-2  items-center rounded-full shadow-2xl">
+                        <div className="flex w-full justify-center py-5">
+                            <button className="flex bg-[#17163d] py-2 px-5 sm:py-4 gap-2   rounded-full shadow-2xl">
                                 <span className="font-title2 sm:text-xl lg:text-3xl text-[--color2-txt]">
                                     Finance it now
                                 </span>
@@ -56,11 +60,8 @@ export default function Financing() {
                             </button>
                         </div>
                     </div>
-                    <div className="flex shadow-2xl rounded-3xl overflow-hidden">
-                        <img
-                            src="/image/carpentry-1.jpg"
-                            className="max-w-[400px] w-full h-full  object-cover"
-                        />
+                    <div className="lg:flex-1 flex w-full lg:w-auto h-full shadow-2xl rounded-3xl overflow-hidden bg-red-200">
+                        <img src="/image/carpentry-1.jpg" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </section>

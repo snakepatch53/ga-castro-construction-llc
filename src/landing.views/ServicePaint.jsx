@@ -28,7 +28,7 @@ export default function ServicePaint() {
                 <div className="absolute inset-0 backdrop-blur-sm" />
                 <div className=" container flex  w-full  h-[500px] items-center justify-center font-title2">
                     <div className="relative z-10 flex items-center  px-2 py-10 gap-5 mx-10 sm:mx-20 md:mx-40 rounded-2xl  bg-[#171640]/50 text-[var(--color1-txt1)] shadow-2xl  flex-col max-w-[550px]">
-                        <h3 className="text-4xl">Transform your interiors</h3>
+                        <h3 className="text-4xl text-center">Transform your interiors</h3>
                         <p className="text-2xl text-center">
                             Each space in your home Will come to life when you choose its colors
                             correctly.

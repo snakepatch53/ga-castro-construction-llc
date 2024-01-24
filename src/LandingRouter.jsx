@@ -7,7 +7,6 @@ import ContactUs from "./landing.views/ContactUs";
 import AboutUs from "./landing.views/AboutUs";
 import NotFound from "./components/NotFound";
 import Services from "./landing.views/Services";
-// import ServiceInfo from "./landing.views/ServiceInfo";
 import ServiceCarpentry from "./landing.views/ServiceCarpentry";
 import ServiceInsuranceClaims from "./landing.views/ServiceInsuranceClaims";
 import ServiceRoofing from "./landing.views/ServiceRoofing";

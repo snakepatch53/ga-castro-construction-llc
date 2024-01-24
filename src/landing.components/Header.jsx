@@ -23,7 +23,7 @@ export default function Header({ withSliderIn = [] }) {
                     "top-0 z-50 pt-3 w-full p-[var(--padding)] " + (isSliderIn ? "fixed" : "sticky")
                 }
             >
-                <div className="container flex justify-between gap-5">
+                <div className="container flex justify-between gap-1 sm:gap-5">
                     <div className="h-full">
                         <img
                             src="/img/logo.png"
@@ -59,7 +59,7 @@ export default function Header({ withSliderIn = [] }) {
                     <div className="flex justify-center items-center">
                         <Link
                             to="/contactus"
-                            className="flex justify-center items-center px-4 py-2 rounded-full font-title2 bg-[#ff8609] text-white"
+                            className="flex justify-center items-center px-4 py-2 w-32 rounded-full font-title2 bg-[#ff8609] text-white text-nowrap text-ellipsis"
                         >
                             Free Estimate
                         </Link>

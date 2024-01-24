@@ -9,7 +9,7 @@ import GoogleItems from "../landing.components/GoogleItems";
 
 export default function ServiceSiding() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
