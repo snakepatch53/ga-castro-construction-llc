@@ -34,7 +34,7 @@ export default function Services() {
                                 <ItemBanner title="Fast response Time" icon={faStopwatch} />
                             </div>
                         </div>
-                        <h2 className="mt-20 pb-20 font-title2 text-3xl font-bold text-balance text-center">
+                        <h2 className=" md:mt-20 pb-20 font-title2 text-xl sm:text-3xl font-bold text-balance text-center">
                             QUALITY AND TRUST IN EACH JOB
                         </h2>
                     </div>

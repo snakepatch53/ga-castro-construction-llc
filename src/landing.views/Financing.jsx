@@ -49,15 +49,15 @@ export default function Financing() {
                             Financing experience at your fingertips
                         </span>
                         <div className="flex w-full justify-center py-5">
-                            <button className="flex bg-[#17163d] py-2 px-5 sm:py-4 gap-2   rounded-full shadow-2xl">
-                                <span className="font-title2 sm:text-xl lg:text-3xl text-[--color2-txt]">
-                                    Finance it now
-                                </span>
-                                <FontAwesomeIcon
-                                    icon={faRightLong}
-                                    className="text-2xl text-[--color2-txt]"
-                                />
-                            </button>
+                            <Button
+                                to="/about-us"
+                                style="3"
+                                type="2"
+                                className="font-title2  items-center  "
+                            >
+                                <span className=" sm:text-2xl">Finance it now</span>{" "}
+                                <FontAwesomeIcon className="sm:text-xl" icon={faRightLong} />
+                            </Button>
                         </div>
                     </div>
                     <div className="lg:flex-1 flex w-full lg:w-auto h-full shadow-2xl rounded-3xl overflow-hidden bg-red-200">
