@@ -27,7 +27,6 @@ export default function Home() {
                 <div className="w-full h-screen">
                     <Carousel data={slides} withSlider={true} />
                 </div>
-
                 <div className="w-full mt-10">
                     <div className="container p-[var(--padding)]">
                         <div className="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center ">
@@ -102,7 +101,7 @@ export default function Home() {
                     <div className="bg-[var(--color2-bg)] px-5">
                         <div className="container flex flex-col justify-center gap-5">
                             <h2 className="text-3xl text-center font-title2">Our Team</h2>
-                            <p className="text-center text-sm font-content font-bold opacity-90 tracking-wide text-[var(--color2-txt)]">
+                            <p className="text-center text-sm font-content opacity-90 tracking-wide text-[var(--color2-txt)]">
                                 We are a team of professionals who are passionate about what we do.
                             </p>
                             <div>

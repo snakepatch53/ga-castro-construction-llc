@@ -1,38 +1,45 @@
 [
     {
         "id": 1,
-        "title": "Our Services",
-        "description": "Discover the best services for your business",
-        "image": "1.jpg",
-        "to": "/services"
+        "title": "Do you need a new roof",
+        "description": "",
+        "image": "./slider/1.jpg",
+        "to": "/services/roofing"
     },
     {
         "id": 2,
-        "title": "Our Products",
-        "description": "Discover the best products for your business",
-        "image": "2.jpg",
-        "to": "/products"
+        "title": "Do you need a replace you roof",
+        "description": "",
+        "image": "./slider/2.jpg",
+        "to": "/services/roofing"
     },
     {
         "id": 3,
-        "title": "Our Clients",
-        "description": "See our client testimonials",
-        "image": "3.jpg",
-        "to": "/clients"
+        "title": "We are experts in ensurance claims",
+        "description": "",
+        "image": "./slider/3.jpg",
+        "to": "/services/insurance-claims"
     },
 
     {
         "id": 4,
-        "title": "Contact Us",
-        "description": "Contact us for more information",
-        "image": "4.jpg",
-        "to": "/contact"
+        "title": "Roofing",
+        "description": "",
+        "image": "./slider/4.jpg",
+        "to": "/services/roofing"
     },
     {
         "id": 5,
-        "title": "Prices",
-        "description": "We have a wide range of prices for your business",
-        "image": "5.jpg",
-        "to": "/prices"
+        "title": "Siding",
+        "description": "",
+        "image": "./slider/5.jpg",
+        "to": "/services/siding"
+    },
+    {
+        "id": 6,
+        "title": "Gutters",
+        "description": "",
+        "image": "./slider/6.jpg",
+        "to": "/services/gutter"
     }
 ]

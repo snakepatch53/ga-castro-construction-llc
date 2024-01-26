@@ -11,7 +11,7 @@ export default function GoogleItems() {
                     className="w-full h-[350px] bg-white p-10 rounded-3xl"
                 ></iframe>
                 <Button
-                    href="https://www.google.com/maps/place/GA+CASTRO+CONSTRUCTION/@41.1729795,-73.2872965,11z/data=!4m13!1m3!11m2!2sEu3myHnp3XuTqtpZ2pYRxWJ1f2oAgA!3e1!3m8!1s0xac10d21f00928c31:0x74003c50fb12aae1!8m2!3d41.057441!4d-73.5517519!9m1!1b1!15sCgEqWgMiASqSARJyb29maW5nX2NvbnRyYWN0b3LgAQA!16s%2Fg%2F11s7ysy0dn?entry=ttu"
+                    href="https://www.google.com/maps/place//data=!4m3!3m2!1s0xac10d21f00928c31:0x74003c50fb12aae1!12e1?source=g.page.m.kd._&laa=lu-desktop-review-solicitation"
                     target="_blank"
                     rel="noreferrer"
                     style="3"

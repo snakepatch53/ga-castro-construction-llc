@@ -56,7 +56,7 @@ function Item({ src, to, title, description }) {
                         <h4 className="group-hover:underline text-center my-2 font-title">
                             {title}
                         </h4>
-                        <p className="font-content font-bold text-sm">{description}</p>
+                        <p className="font-content text-sm">{description}</p>
                     </div>
                 </Link>
             </AnimatedElement>

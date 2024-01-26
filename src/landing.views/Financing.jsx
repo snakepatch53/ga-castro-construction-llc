@@ -16,7 +16,8 @@ export default function Financing() {
     return (
         <AnimatedElement>
             <section className="relative ">
-                <img src="/image/carpentry-1.jpg" className="absolute w-full h-full object-cover" />
+                <img src="/image/financing1.jpg" className="absolute w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-transparent" />
                 <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
 
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
@@ -61,16 +62,16 @@ export default function Financing() {
                         </div>
                     </div>
                     <div className="lg:flex-1 flex w-full lg:w-auto h-full shadow-2xl rounded-3xl overflow-hidden bg-red-200">
-                        <img src="/image/carpentry-1.jpg" className="w-full h-full object-cover" />
+                        <img src="/image/financing2.jpg" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </section>
 
             <section className="relative">
-                <img src="/image/carpentry-1.jpg" className="absolute w-full h-full object-cover" />
+                <img src="/image/Banner 4.jpg" className="absolute w-full h-full object-cover" />
 
                 <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
-                <div className=" relative z-10 flex container p-[--padding] justify-center ">
+                <div className=" relative z-10 flex container p-[--padding] pt-28 pb-32 justify-center ">
                     <form className=" flex flex-col w-full max-w-[900px] h-full px-5 sm:p-10 md:px-20 py-10 font-title2 items-center bg-[#cdd1dd]/70 gap-5 md:gap-10 rounded-3xl shadow-2xl ">
                         <h3 className="font-title2 text-2xl">
                             Options marked with an asterisk (<span className="text-red-700">*</span>
@@ -88,30 +89,32 @@ export default function Financing() {
                             <Input placeholder="*Credit needed" />
                             <Input placeholder="I can pay monthly" />
                         </div>
-                        <div className="flex flex-col w-full items-center">
-                            <h3 className="font-title text-4xl text-center">
-                                Great, you&apos;re almost done!
-                            </h3>
-                            <h3 className="font-title2 text-2xl w-full pl-10 md:pl-32 ">
-                                <span className="text-red-700">*</span> All fields are required
-                            </h3>
+                        <div className="flex flex-col w-full  sm:px-10 gap-5 md:gap-10">
+                            <div className="flex flex-col w-full items-center">
+                                <h3 className="font-title text-4xl text-center">
+                                    Great, you&apos;re almost done!
+                                </h3>
+                                <h3 className="font-title2 text-2xl w-full pl-10 md:pl-20 ">
+                                    <span className="text-red-700">*</span> All fields are required
+                                </h3>
+                            </div>
+                            <div className="flex flex-col md:flex-row w-full gap-5 md:gap-10">
+                                <Input placeholder="First name" />
+                                <Input placeholder="Last name" />
+                            </div>
+                            <Input placeholder="Email address" />
+                            <Input placeholder="Phone number" />
+                            <Input placeholder="Address" />
+                            <Input placeholder="City" />
+                            <div className="flex flex-col md:flex-row w-full gap-5 md:gap-10">
+                                <Input placeholder="State" />
+                                <Input placeholder="Zip code" />
+                            </div>
+                            <Input placeholder="Birthdate" />
+                            <Input placeholder="Social security number" />
                         </div>
-                        <div className="flex flex-col md:flex-row w-full gap-5 md:gap-10">
-                            <Input placeholder="First name" />
-                            <Input placeholder="Last name" />
-                        </div>
-                        <Input placeholder="Email address" />
-                        <Input placeholder="Phone number" />
-                        <Input placeholder="Address" />
-                        <Input placeholder="City" />
-                        <div className="flex flex-col md:flex-row w-full gap-5 md:gap-10">
-                            <Input placeholder="State" />
-                            <Input placeholder="Zip code" />
-                        </div>
-                        <Input placeholder="Birthdate" />
-                        <Input placeholder="Social security number" />
 
-                        <div className="flex flex-col gap-3 pt-10 px-2">
+                        <div className="flex flex-col gap-3 pt-10 px-2 ">
                             <ul className="list-disc">
                                 <li>
                                     I, the above-named individual, have read and consent to GA
@@ -187,10 +190,12 @@ export default function Financing() {
 
 function Input({ placeholder }) {
     return (
-        <input
-            type="text"
-            placeholder={placeholder}
-            className="w-full px-5 py-2 sm:py-3 rounded-full text-xl"
-        />
+        <div className="flex-1">
+            <input
+                type="text"
+                placeholder={placeholder}
+                className="w-full px-5 py-2 sm:py-3 rounded-full text-xl"
+            />
+        </div>
     );
 }

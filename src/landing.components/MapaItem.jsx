@@ -42,7 +42,7 @@ export default function MapaItem() {
                                     />
                                     <a
                                         className="flex bg-[--color3-bg] h-14 aspect-square items-center justify-center rounded-full shadow-xl"
-                                        href="mailto:g.a.castroconstructionllc@gmail.com"
+                                        href="mailto:info@gacastroconstructionllc.com"
                                         target="_blank"
                                         rel="noreferrer"
                                     >

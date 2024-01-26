@@ -24,7 +24,7 @@ export default function ServiceGutter() {
                     />
                 </div>
             </section>
-            <section className="bg-[#171640]">
+            <section className="bg-[#0b0c1e]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
                         fill="#ffffff"
@@ -38,7 +38,7 @@ export default function ServiceGutter() {
                         </h3>
                         <div className="flex">
                             <Button
-                                to="/about-us"
+                                to="/contact-us"
                                 style="3"
                                 type="2"
                                 className="mt-2 mr-auto bg-white font-title2 px-5  items-center"
@@ -56,7 +56,7 @@ export default function ServiceGutter() {
             <section className="bg-[#ff9500]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
-                        fill="#171640"
+                        fill="#0b0c1e"
                         d="M0,224L60,208C120,192,240,160,360,149.3C480,139,600,149,720,138.7C840,128,960,96,1080,74.7C1200,53,1320,43,1380,37.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
                     ></path>
                 </svg>

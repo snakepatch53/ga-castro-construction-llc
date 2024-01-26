@@ -66,7 +66,7 @@ export default function ServiceCarpentry() {
                         </p>
                         <div className="flex">
                             <Button
-                                to="/about-us"
+                                to="/contact-us"
                                 style="3"
                                 type="2"
                                 className="mt-2 mr-auto items-center px-3 sm:p-5 text-xl sm:gap-2"

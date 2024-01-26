@@ -43,7 +43,7 @@ export default function Carousel({ data, autoPlay = true, delay = 5000, directio
                             <div
                                 key={item.title}
                                 className="item overflow-hidden"
-                                style={{ backgroundImage: `url(/slider/${item.image})` }}
+                                style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 <div className="relative w-full h-full bg-gradient-to-b from-black to-transparent"></div>
                                 <div className="content">

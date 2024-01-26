@@ -13,9 +13,10 @@ export default function ContactUs() {
         <AnimatedElement>
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full ">
-                    <img src="/image/carpentry-1.jpg" className="w-full h-full object-cover" />
+                    <img src="/image/ciudad.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-transparent" />
 
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
                     <div className="relative flex flex-row items-center rounded-tr-3xl rounded-bl-3xl border-solid border-4 gap-2 p-3">
@@ -66,7 +67,10 @@ export default function ContactUs() {
                         <Input placeholder="Email address" />
                         <Input placeholder="Phone number" />
                         <Input placeholder="Address home" />
-                        <Input placeholder="Message" />
+                        <textarea
+                            className="w-full h-32 px-5 py-2 sm:py-3 rounded-3xl text-xl"
+                            placeholder="Message"
+                        />
                         <div className="flex flex-col gap-3">
                             <span className="w-full text-end text-xl">
                                 <span className="text-red-600">*</span> All fields are required

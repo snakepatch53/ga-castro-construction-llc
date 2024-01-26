@@ -1,51 +1,121 @@
 [
     {
         "id": 1,
-        "name": "John Doe",
-        "rol": "Backend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "1.jpg"
+        "name": "Catherine Castro",
+        "rol": "Secretari",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/1.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 2,
-        "name": "Jose Arizaga",
-        "rol": "Frontend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "2.jpg"
+        "name": "German Castro",
+        "rol": "Founder & CEO",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/2.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 3,
-        "name": "Juan Perez",
-        "rol": "Backend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "3.jpg"
+        "name": "Jeison Castro",
+        "rol": "Senior Manager",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/3.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 4,
-        "name": "Maria Rodriguez",
-        "rol": "Frontend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "4.jpg"
+        "name": "Deivis Castro",
+        "rol": "Sales Manager",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/4.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 5,
-        "name": "Pedro Perez",
-        "rol": "Backend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "5.jpg"
+        "name": "Diana Castro",
+        "rol": "Sales Representative",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/5.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 6,
-        "name": "Luisa Rodriguez",
-        "rol": "Frontend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "6.jpg"
+        "name": "Jonathan Aquino",
+        "rol": "Sales Representative",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/6.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     },
     {
         "id": 7,
         "name": "Cristian Villavicencio",
-        "rol": "Backend Developer",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.",
-        "photo": "7.jpg"
+        "rol": "Advertisament",
+        "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
+        "photo": "./team/7.jpg",
+        "social": [
+            {
+                "id": 1,
+                "name": "Facebook",
+                "value": "@gacastroconstructionllc",
+                "url": "https://www.facebook.com/roofinggcastro",
+                "color": "#3b5998",
+                "icon": "<svg viewBox='0 0 448 512'><path d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z'/></svg>"
+            }
+        ]
     }
 ]

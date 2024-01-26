@@ -1,6 +1,4 @@
-import social from "./../mooks/social.json";
-
-export default function TeamItemCard({ name, rol, description = "", photo, type = 1 }) {
+export default function TeamItemCard({ name, rol, description = "", photo, social, type = 1 }) {
     if (type == 1)
         return (
             <div className="bg-[#eaecf8] hover:shadow-2xl hover:bg-white font-bold">
@@ -12,7 +10,7 @@ export default function TeamItemCard({ name, rol, description = "", photo, type 
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute bottom-2 rounded-full overflow-hidden flex max-w-28 w-full items-center justify-center aspect-square">
-                            <img src={"/team/" + photo} className="w-fill h-full object-contain" />
+                            <img src={photo} className="w-fill h-full object-contain" />
                         </div>
                     </div>
                     <div className="flex flex-col px-5 items-center gap-4 ">
@@ -44,7 +42,7 @@ export default function TeamItemCard({ name, rol, description = "", photo, type 
             <div className="relative font-bold rounded-2xl h-56 flex justify-center">
                 <div className="group/team flex flex-col gap-3 items-center justify_center pb-5 relative w-full rounded-2xl transition-all h-full max-w-52">
                     <img
-                        src={"/team/" + photo}
+                        src={photo}
                         className="group-hover/team:opacity-60 group-hover/team:-rotate-12 absolute w-full h-full  rounded-2xl object-cover transition-all"
                     />
                     <div className=" w-full h-full absolute opacity-0 rounded-2xl overflow-hidden bg-[rgba(0,0,0,0.2)] backdrop-blur-[3px]	group-hover/team:opacity-100 shadow-xl group-hover/team:rotate-6 transition-all delay-75 group-hover/team:delay-150 flex flex-col justify-center items-center">

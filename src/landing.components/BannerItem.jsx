@@ -16,7 +16,7 @@ export default function BannerItem({
     titleClassName = "",
 }) {
     return (
-        <div className="flex flex-col px-10 sm:px-20 pt-20">
+        <div className="flex flex-col px-10 sm:px-20 pt-16">
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">
@@ -33,7 +33,7 @@ export default function BannerItem({
                     </div>
                     {showButton && (
                         <Button
-                            to="/about-us"
+                            to="/contact-us"
                             style="3"
                             type="2"
                             className="mt-2 mr-auto sm:gap-3 py-5 px-5 items-center"

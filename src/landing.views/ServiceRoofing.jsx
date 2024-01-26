@@ -26,7 +26,7 @@ export default function ServiceRoofing() {
                         title="Roofing Services"
                         title2="in Stamford, CT"
                         subtitle="Maximize your coverage with our expert help"
-                        imgSrc="/img/services.jpg"
+                        imgSrc="/image/Banner 3.jpg"
                         imgText="Claims couseling process"
                     />
                 </div>
@@ -35,7 +35,10 @@ export default function ServiceRoofing() {
             <section className="relative">
                 <div className="absolute inset-0 -z-1 flex flex-col">
                     <div className="relative h-[750px]">
-                        <img src="/img/services.jpg" className="w-full h-full object-cover" />
+                        <img
+                            src="/image/4 Servicios Roofing - 1 Banner.jpg"
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
                         <svg
                             viewBox="0 0 1440 320"
@@ -132,7 +135,7 @@ export default function ServiceRoofing() {
                         <path d="M0,320L40,298.7C80,277,160,235,240,234.7C320,235,400,277,480,266.7C560,256,640,192,720,144C800,96,880,64,960,58.7C1040,53,1120,75,1200,96C1280,117,1360,139,1400,149.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
                     </svg>
                 </div>
-                <div className="container">
+                <div className="container pt-32">
                     <GoogleItems />
                 </div>
             </section>
