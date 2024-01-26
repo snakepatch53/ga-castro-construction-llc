@@ -17,8 +17,10 @@ export default function Header({ withSliderIn = [] }) {
     //         else setIsTop(true);
     //     };
     // }, []);
-    if (closeElement.current) closeElement.current.onClick = () => setIsOpen(false);
-    window.onKeyDown = (e) => (e.key == "Escape" ? setIsOpen(false) : null);
+    if (closeElement.current) {
+        closeElement.current.addEventListener("click", () => setIsOpen(false));
+    }
+    // window.onKeyDown = (e) => (e.key == "Escape" ? setIsOpen(false) : null);
     return (
         <>
             <div
@@ -47,8 +49,8 @@ export default function Header({ withSliderIn = [] }) {
                         `}
                     >
                         <Option name="Home" to="/" />
+                        <Option name="Insurance Claims" to="/services/insurance-claims" />
                         <Option name="Services" to="/services">
-                            <Option name="Insurance Claims" to="/services/insurance-claims" />
                             <Option name="Roofing" to="/services/roofing" />
                             <Option name="Siding" to="/services/siding" />
                             <Option name="Gutter" to="/services/gutter" />
