@@ -2,8 +2,20 @@
     "name": "GA Castro Construcctions LLC",
     "name_min": "Castro Construcctions",
     "initials": "G.A.C.C.",
-    "map1": " https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193062.79912567828!2d-73.7568813171261!3d40.88051480656798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27cdfa3115555%3A0xb7ba1175b607432b!2sGa%20Castro%20Construction!5e0!3m2!1ses-419!2sec!4v1705954557382!5m2!1ses-419!2sec ",
-    "map2": " https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193062.79912567828!2d-73.7568813171261!3d40.88051480656798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac10d21f00928c31%3A0x74003c50fb12aae1!2sGA%20CASTRO%20CONSTRUCTION!5e0!3m2!1ses-419!2sec!4v1705954734281!5m2!1ses-419!2sec ",
+    "phone": "+1 (800) 838-8186",
+    "email": "info@gacastroconstructionllc.com",
+    "branch1": {
+        "name": "Main Office",
+        "address": "39 hubbard Ave, STAMFORD, CT 06905",
+        "phone": "203-570-4688",
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4171.982373498454!2d-73.55432682315829!3d41.057445016394865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac10d21f00928c31%3A0x74003c50fb12aae1!2sGA%20CASTRO%20CONSTRUCTION!5e1!3m2!1ses-419!2sec!4v1706294916286!5m2!1ses-419!2sec"
+    },
+    "branch2": {
+        "name": "Second Office",
+        "address": "'1300 Boston Post Rd, Guilford, CT 06437",
+        "phone": "203-570-4688",
+        "map": "https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d716.6955975690599!2d-72.69303960100247!3d41.28857396246239!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e62b50d2f17f47%3A0x34229e7354d53e31!2sGA%20CASTRO%20CONSTRUCTION%20-%20GUILFORD!5e1!3m2!1ses-419!2sec!4v1706294853191!5m2!1ses-419!2sec"
+    },
     "home": {
         "section1": {
             "title": "Be the Difference",

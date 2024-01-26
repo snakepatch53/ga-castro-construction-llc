@@ -16,10 +16,11 @@
 
 .carousel-component .item {
     --width: 200px;
+    --height: 300px;
     --margin: 20px;
     --left: 50%;
     width: var(--width);
-    height: 300px;
+    height: var(--height);
     background-position: 50% 50%;
     display: inline-block;
     transition: 0.8s;
@@ -64,6 +65,7 @@
     position: absolute;
     top: 50%;
     left: 100px;
+    flex-direction: column;
     width: 300px;
     text-align: left;
     padding: 0;
@@ -73,7 +75,7 @@
 }
 
 .carousel-component .item:nth-child(2) .content {
-    display: block;
+    display: flex;
     z-index: 11111;
 }
 
@@ -98,8 +100,10 @@
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 
+.carousel-component .item button,
 .carousel-component .item a {
     padding: 10px 20px;
+    margin-right: auto;
     border: none;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.6s 1 forwards;
@@ -153,14 +157,43 @@
 
 @media (width < 1024px) {
     .carousel-component .item {
-        --width: 200px;
+        --width: 150px;
+        --height: 200px;
         --margin: 20px;
         --left: 30px;
         transform: none;
+
+        top: unset;
+        transform: unset;
+        bottom: 50px;
     }
 
     .carousel-component .item .content {
-        top: calc(var(--header-height) + 130px);
-        left: var(--left);
+        /* top: calc(var(--header-height) + 130px); */
+        left: 50%;
+        top: unset;
+        bottom: 50%;
+        transform: translate(-50%, 0);
+        align-items: center;
+    }
+
+    .carousel-component .item .name {
+        font-size: 2.5rem;
+        padding: 0 20px;
+    }
+
+    .carousel-component .item .des {
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+
+    .carousel-component .item .name,
+    .carousel-component .item .des {
+        text-align: center;
+    }
+
+    .carousel-component .item button,
+    .carousel-component .item a {
+        margin: 0 auto;
     }
 }

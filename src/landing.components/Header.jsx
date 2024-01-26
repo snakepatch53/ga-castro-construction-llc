@@ -1,9 +1,10 @@
 import { faBars, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header({ withSliderIn = [] }) {
+    const closeElement = useRef(null);
     const { pathname } = useLocation();
     const isSliderIn = withSliderIn.find((path) => path.includes(pathname)) ? true : false;
     // console.log(pathname);
@@ -16,6 +17,8 @@ export default function Header({ withSliderIn = [] }) {
     //         else setIsTop(true);
     //     };
     // }, []);
+    if (closeElement.current) closeElement.current.onClick = () => setIsOpen(false);
+    window.onKeyDown = (e) => (e.key == "Escape" ? setIsOpen(false) : null);
     return (
         <>
             <div
@@ -24,14 +27,15 @@ export default function Header({ withSliderIn = [] }) {
                 }
             >
                 <div className="container flex justify-between gap-1 sm:gap-5">
-                    <div className="h-full">
+                    <Link to="/" className="h-full">
                         <img
                             src="/img/logo.png"
                             alt="Logo de GA Castro Constructions LLC"
                             className="w-full h-full object-contain"
                         />
-                    </div>
+                    </Link>
                     <div
+                        ref={closeElement}
                         className={`
                             fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-screen rounded-none flex-col bg-[#050504]/90 backdrop-blur-sm
                             flex gap-5 justify-center items-center 
@@ -39,7 +43,7 @@ export default function Header({ withSliderIn = [] }) {
                             ${/*isTop && isSliderIn ? "bg-transparent" : "lg:bg-[#050504]" */ ""} 
                             lg:bg-[#050504] 
                             transition-all duration-200 overflow-hidden lg:backdrop-blur-0 
-                            ${isOpen ? "max-h-screen" : "max-h-0"}
+                            ${isOpen ? "max-h-screen" : "max-h-0"} 
                         `}
                     >
                         <Option name="Home" to="/" />
@@ -59,7 +63,7 @@ export default function Header({ withSliderIn = [] }) {
                     <div className="flex justify-center items-center">
                         <Link
                             to="/contactus"
-                            className="flex justify-center items-center px-4 py-2 w-32 rounded-full font-title2 bg-[#ff8609] text-white text-nowrap text-ellipsis"
+                            className="flex justify-center items-center px-4 py-2 md:py-3 rounded-full font-title2 bg-[#ff8609] text-white md:text-xl text-nowrap text-ellipsis"
                         >
                             Free Estimate
                         </Link>

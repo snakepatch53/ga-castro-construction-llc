@@ -72,7 +72,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="relative px-10 mt-32 flex flex-col">
+                <div className="relative px-[--padding] mt-32 flex flex-col">
                     <div className="absolute inset-0 w-full max-h-96">
                         <div className="relative w-full h-full">
                             <img
@@ -85,7 +85,7 @@ export default function Home() {
                     </div>
                     <div className="container relative z-10">
                         <h2
-                            className="mb-14 mt-44 text-5xl text-center font-title text-[--color1-txt1]"
+                            className="mb-24 mt-44 text-5xl text-center font-title text-[--color1-txt1]"
                             style={{ textShadow: "0 2px 5px #000" }}
                         >
                             Our Services

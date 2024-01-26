@@ -2,14 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import AnimatedElement from "../components/AnimatedElement";
+import info from "../mooks/info.json";
 
 export default function MapaItem() {
-    const map1 =
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193062.79912567828!2d-73.7568813171261!3d40.88051480656798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27cdfa3115555%3A0xb7ba1175b607432b!2sGa%20Castro%20Construction!5e0!3m2!1ses-419!2sec!4v1705954557382!5m2!1ses-419!2sec";
-    const map2 =
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193062.79912567828!2d-73.7568813171261!3d40.88051480656798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac10d21f00928c31%3A0x74003c50fb12aae1!2sGA%20CASTRO%20CONSTRUCTION!5e0!3m2!1ses-419!2sec!4v1705954734281!5m2!1ses-419!2sec";
-
-    const [map, setMap] = useState(map1);
+    const [map, setMap] = useState(info.branch1.map);
     return (
         <div className="">
             <div className="container flex flex-col items-center font-title ">
@@ -30,19 +26,19 @@ export default function MapaItem() {
                             <div className="flex flex-row gap-2 sm:gap-10">
                                 <div className="flex flex-col items-center gap-10">
                                     <Option
-                                        name="Main office"
-                                        description="39 hubbard Av. Stamford 06905"
+                                        name={info.branch1.name}
+                                        description={info.branch1.address}
                                         icon={faLocationDot}
-                                        onClick={() => setMap(map1)}
+                                        onClick={() => setMap(info.branch1.map)}
                                         className={
-                                            map === map1
+                                            map === info.branch1.map
                                                 ? "border md:border-2 border-solid border-black"
                                                 : ""
                                         }
                                     />
                                     <a
                                         className="flex bg-[--color3-bg] h-14 aspect-square items-center justify-center rounded-full shadow-xl"
-                                        href="mailto:info@gacastroconstructionllc.com"
+                                        href={"mailto:" + info.email}
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -54,24 +50,24 @@ export default function MapaItem() {
                                 </div>
                                 <div className="flex flex-col items-center gap-10">
                                     <Option
-                                        name="Secondary office"
-                                        description="39 hubbard Av. Stamford 06905"
+                                        name={info.branch2.name}
+                                        description={info.branch2.address}
                                         icon={faLocationDot}
-                                        onClick={() => setMap(map2)}
+                                        onClick={() => setMap(info.branch2.map)}
                                         icon2={faEnvelope}
                                         className={
-                                            map === map2
+                                            map === info.branch2.map
                                                 ? "border md:border-2 border-solid border-black"
                                                 : ""
                                         }
                                     />
                                     <a
                                         className="flex bg-[--color3-bg] h-14 items-center justify-center rounded-full shadow-xl px-5 font-title text-center"
-                                        href="tel:+1 (800) 838-8186"
+                                        href={"tel:" + info.phone}
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        +1 (800) 838-8186
+                                        {info.phone}
                                     </a>
                                 </div>
                             </div>
