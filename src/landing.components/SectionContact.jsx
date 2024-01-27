@@ -23,7 +23,7 @@ export default function SectionContact() {
                 </div>
             </div>
             <div className="flex-1 flex w-full justify-center">
-                <div className="flex flex-col w-[600px] lg:w-full px-8 py-5 gap-3 rounded-lg bg-[#171640]">
+                <div className="flex flex-col w-[600px]  lg:w-full px-8 py-5 gap-3 rounded-lg bg-[#171640]">
                     <h3 className=" text-xl pb-1 pl-3 text-[var(--color1-txt1)]">
                         Send us a message
                     </h3>

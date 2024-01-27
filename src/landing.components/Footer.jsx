@@ -1,112 +1,59 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import socials from "./../mooks/social.json";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
-import Button from "./Button";
-import SocialItem from "./SocialItem";
 
-export default function Footer({ withOutMarginTop = [] }) {
-    const { pathname } = useLocation();
-    const isMartinTopIn = withOutMarginTop.find((path) => path.includes(pathname)) ? false : true;
+export default function Footer() {
     return (
-        <>
-            <footer
-                className={
-                    "--color2-bg p-[var(--padding)] relative pt-32 " +
-                    (isMartinTopIn ? "mt-36" : "mt-0")
-                }
-            >
-                <div className=" container ">
-                    <section
-                        className="w-full h-auto p-5  pb-12 lg:p-12 absolute left-0 font-bold"
-                        style={{ bottom: "calc(100% - 150px)" }}
-                    >
-                        <div className="container flex flex-col --color3-bg  items-center content-center h-auto p-5 lg:p-12 lg:gap-10 rounded-md shadow-[0_-35px_60px_-15px_rgba(0,0,0,0.2)] lg:flex-row text-center lg:text-left">
-                            <div className="flex flex-col  w-full h-full p-5">
-                                <h3 className="text-sm lg:text-md">NEED ANY HELP</h3>
-                                <p className="text-md lg:text-2xl ">
-                                    Let’s book your Appointment with Us now
-                                </p>
-                            </div>
-                            <Button
-                                to="/"
-                                type="2"
-                                style="2"
-                                className="flex justify-center items-center gap-1"
-                            >
-                                <span className="text-nowrap">CONTACT US</span>
-                                <ArrowRightIcon className="w-3" />
-                            </Button>
-                        </div>
-                    </section>
-
-                    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
-                        <div className=" flex flex-col ">
-                            <a href="#">
-                                <img src="/img/logo.png" />
-                            </a>
-                            <p className="flex  text-sm opacity-75 --color2-txt">
-                                Your trusted roofing and construction experts in Fairfield County.
-                                Serving Stamford, Bridgeport, Norwalk, and surrounding areas. © 2023
-                                All rights reserved.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2  ">
-                            <h3 className="text-xl font-title2 --color2-txt1">Social Networks</h3>
-                            <div className="flex flex-col gap-1 text-sm opacity-75 --color2-txt">
-                                {socials.map((social) => (
-                                    <SocialItem key={social.id} type="2" {...social} />
-                                ))}
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-2 ">
-                            <h3 className="text-xl font-title2 --color2-txt1">Services</h3>
-                            <div className="flex flex-col gap-1 text-sm opacity-75 --color2-txt">
-                                <Link className="hover:underline" to="/">
-                                    Reclamos de Seguro
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Techumbre
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Vía Muerta
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Canal
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Carpintería
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Pintar
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-2 ">
-                            <h3 className="text-xl font-title2 --color2-txt1">Services</h3>
-                            <div className="flex flex-col gap-1 text-sm  opacity-75 --color2-txt">
-                                <Link className="hover:underline" to="/">
-                                    Reclamos de Seguro
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Techumbre
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Vía Muerta
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Canal
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Carpintería
-                                </Link>
-                                <Link className="hover:underline" to="/">
-                                    Pintar
-                                </Link>
-                            </div>
-                        </div>
-                    </section>
+        <footer className="bg-[--color2-bg] px-[var(--padding)]">
+            <div className="container text-[--color2-txt] font-title2">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start px-5 py-8 gap-5  border-b-[1px] border-gray-500">
+                    <span className="opacity-70">Follow us </span>
+                    <div className="flex gap-3 text-sm opacity-75 --color2-txt">
+                        {socials.map((social) => (
+                            <SocialItem key={social.id} type="2" {...social} />
+                        ))}
+                    </div>
                 </div>
-            </footer>
-        </>
+                <div className="flex flex-col lg:flex-row items-center gap-7 lg:gap-5 px-5 py-8">
+                    <div className="w-28">
+                        <img
+                            src="/img/logo.png"
+                            alt="logo"
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-5 text-center">
+                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                            Financing
+                        </Link>
+                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                            Gallery
+                        </Link>
+                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                            Contac us
+                        </Link>
+                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                            About us
+                        </Link>
+                    </div>
+                    <div className="mx-auto lg:ml-auto opacity-70">
+                        <select className="text-black cursor-pointer rounded-sm">
+                            <option value="en">English - United States</option>
+                            <option value="es">Español - España</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
+
+function SocialItem({ url, icon }) {
+    return (
+        <a href={url} target="_blank" rel="noreferrer">
+            <div
+                dangerouslySetInnerHTML={{ __html: icon }}
+                className="icon w-5 aspect-square fill-white"
+            />
+        </a>
     );
 }

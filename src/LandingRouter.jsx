@@ -28,6 +28,8 @@ export default function LandingRouter() {
                         "/services/carpentry",
                         "/financing",
                         "/contact-us",
+                        "/gallery",
+                        "/about-us",
                     ]}
                 />
                 <div className="min-h-[var(--heigh-not-header)]">

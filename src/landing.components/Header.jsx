@@ -64,7 +64,7 @@ export default function Header({ withSliderIn = [] }) {
                     </div>
                     <div className="flex justify-center items-center">
                         <Link
-                            to="/contactus"
+                            to="/contact-us"
                             className="flex justify-center items-center px-4 py-2 md:py-3 rounded-full font-title2 bg-[#ff8609] text-white md:text-xl text-nowrap text-ellipsis"
                         >
                             Free Estimate
