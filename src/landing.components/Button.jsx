@@ -12,10 +12,10 @@ export default function Button({ children = false, text = "", style = 1, type = 
             "landing-button-component py-3 px-6 font-bold  shadow-[0_3px_15px_2px_var(--color2-bg1)] text-[var(--color2-bg)]  rounded-full opacity-80 hover:bg-[var(--color2-bg)] hover:text-[var(--color2-txt)] hover:fill-[var(--color2-txt)] hover:opacity-100 transition-all duration-300 ";
     } else if (style == 3) {
         classStyle =
-            "flex justify-center px-10 py-3 bg-[var(--color2-bg)] text-[var(--color2-txt)] text-md font-content font-bold tracking-widest rounded-full transition-all duration-300 gap-1 hover:gap-3 hover:scale-105";
+            "flex justify-center items-center px-10 py-3 bg-[var(--color2-bg)] text-[var(--color2-txt)] text-md font-content font-bold tracking-widest rounded-full transition-all duration-300 gap-1 hover:gap-3 hover:scale-105";
     } else if (style == 4) {
         classStyle =
-            "flex justify-center px-10 py-3 bg-[var(--color3-bg)] text-[var(--color3-txt)] text-md font-content font-bold tracking-widest rounded-full transition-all duration-300 gap-1 hover:gap-3 hover:scale-105";
+            "flex justify-center items-center px-10 py-3 bg-[var(--color3-bg)] text-[var(--color3-txt)] text-md font-content font-bold tracking-widest rounded-full transition-all duration-300 gap-1 hover:gap-3 hover:scale-105";
     } else if (style == 5) {
         classStyle =
             "landing-button-component px-5 py-1 font-bold  shadow-[0_3px_15px_2px_var(--color2-bg1)] text-[var(--color2-bg)]  rounded-md  hover:bg-[var(--color2-bg)] hover:text-[var(--color2-txt)] hover:fill-[var(--color2-txt)] hover:opacity-100 transition-all duration-300 ";

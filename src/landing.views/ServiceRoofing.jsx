@@ -34,7 +34,7 @@ export default function ServiceRoofing() {
 
             <section className="relative">
                 <div className="absolute inset-0 -z-1 flex flex-col">
-                    <div className="relative h-[750px]">
+                    <div className="relative h-[650px] sm:h-[750px]">
                         <img
                             src="/image/4 Servicios Roofing - 1 Banner.jpg"
                             className="w-full h-full object-cover"
@@ -60,7 +60,7 @@ export default function ServiceRoofing() {
                 <div className="container relative z-10 py-10 font-title2">
                     <div className=" flex flex-col w-full gap-14  items-center overflow-hidden rounded-md">
                         <h3
-                            className="text-4xl p-10 text-[--color1-txt1]"
+                            className="text-4xl p-10 text-[--color1-txt1] text-center"
                             style={{ textShadow: "0 0 10px #000" }}
                         >
                             PROJECT CHALLENGES IN ROOFING
@@ -96,7 +96,7 @@ export default function ServiceRoofing() {
                     </div>
                 </div>
                 <div className="container relative z-10 font-title2 p-[--padding]">
-                    <div className="flex w-full pt-72 ">
+                    <div className="flex w-full pt-52 sm:pt-72 ">
                         <div className="grid w-full gap-5 grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-2 ">
                             <div className="flex flex-col w-full items-center gap-3">
                                 <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
@@ -106,7 +106,7 @@ export default function ServiceRoofing() {
                                         className="w-full h-full [&:hover>img]:scale-110"
                                     />
                                 </div>
-                                <span className="text-lg">
+                                <span className="text-lg font-content">
                                     Project done for a family somew here in New Haven
                                 </span>
                             </div>
@@ -118,7 +118,7 @@ export default function ServiceRoofing() {
                                         className="w-full h-full [&:hover>img]:scale-110"
                                     />
                                 </div>
-                                <span className="text-lg">
+                                <span className="text-lg font-content">
                                     Project done for a family somew here in New Haven
                                 </span>
                             </div>
@@ -126,11 +126,11 @@ export default function ServiceRoofing() {
                     </div>
                 </div>
             </section>
-            <section className="relative bg-[#0b0c1e] pt-60 pb-20">
-                <div className="h-20">
+            <section className="relative bg-[#0b0c1e] md:pt-20 lg:pt-44 pb-20">
+                <div className="h-20 ">
                     <svg
                         viewBox="0 0 1440 320"
-                        className="absolute left-0 right-0 -top-0 fill-[#fc8811] bg-[#0b0c1e]"
+                        className="absolute left-0 right-0 -top-0 fill-[#fc8811] bg-[#0b0c1e]  "
                     >
                         <path d="M0,320L40,298.7C80,277,160,235,240,234.7C320,235,400,277,480,266.7C560,256,640,192,720,144C800,96,880,64,960,58.7C1040,53,1120,75,1200,96C1280,117,1360,139,1400,149.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
                     </svg>

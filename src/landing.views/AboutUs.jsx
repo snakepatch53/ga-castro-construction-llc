@@ -73,8 +73,8 @@ export default function AboutUs() {
             </section>
             <section className="relative p-[--pading]">
                 <div className="md:absolute w-full">
-                    <div className="container flex flex-col md:flex-row font-title gap-10 lg:gap-32 justify-center items-center">
-                        <div className="max-w-96 h-full flex border-solid border-4 border-[--color1-bg] rounded-md">
+                    <div className="relative z-10 container flex flex-col md:flex-row font-title gap-10 lg:gap-32 justify-center items-center">
+                        <div className="max-w-96 w-full  h-full flex border-solid border-4 border-[--color1-bg] rounded-md">
                             <img src="./team/2.jpg" alt="" />
                         </div>
                         <div className="flex flex-col gap-10">
@@ -99,10 +99,10 @@ export default function AboutUs() {
             </section>
             <section>
                 <div className="md:mt-24 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
-                    <svg viewBox="0 0 1440 220">
+                    <svg viewBox="0 0 1440 220" className="translate-y-1">
                         <path d="M0,192L48,186.7C96,181,192,171,288,165.3C384,160,480,160,576,154.7C672,149,768,139,864,138.7C960,139,1056,149,1152,144C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
-                    <div className="bg-[var(--color2-bg)] px-5 md:pt-48">
+                    <div className="bg-[var(--color2-bg)] p-5 md:pt-48">
                         <div className="container flex flex-col justify-center gap-5">
                             <div>
                                 <Swiper
@@ -134,7 +134,7 @@ export default function AboutUs() {
                             </Button>
                         </div>
                     </div>
-                    <svg viewBox="0 0 1440 320">
+                    <svg viewBox="0 0 1440 320" className="-translate-y-1">
                         <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
                     </svg>
                 </div>

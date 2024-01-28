@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import Button from "../landing.components/Button";
@@ -8,6 +9,8 @@ import images from "../mooks/gallery.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
+import info from "../mooks/info.json";
+
 export default function Gallery() {
     const [filter, setFilter] = useState("all");
     const [filterImages, setFilterImages] = useState([]);
@@ -16,7 +19,7 @@ export default function Gallery() {
         else setFilterImages(images.filter((img) => img.tags.includes(filter)));
     }, [filter]);
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
@@ -28,7 +31,17 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-transparent" />
 
                 <div className="relative z-10 container flex flex-col w-full  py-40 items-center gap-20">
-                    <h3 className="font-title text-white text-9xl">GALLERY</h3>
+                    {/* <h3 className="font-title text-white text-9xl">GALLERY</h3> */}
+                    <div className="flex gap-1 sm:gap-5">
+                        {info.gallery.title.map((letter, index) => (
+                            <Letter
+                                key={letter.id}
+                                src={letter.src}
+                                letter={letter.letter}
+                                delay={index / 2}
+                            />
+                        ))}
+                    </div>
                     <div className="flex  w-full justify-center ">
                         <Button
                             href="#photos"
@@ -41,9 +54,10 @@ export default function Gallery() {
                     </div>
                 </div>
             </section>
+
             <section className=" p-[--padding]">
                 <div className="container ">
-                    <div className="sticky top-0 z-50 grid grid-cols-3 sm:flex sm:flex-row w-full justify-center gap-5 sm:gap-2 lg:gap-10 bg-white py-4">
+                    <div className="sticky top-0 z-50 grid grid-cols-3 place-items-center sm:flex sm:flex-row w-full justify-center gap-2 lg:gap-10 bg-white py-4">
                         <ItemButton
                             text="All"
                             value="all"
@@ -100,6 +114,7 @@ export default function Gallery() {
                     </div>
                 </div>
             </section>
+
             <section className="p-[--padding]">
                 <div className="container flex flex-col items-center">
                     <div className="flex flex-col items-center gap-10">
@@ -112,7 +127,7 @@ export default function Gallery() {
                             and see the process.
                         </p>
                     </div>
-                    <div className="flex flex-col md:flex-row py-20 gap-2 lg:gap-10">
+                    <div className="flex flex-col md:flex-row py-20 gap-5 lg:gap-10">
                         <Item
                             title="Roofing"
                             subtitle="Av.Calle 1 y calle 3"
@@ -137,12 +152,41 @@ export default function Gallery() {
                     </div>
                 </div>
             </section>
+
             <section className="p-[--padding]">
                 <div className="container w-full">
                     <SectionContact />
                 </div>
             </section>
         </AnimatedElement>
+    );
+}
+
+function Letter({ letter, src = "", delay = 0.5 }) {
+    return (
+        <>
+            <motion.h1
+                initial={{
+                    opacity: 0,
+                    y: (window.innerHeight / 2) * -1,
+                }}
+                animate={{
+                    opacity: 1,
+                    y: 0,
+                }}
+                transition={{
+                    delay,
+                    duration: 1,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                }}
+                className="font-title3 text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] bg-clip-text text-transparent bg-cover bg-center"
+                style={{ backgroundImage: `url(${src})` }}
+            >
+                {letter}
+            </motion.h1>
+        </>
     );
 }
 

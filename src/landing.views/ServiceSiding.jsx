@@ -13,29 +13,29 @@ export default function ServiceSiding() {
     }, []);
     return (
         <AnimatedElement>
-            <section className="relative shadow-xl font-title">
+            <section className="relative shadow-xl font-title p-[--padding]">
                 <div className="absolute flex inset-0 -z-1 ">
                     <img src="/image/siding-banner.jpg" className="w-full h-full object-cover" />
                 </div>
-                <div className="container relative z-10 py-28 px-10">
+                <div className="container relative z-10 py-16 md:py-28 md:px-10">
                     <div
-                        className="flex flex-col py-10 text-5xl gap-24 "
+                        className="flex flex-col py-10 text-4xl sm:text-5xl gap-20 sm:gap-24 "
                         style={{ "--textShadow": "-10px 8px 25px #000" }}
                     >
                         <span
-                            className="w-full  text-start"
+                            className="w-full text-center md:text-start"
                             style={{ textShadow: "var(--textShadow)" }}
                         >
                             Update Your Life
                         </span>
                         <span
-                            className="w-full  text-center"
+                            className="w-full text-center md:text-center"
                             style={{ textShadow: "var(--textShadow)" }}
                         >
                             Transform Your Space
                         </span>
                         <span
-                            className="w-full  text-end"
+                            className="w-full text-center md:text-end"
                             style={{ textShadow: "var(--textShadow)" }}
                         >
                             Renew Your Style
@@ -49,7 +49,7 @@ export default function ServiceSiding() {
                         <path d="M0,224L48,234.7C96,245,192,267,288,266.7C384,267,480,245,576,245.3C672,245,768,267,864,266.7C960,267,1056,245,1152,202.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                 </div>
-                <div className="container relative z-10 flex flex-col w-full px-[--padding] py-20 gap-5 justify-center items-center">
+                <div className="container relative z-10 flex flex-col w-full p-[--padding] sm:py-20 gap-5 justify-center items-center">
                     <p className="text-3xl sm:text-5xl text-center font-title max-w-[700px]">
                         We have expert staff in remodeling and changing siding both outdoors and
                         indoors.

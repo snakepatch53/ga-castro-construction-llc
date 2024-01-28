@@ -21,10 +21,10 @@ export default function ContactUs() {
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
                     <div className="relative flex flex-row items-center rounded-tr-3xl rounded-bl-3xl border-solid border-4 gap-2 p-3">
                         <FontAwesomeIcon
-                            className="text-3xl sm:text-4xl text-[--color2-txt]"
+                            className="text-2xl sm:text-4xl text-[--color2-txt]"
                             icon={faMagnifyingGlass}
                         />
-                        <h1 className=" text-3xl  sm:text-5xl font-title text-[--color2-txt]">
+                        <h1 className=" text-2xl  sm:text-5xl font-title text-[--color2-txt]">
                             Contact us
                         </h1>
                         <FontAwesomeIcon
@@ -54,7 +54,7 @@ export default function ContactUs() {
                     <MapaItem />
                 </div>
             </section>
-            <section>
+            <section className="pb-20">
                 <div className="flex container pt-0 p-[--padding] justify-center md:-translate-y-20">
                     <form className=" flex flex-col w-full max-w-[900px] h-full p-5 md:p-10 lg:px-20 py-10 font-title2 items-center bg-[#cdd1dd]  gap-5 rounded-3xl shadow-2xl">
                         <h3 className="font-title text-4xl mb-5 text-center">

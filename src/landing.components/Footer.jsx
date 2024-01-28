@@ -14,28 +14,28 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row items-center gap-7 lg:gap-5 px-5 py-8">
-                    <div className="w-28">
+                    <Link to="/" className="w-28">
                         <img
                             src="/img/logo.png"
                             alt="logo"
                             className="w-full h-full object-contain"
                         />
-                    </div>
+                    </Link>
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-5 text-center">
-                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                        <Link className="hover:underline opacity-70" to="/financing">
                             Financing
                         </Link>
-                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                        <Link className="hover:underline opacity-70" to="/gallery">
                             Gallery
                         </Link>
-                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                        <Link className="hover:underline opacity-70" to="/contact-us">
                             Contac us
                         </Link>
-                        <Link className="hover:underline opacity-70" to="/services/roofing">
+                        <Link className="hover:underline opacity-70" to="/about-us">
                             About us
                         </Link>
                     </div>
-                    <div className="mx-auto lg:ml-auto opacity-70">
+                    <div className="mx-auto lg:ml-auto lg:mx-0 opacity-70">
                         <select className="text-black cursor-pointer rounded-sm">
                             <option value="en">English - United States</option>
                             <option value="es">Español - España</option>

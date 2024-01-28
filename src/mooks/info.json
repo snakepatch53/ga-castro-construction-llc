@@ -22,5 +22,44 @@
             "subtitle": "Just a sample of our changees"
         },
         "section2": {}
+    },
+    "gallery": {
+        "title": [
+            {
+                "id": 1,
+                "src": "./gallery_title/1.jpg",
+                "letter": "G"
+            },
+            {
+                "id": 2,
+                "src": "./gallery_title/2.jpg",
+                "letter": "A"
+            },
+            {
+                "id": 3,
+                "src": "./gallery_title/3.jpg",
+                "letter": "L"
+            },
+            {
+                "id": 4,
+                "src": "./gallery_title/4.jpg",
+                "letter": "L"
+            },
+            {
+                "id": 5,
+                "src": "./gallery_title/5.jpg",
+                "letter": "E"
+            },
+            {
+                "id": 6,
+                "src": "./gallery_title/6.jpg",
+                "letter": "R"
+            },
+            {
+                "id": 7,
+                "src": "./gallery_title/7.jpg",
+                "letter": "Y"
+            }
+        ]
     }
 }

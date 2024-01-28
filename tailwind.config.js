@@ -7,6 +7,7 @@ export default {
                 link: ["link", "sans-serif"],
                 title: ["title", "sans-serif"],
                 title2: ["title2", "sans-serif"],
+                title3: ["title3", "sans-serif"],
                 content: ["content", "sans-serif"],
             },
         },

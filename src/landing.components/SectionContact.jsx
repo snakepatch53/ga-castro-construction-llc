@@ -6,7 +6,7 @@ import socials from "./../mooks/social.json";
 
 export default function SectionContact() {
     return (
-        <div className="flex flex-col items-center w-full gap-5 lg:flex-row font-title2">
+        <div className="flex flex-col sm:p-[--padding] items-center w-full gap-5 lg:flex-row font-title2">
             <div className="flex-1 flex flex-col gap-10 items-center justify-center bg">
                 <h3 className="text-3xl ">Contact Us</h3>
                 <div className="px-5 sm:px-10">
@@ -22,9 +22,9 @@ export default function SectionContact() {
                     </Button>
                 </div>
             </div>
-            <div className="flex-1 flex w-full justify-center">
+            <div className="flex-1 flex w-full justify-center pb-20">
                 <div className="flex flex-col w-[600px]  lg:w-full px-8 py-5 gap-3 rounded-lg bg-[#171640]">
-                    <h3 className=" text-xl pb-1 pl-3 text-[var(--color1-txt1)]">
+                    <h3 className=" text-xl pb-1 sm:pl-3 text-center sm:text-start text-[var(--color1-txt1)]">
                         Send us a message
                     </h3>
                     <Input placeholder="Your name" />
@@ -51,7 +51,7 @@ export default function SectionContact() {
 }
 
 function Input({ type = "text", placeholder, className = "" }) {
-    const classNameInput = "py-2 px-4 rounded-md " + className;
+    const classNameInput = "py-2 px-4 rounded-md w-full" + className;
     if (type != "textarea")
         return <input type={type} placeholder={placeholder} className={classNameInput} />;
     return <textarea placeholder={placeholder} className={classNameInput} />;

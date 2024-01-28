@@ -19,7 +19,7 @@ import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <>
@@ -33,11 +33,11 @@ export default function Home() {
                             <div className="flex flex-col w-full h-full justify-center items-center gap-8">
                                 <div className="flex flex-col gap-8 max-w-72 ">
                                     <div className="flex flex-col gap-3 pl-2">
-                                        <h3 className="font-title text-5xl">
+                                        <h3 className="font-title text-5xl sm:text-6xl">
                                             Be the{" "}
                                             <span className="text-[--color2-txt1]">Difference</span>
                                         </h3>
-                                        <p className="font-title text-3xl">
+                                        <p className="font-title text-3xl sm:text-4xl">
                                             Just a sample of our changees
                                         </p>
                                     </div>
@@ -46,7 +46,7 @@ export default function Home() {
                                             to="/about-us"
                                             style="3"
                                             type="2"
-                                            className="mt-2 mr-auto font-title2 px-5  items-center text-xl"
+                                            className="mt-2 mr-auto font-title2 px-5  items-center text-xl text-balance"
                                         >
                                             <span>Let&apos;s go for more</span>{" "}
                                             <FontAwesomeIcon icon={faRightLong} />
@@ -63,7 +63,7 @@ export default function Home() {
                                     />
                                 </div>
                                 <div className="flex w-full">
-                                    <span className="w-full text-end">
+                                    <span className="w-full text-end font-content">
                                         Project done for family somewhere in New Haven
                                     </span>
                                 </div>
@@ -94,11 +94,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="mt-24 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
-                    <svg viewBox="0 0 1440 220">
+                <div className="flex flex-col mt-24 sm:mt-5 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
+                    <svg viewBox="0 0 1440 220" className="">
                         <path d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,144C800,160,880,224,960,218.7C1040,213,1120,139,1200,90.7C1280,43,1360,21,1400,10.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
                     </svg>
-                    <div className="bg-[var(--color2-bg)] px-5">
+                    <div className="bg-[var(--color2-bg)] p-5">
                         <div className="container flex flex-col justify-center gap-5">
                             <h2 className="text-3xl text-center font-title2">Our Team</h2>
                             <p className="text-center text-sm font-content opacity-90 tracking-wide text-[var(--color2-txt)]">
@@ -134,7 +134,7 @@ export default function Home() {
                             </Button>
                         </div>
                     </div>
-                    <svg viewBox="0 0 1440 320">
+                    <svg viewBox="0 0 1440 320" className="-translate-y-1">
                         <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
                     </svg>
                 </div>

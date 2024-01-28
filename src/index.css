@@ -54,6 +54,11 @@
 }
 
 @font-face {
+    src: url("./assets/fonts/poppins/Poppins-Black.ttf");
+    font-family: title3;
+}
+
+@font-face {
     src: url("./assets/fonts/poppins/Poppins-Light.ttf");
     font-family: content;
 }

@@ -22,14 +22,14 @@ export default function ServiceInsuranceClaims() {
                     />
                 </div>
             </section>
-            <section className="relative">
+            <section className="relative p-[--padding]">
                 <img
                     className="absolute inset-0 w-full h-full object-cover"
                     src="/image/insurance-claims-2.jpg"
                 />
                 <div className="absolute inset-0 backdrop-blur-sm" />
-                <div className="container relative flex w-full min-h-96 py-48 items-center overflow-hidden rounded-md">
-                    <div className="flex items-center px-5 py-10 gap-2 mx-10 sm:mx-20 md:mx-40  rounded-2xl bg-[#ff7c00]/60 text-[var(--color1-txt1)] shadow-xl ">
+                <div className="container relative flex w-full min-h-96 py-20 sm:py-48 items-center overflow-hidden rounded-md">
+                    <div className="flex items-center px-2 py-10 gap-2  sm:mx-20 md:mx-40  rounded-2xl bg-[#ff7c00]/60 text-[var(--color1-txt1)] shadow-xl ">
                         <button className="text-xl cursor-pointer">
                             <FontAwesomeIcon icon={faAngleLeft} className="text-[2.5rem]" />
                         </button>

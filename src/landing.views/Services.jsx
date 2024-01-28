@@ -34,7 +34,7 @@ export default function Services() {
                     </div>
                 </div>
                 <div className="container flex flex-col items-center">
-                    <div className="w-full mt-10">
+                    <div className="w-full my-10">
                         <OurServices />
                     </div>
                 </div>

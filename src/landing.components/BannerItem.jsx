@@ -16,11 +16,11 @@ export default function BannerItem({
     titleClassName = "",
 }) {
     return (
-        <div className="flex flex-col px-10 sm:px-20 pt-16">
+        <div className="flex flex-col p-[--padding] sm:px-20 pt-16">
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">
-                        <h3 className={"text-4xl sm:text-6xl text-balance " + titleClassName}>
+                        <h3 className={"text-5xl sm:text-6xl text-balance " + titleClassName}>
                             {title}{" "}
                             <span
                                 className="text-[var(--color3-txt1)]"
@@ -29,7 +29,7 @@ export default function BannerItem({
                                 {title2}
                             </span>
                         </h3>
-                        <span className="text-2xl sm:text-4xl ">{subtitle}</span>
+                        <span className="text-3xl sm:text-4xl ">{subtitle}</span>
                     </div>
                     {showButton && (
                         <Button

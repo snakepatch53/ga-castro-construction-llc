@@ -23,10 +23,10 @@ export default function Financing() {
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
                     <div className="relative flex flex-row items-center  rounded-tr-3xl rounded-bl-3xl border-solid border-4 gap-5 px-5 py-3">
                         <FontAwesomeIcon
-                            className="text-3xl sm:text-4xl text-[--color2-txt]"
+                            className="text-2xl sm:text-4xl text-[--color2-txt]"
                             icon={faMagnifyingGlass}
                         />
-                        <h1 className="text-3xl  sm:text-5xl font-title text-[--color2-txt]">
+                        <h1 className="text-2xl  sm:text-5xl font-title text-[--color2-txt]">
                             FINANCING
                         </h1>
                         <FontAwesomeIcon
