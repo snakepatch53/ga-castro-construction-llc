@@ -32,7 +32,7 @@ export default function Gallery() {
 
                 <div className="relative z-10 container flex flex-col w-full  py-40 items-center gap-20">
                     {/* <h3 className="font-title text-white text-9xl">GALLERY</h3> */}
-                    <div className="flex gap-1 sm:gap-5">
+                    <h2 className="text-nowrap overflow-hidden">
                         {info.gallery.title.map((letter, index) => (
                             <Letter
                                 key={letter.id}
@@ -41,7 +41,7 @@ export default function Gallery() {
                                 delay={index / 2}
                             />
                         ))}
-                    </div>
+                    </h2>
                     <div className="flex  w-full justify-center ">
                         <Button
                             href="#photos"
@@ -165,7 +165,7 @@ export default function Gallery() {
 function Letter({ letter, src = "", delay = 0.5 }) {
     return (
         <>
-            <motion.h1
+            <motion.b
                 initial={{
                     opacity: 0,
                     y: (window.innerHeight / 2) * -1,
@@ -181,11 +181,11 @@ function Letter({ letter, src = "", delay = 0.5 }) {
                     stiffness: 100,
                     damping: 10,
                 }}
-                className="font-title3 text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] bg-clip-text text-transparent bg-cover bg-center"
+                className="font-title3 text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] bg-clip-text text-transparent bg-cover bg-center mx-0 sm:mx-2"
                 style={{ backgroundImage: `url(${src})` }}
             >
                 {letter}
-            </motion.h1>
+            </motion.b>
         </>
     );
 }
