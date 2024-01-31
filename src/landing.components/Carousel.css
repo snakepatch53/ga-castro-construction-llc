@@ -19,6 +19,7 @@
     --height: 300px;
     --margin: 20px;
     --left: 50%;
+    --right: 10px;
     width: var(--width);
     height: var(--height);
     background-position: 50% 50%;
@@ -27,16 +28,25 @@
     background-size: cover;
     position: absolute;
     z-index: 1;
-    top: 50%;
-    transform: translate(0, -50%);
+    bottom: 10px;
     border-radius: 20px;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.carousel-component .item:nth-child(n + 3) .filter-efect {
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.carousel-component .item:nth-child(n + 3) {
+    cursor: pointer;
 }
 
 /* .item:nth-child(1), */
 .carousel-component .item:nth-child(2) {
     left: 0;
-    top: 0;
+    bottom: 0;
     transform: translate(0, 0);
     border-radius: 0;
     width: 100%;
@@ -45,19 +55,19 @@
 }
 
 .carousel-component .item:nth-child(3) {
-    left: var(--left);
+    left: calc(100vw - ((var(--width) + var(--margin)) * 3) - var(--right));
 }
 
 .carousel-component .item:nth-child(4) {
-    left: calc(var(--left) + var(--width) + var(--margin));
+    left: calc(100vw - ((var(--width) + var(--margin)) * 2) - var(--right));
 }
 
 .carousel-component .item:nth-child(5) {
-    left: calc(var(--left) + (var(--width) * 2) + (var(--margin) * 2));
+    left: calc(100vw - ((var(--width) + var(--margin)) * 1) - var(--right));
 }
 
 .carousel-component .item:nth-child(n + 6) {
-    left: calc(var(--left) + (var(--width) * 3) + (var(--margin) * 3));
+    left: calc(100vw + ((var(--width) + var(--margin)) * 1) + var(--right));
     opacity: 0;
 }
 
@@ -161,11 +171,23 @@
         --height: 200px;
         --margin: 20px;
         --left: 30px;
-        transform: none;
+    }
 
-        top: unset;
-        transform: unset;
-        bottom: 50px;
+    .carousel-component .item:nth-child(3) {
+        left: var(--left);
+    }
+
+    .carousel-component .item:nth-child(4) {
+        left: calc(var(--left) + var(--width) + var(--margin));
+    }
+
+    .carousel-component .item:nth-child(5) {
+        left: calc(var(--left) + (var(--width) * 2) + (var(--margin) * 2));
+    }
+
+    .carousel-component .item:nth-child(n + 6) {
+        left: calc(var(--left) + (var(--width) * 3) + (var(--margin) * 3));
+        opacity: 0;
     }
 
     .carousel-component .item .content {

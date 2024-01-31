@@ -19,6 +19,16 @@ export default function Carousel({ data, autoPlay = true, delay = 5000, directio
         if (items.length > 0) slideRef.current.prepend(items[items.length - 1]);
     };
 
+    const handleClickItem = (index) => {
+        return () => {
+            let item_selected = slideRef.current.querySelector("#img-slider" + index);
+            let item_before = slideRef.current.querySelectorAll(".item")[1];
+            if (item_selected) {
+                slideRef.current.insertBefore(item_selected, item_before);
+            }
+        };
+    };
+
     useEffect(() => {
         const intervalFunction = async () => {
             if (direction == "left") handleClickPrev();
@@ -37,15 +47,17 @@ export default function Carousel({ data, autoPlay = true, delay = 5000, directio
         <div className="w-full h-full">
             <div className="relative w-full h-full overflow-hidden">
                 <div className="carousel-component">
-                    <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
+                    <div className="loadbar" style={{ width: `${loadingProgress}%` }} />
                     <div id="slide" ref={slideRef}>
-                        {data.map((item) => (
+                        {data.map((item, index) => (
                             <div
                                 key={item.title}
                                 className="item overflow-hidden"
                                 style={{ backgroundImage: `url(${item.image})` }}
+                                onClick={handleClickItem(index)}
+                                id={"img-slider" + index}
                             >
-                                <div className="relative w-full h-full bg-gradient-to-b from-black to-transparent"></div>
+                                <div className="filter-efect relative w-full h-full bg-gradient-to-b from-black to-transparent" />
                                 <div className="content">
                                     <div className="name">{item.title}</div>
                                     <div className="des">{item.description}</div>

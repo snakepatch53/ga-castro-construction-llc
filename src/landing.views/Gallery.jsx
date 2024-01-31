@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import SectionContact from "../landing.components/SectionContact";
 import GallerySection from "../landing.components/GallerySection";
 import images from "../mooks/gallery.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 import info from "../mooks/info.json";
 
@@ -32,7 +30,7 @@ export default function Gallery() {
 
                 <div className="relative z-10 container flex flex-col w-full  py-40 items-center gap-20">
                     {/* <h3 className="font-title text-white text-9xl">GALLERY</h3> */}
-                    <h2 className="text-nowrap overflow-hidden">
+                    <h2 className="flex text-nowrap">
                         {info.gallery.title.map((letter, index) => (
                             <Letter
                                 key={letter.id}
@@ -57,7 +55,7 @@ export default function Gallery() {
 
             <section className=" p-[--padding]">
                 <div className="container ">
-                    <div className="sticky top-0 z-50 grid grid-cols-3 place-items-center sm:flex sm:flex-row w-full justify-center gap-2 lg:gap-10 bg-white py-4">
+                    <div className="grid grid-cols-3 place-items-center sm:flex sm:flex-row w-full justify-center gap-2 lg:gap-10 bg-white py-4">
                         <ItemButton
                             text="All"
                             value="all"
@@ -94,20 +92,6 @@ export default function Gallery() {
                             valueSelected={filter}
                             onClick={setFilter}
                         />
-                        <div className="relative flex flex-col opacity-80">
-                            <a
-                                href="/gallery#header"
-                                className="flex flex-col justify-center items-center w-10 aspect-square rounded-full border border-solid border-white animate-bounce bg-[--color2-bg]"
-                            >
-                                <FontAwesomeIcon
-                                    icon={faChevronUp}
-                                    className="text-[--color2-txt]"
-                                />
-                            </a>
-                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 flex text-nowrap text-[10px] text-center leading-[0]">
-                                GO UP
-                            </span>
-                        </div>
                     </div>
                     <div className="flex py-9" id="photos">
                         <GallerySection images={filterImages || images} />

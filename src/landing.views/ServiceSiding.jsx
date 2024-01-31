@@ -9,7 +9,7 @@ import GoogleItems from "../landing.components/GoogleItems";
 
 export default function ServiceSiding() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
@@ -89,10 +89,8 @@ export default function ServiceSiding() {
                     </svg>
                 </div>
             </section>
-            <section className="relative bg-[#0b0c1e] ">
-                <div className="container">
-                    <GoogleItems />
-                </div>
+            <section className="bg-[#0b0c1e] ">
+                <GoogleItems />
             </section>
 
             <section>

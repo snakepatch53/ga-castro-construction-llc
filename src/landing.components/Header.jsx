@@ -103,7 +103,7 @@ function Option({ children, name, to, ...props }) {
             <Link
                 to={to}
                 className={`flex gap-1 text-md transition-all px-3 rounded-full duration-200 hover:opacity-100 text-nowrap justify-center items-center ${
-                    isLocation ? "opacity-100 bg-[#ef8f17]" : "opacity-60"
+                    isLocation ? "opacity-100 bg-[#ef8f17]" : "opacity-90"
                 }`}
             >
                 {name}

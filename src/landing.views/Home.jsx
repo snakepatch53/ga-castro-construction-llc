@@ -1,11 +1,9 @@
 import AnimatedElement from "../components/AnimatedElement";
 import Carousel from "../landing.components/Carousel";
-import SocialItem from "../landing.components/SocialItem";
 import TeamItemCard from "../landing.components/TeamItemCard";
 
 import slides from "./../mooks/slider.json";
 import teams from "./../mooks/team.json";
-import socials from "./../mooks/social.json";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -16,6 +14,7 @@ import Button from "../landing.components/Button";
 import ReactCompareImage from "react-compare-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import SectionContact from "../landing.components/SectionContact";
 
 export default function Home() {
     useEffect(() => {
@@ -139,17 +138,11 @@ export default function Home() {
                     </svg>
                 </div>
 
-                <div className="px-5 sm:px-10 mb-56 flex flex-col">
-                    <h2 className="mb-10 text-3xl text-center font-title2">Contact Us</h2>
-                    <div className="container flex justify-center gap-5">
-                        {socials.map(({ ...social }) => (
-                            <SocialItem key={social.id} type="3" {...social} />
-                        ))}
+                <section className="px-[var(--padding)]">
+                    <div className="container w-full">
+                        <SectionContact />
                     </div>
-                    <Button to="/contact-us" style="3" type="2" className="mt-10 mx-auto">
-                        <span>Do you need more info?</span> <span>&rarr;</span>
-                    </Button>
-                </div>
+                </section>
             </AnimatedElement>
         </>
     );
