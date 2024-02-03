@@ -16,15 +16,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import SectionContact from "../landing.components/SectionContact";
 
-export default function Home() {
+export default function Home({ info }) {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <>
             <AnimatedElement>
                 <div className="w-full h-screen">
-                    <Carousel data={slides} withSlider={true} />
+                    <Carousel info={info} data={slides} withSlider={true} />
                 </div>
                 <div className="w-full mt-10">
                     <div className="container p-[var(--padding)]">

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faBullseye, faShield, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faBullseye, faHouseCircleCheck, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../landing.components/Button";
 import { Autoplay } from "swiper/modules";
@@ -60,7 +60,7 @@ export default function AboutUs() {
                             </div>
                             <div className="flex flex-col items-center gap-2">
                                 <FontAwesomeIcon
-                                    icon={faShield}
+                                    icon={faHouseCircleCheck}
                                     className="text-7xl lg:text-9xl "
                                 />
                                 <h3 className="flex text-xl lg:text-3xl text-center max-w-24 lg:max-w-40 ">

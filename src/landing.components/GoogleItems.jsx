@@ -18,7 +18,7 @@ export default function GoogleItems() {
                     type="3"
                     className="mt-10 mb-5 mx-auto items-center gap-2"
                 >
-                    <span>View on Google Maps</span>{" "}
+                    <span>Write a review</span>{" "}
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 text-lg" />
                 </Button>
             </div>

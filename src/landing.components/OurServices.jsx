@@ -12,20 +12,34 @@ export default function OurServices() {
     }, []);
 
     return (
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-            {servicios && servicios.map((item) => <Item key={item.id} {...item} />)}
-            {!servicios && (
-                <>
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
-                </>
-            )}
+        <div>
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
+                {servicios && (
+                    <>
+                        {servicios.map((item) => (
+                            <Item key={item.id} {...item} />
+                        ))}
+                        <Item
+                            src="/img/services2.jpg"
+                            to="/services/insurance-claims"
+                            title="See more"
+                            description="We have a wide range of services that we offer to our clients."
+                        />
+                    </>
+                )}
+                {!servicios && (
+                    <>
+                        <Item />
+                        <Item />
+                        <Item />
+                        <Item />
+                        <Item />
+                        <Item />
+                        <Item />
+                        <Item />
+                    </>
+                )}
+            </div>
         </div>
     );
 }

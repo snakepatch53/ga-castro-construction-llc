@@ -1,13 +1,5 @@
 [
     {
-        "id": 1,
-        "title": "Insurance Claims",
-        "src": "/services/1.jpg",
-        "to": "/services/insurance-claims",
-        "description": "Facing damage? Trust GA Castro's expert team, using high-quality products for insurance claim assessments and repairs.",
-        "extend": "We are experts in insurance claims. We will help you with your claim and we will make sure that you get the best possible outcome. We are experts in insurance claims. We will help you with your claim and we will make sure that you get the best possible outcome. We are experts in insurance claims. We will help you with your claim and we will make sure that you get the best possible outcome. We are experts in insurance claims. We will help you with your claim and we will make sure that you get the best possible outcome."
-    },
-    {
         "id": 2,
         "title": "Roofing",
         "src": "/services/2.jpg",

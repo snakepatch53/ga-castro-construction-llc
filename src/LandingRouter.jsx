@@ -13,8 +13,10 @@ import ServiceRoofing from "./landing.views/ServiceRoofing";
 import ServiceSiding from "./landing.views/ServiceSiding";
 import ServicePaint from "./landing.views/ServicePaint";
 import ServiceGutter from "./landing.views/ServiceGutter";
+import ServiceRemodelation from "./landing.views/ServiceRemodelation";
 import Gallery from "./landing.views/Gallery";
 import Financing from "./landing.views/Financing";
+import info from "./mooks/info.json";
 
 export default function LandingRouter() {
     return (
@@ -35,25 +37,41 @@ export default function LandingRouter() {
                 <div className="min-h-[var(--heigh-not-header)]">
                     <AnimatePresence>
                         <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/services" element={<Services />} />
+                            <Route path="/" element={<Home info={info} />} />
+                            <Route path="/services" element={<Services info={info} />} />
                             {/* <Route path="/services/:title" element={<ServiceInfo />} /> */}
-                            <Route path="/services/carpentry" element={<ServiceCarpentry />} />
+                            <Route
+                                path="/services/carpentry"
+                                element={<ServiceCarpentry info={info} />}
+                            />
 
                             <Route
                                 path="/services/insurance-claims"
-                                element={<ServiceInsuranceClaims />}
+                                element={<ServiceInsuranceClaims info={info} />}
                             />
-                            <Route path="/services/roofing" element={<ServiceRoofing />} />
-                            <Route path="/services/siding" element={<ServiceSiding />} />
-                            <Route path="/services/gutter" element={<ServiceGutter />} />
-                            <Route path="/services/paint" element={<ServicePaint />} />
+                            <Route
+                                path="/services/roofing"
+                                element={<ServiceRoofing info={info} />}
+                            />
+                            <Route
+                                path="/services/siding"
+                                element={<ServiceSiding info={info} />}
+                            />
+                            <Route
+                                path="/services/gutter"
+                                element={<ServiceGutter info={info} />}
+                            />
+                            <Route path="/services/paint" element={<ServicePaint info={info} />} />
+                            <Route
+                                path="/services/remodelation"
+                                element={<ServiceRemodelation info={info} />}
+                            />
 
-                            <Route path="/financing" element={<Financing />} />
-                            <Route path="/gallery" element={<Gallery />} />
-                            <Route path="/about-us" element={<AboutUs />} />
-                            <Route path="/contact-us" element={<ContactUs />} />
-                            <Route path="*" element={<NotFound />} />
+                            <Route path="/financing" element={<Financing info={info} />} />
+                            <Route path="/gallery" element={<Gallery info={info} />} />
+                            <Route path="/about-us" element={<AboutUs info={info} />} />
+                            <Route path="/contact-us" element={<ContactUs info={info} />} />
+                            <Route path="*" element={<NotFound info={info} />} />
                         </Routes>
                     </AnimatePresence>
                 </div>

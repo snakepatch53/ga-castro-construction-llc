@@ -51,9 +51,11 @@ export default function Financing() {
                         </span>
                         <div className="flex w-full justify-center py-5">
                             <Button
-                                to="/about-us"
+                                href="https://app.gethearth.com/partners/ga-castro-construction-llc/jeison/apply"
+                                target="_blank"
+                                rel="noreferrer"
                                 style="3"
-                                type="2"
+                                type="3"
                                 className="font-title2  items-center  "
                             >
                                 <span className=" sm:text-2xl">Finance it now</span>{" "}

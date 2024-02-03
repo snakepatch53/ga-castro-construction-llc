@@ -6,7 +6,7 @@ import Carousel from "../landing.components/Carousel";
 import { faTrowelBricks, faUsersGear, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import OurServices from "../landing.components/OurServices";
 
-export default function Services() {
+export default function Services({ info }) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -17,7 +17,7 @@ export default function Services() {
                 <div className="flex flex-col w-full items-center content-center">
                     <div className="flex  w-full">
                         <div className="w-full h-screen">
-                            <Carousel data={slides} withSlider={true} />
+                            <Carousel info={info} data={slides} withSlider={true} />
                         </div>
                     </div>
                     <div className="flex flex-col w-full h-auto items-center bg-[#171640] text-[--color1-txt1] ">
