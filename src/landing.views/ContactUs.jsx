@@ -1,13 +1,13 @@
 import AnimatedElement from "../components/AnimatedElement";
 import MapaItem from "../landing.components/MapaItem";
-import FormConsult from "../landing.components/Formconsult";
+import FormConsult from "../landing.components/FormConsult";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHandPointer } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactUs() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>

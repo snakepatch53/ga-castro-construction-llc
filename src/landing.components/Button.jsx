@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
-export default function Button({ children = false, text = "", style = 1, type = 1, ...props }) {
+export default function Button({
+    children = false,
+    text = "",
+    style = 1,
+    type = 1,
+    _type = null,
+    ...props
+}) {
     const className = props.className ? " " + props.className : "";
 
     let classStyle = "";
@@ -26,7 +33,7 @@ export default function Button({ children = false, text = "", style = 1, type = 
     if (type == 1) {
         return (
             <>
-                <button {...props} className={classStyle + " " + className}>
+                <button {...props} type={_type} className={classStyle + " " + className}>
                     {children ? children : text}
                 </button>
             </>
