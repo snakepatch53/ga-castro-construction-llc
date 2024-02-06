@@ -1,18 +1,16 @@
 import AnimatedElement from "../components/AnimatedElement";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faAngleLeft,
-    faSnowflake,
-    faHouse,
-    faAngleRight,
-    faHandHoldingDollar,
-} from "@fortawesome/free-solid-svg-icons";
-
 import ReactCompareImage from "react-compare-image";
 import SectionContact from "../landing.components/SectionContact";
 import BannerItem from "../landing.components/BannerItem";
 import { useEffect } from "react";
 import GoogleItems from "../landing.components/GoogleItems";
+
+import roofing_challenges from "../mooks/roofing_challenges.json";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function ServiceRoofing() {
     useEffect(() => {
@@ -65,34 +63,7 @@ export default function ServiceRoofing() {
                         >
                             PROJECT CHALLENGES IN ROOFING
                         </h3>
-                        <div className="flex w-full">
-                            {/* <div className="absolute inset-0 backdrop-blur-sm" /> */}
-                            <div className=" flex items-center w-full px-1 sm:px-5 py-3 gap-2 mx-5 md:mx-20 lg:mx-40 rounded-2xl bg-[#171640]/60 text-[var(--color1-txt1)] shadow-xl ">
-                                <div className="text-xl cursor-pointer">
-                                    <FontAwesomeIcon icon={faAngleLeft} className="text-[2.5rem]" />
-                                </div>
-                                <div className=" w-full flex justify-center items-center">
-                                    <div className="grid grid-cols-3 h-full sm:gap-10 md:gap-20 ">
-                                        <ItemBanner
-                                            title="Sustainability"
-                                            icon={faHandHoldingDollar}
-                                        />
-                                        <ItemBanner
-                                            title="Improved air
-                                            quality"
-                                            icon={faHouse}
-                                        />
-                                        <ItemBanner title="Thermal isolation" icon={faSnowflake} />
-                                    </div>
-                                </div>
-                                <div className="text-xl cursor-pointer">
-                                    <FontAwesomeIcon
-                                        icon={faAngleRight}
-                                        className="text-[2.5rem]"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        <Banner />
                     </div>
                 </div>
                 <div className="container relative z-10 font-title2 p-[--padding]">
@@ -149,11 +120,43 @@ export default function ServiceRoofing() {
     );
 }
 
-function ItemBanner({ title, icon }) {
+function Banner() {
+    return (
+        <div className="swipper-roofing-component-container flex w-full">
+            <Swiper
+                modules={[Autoplay, Navigation]}
+                navigation={true}
+                autoplay={{ delay: 5000 }}
+                speed={1500}
+                slidesPerView={3}
+                breakpoints={{
+                    0: { slidesPerView: 1 },
+                    320: { slidesPerView: 1 },
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                    1280: { slidesPerView: 3 },
+                }}
+                spaceBetween={0}
+                loop={true}
+                grabCursor={true}
+                className="flex items-center w-full px-1 sm:px-5 py-3 gap-2 mx-5 md:mx-20 lg:mx-40 rounded-2xl bg-[#171640]/60 text-[var(--color1-txt1)] shadow-xl"
+            >
+                {roofing_challenges.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <ItemBanner {...item} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+}
+
+function ItemBanner({ name, icon }) {
     return (
         <div className="flex flex-col  content-center items-center py-1  sm:px-5 rounded-xl sm:gap-2 shadow-3xl">
-            <FontAwesomeIcon className="text-4xl md:text-6xl" icon={icon} />
-            <h3 className="text-center text-lg md:text-xl sm:max-w-36">{title}</h3>
+            {/* <FontAwesomeIcon className="text-4xl md:text-6xl" icon={icon} /> */}
+            <div dangerouslySetInnerHTML={{ __html: icon }} className="icon h-16 fill-white" />
+            <h3 className="text-center text-balance text-lg md:text-xl sm:max-w-36">{name}</h3>
         </div>
     );
 }

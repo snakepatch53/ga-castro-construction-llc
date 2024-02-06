@@ -16,7 +16,7 @@ export default function GoogleItems() {
                     rel="noreferrer"
                     style="3"
                     type="3"
-                    className="mt-10 mb-5 mx-auto items-center gap-2"
+                    className="bg-[var(--color3-bg)] text-[var(--color3-txt)] py-4 mt-10 mb-5 mx-auto items-center gap-2 border border-red-500"
                 >
                     <span>Write a review</span>{" "}
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="text-red-500 text-lg" />

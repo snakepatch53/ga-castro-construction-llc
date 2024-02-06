@@ -7,7 +7,7 @@ import { faMagnifyingGlass, faHandPointer } from "@fortawesome/free-solid-svg-ic
 
 export default function ContactUs() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>

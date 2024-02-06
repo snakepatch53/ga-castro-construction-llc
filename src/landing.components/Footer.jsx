@@ -35,11 +35,12 @@ export default function Footer() {
                             About us
                         </Link>
                     </div>
-                    <div className="mx-auto lg:ml-auto lg:mx-0 opacity-70">
-                        <select className="text-black cursor-pointer rounded-sm">
+                    <div className="mx-auto lg:ml-auto lg:mx-0 opacity-70 w-full max-w-48">
+                        {/* <select className="text-black cursor-pointer rounded-sm">
                             <option value="en">English - United States</option>
                             <option value="es">Español - España</option>
-                        </select>
+                        </select> */}
+                        <div id="google_translate_element"></div>
                     </div>
                 </div>
             </div>

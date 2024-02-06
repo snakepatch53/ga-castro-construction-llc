@@ -1,5 +1,5 @@
 import AnimatedElement from "../components/AnimatedElement";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,10 +9,9 @@ import Button from "../landing.components/Button";
 import { Autoplay } from "swiper/modules";
 import teams from "./../mooks/team.json";
 import SectionContact from "../landing.components/SectionContact";
-
 import TeamItemCard from "../landing.components/TeamItemCard";
 
-export default function AboutUs() {
+export default function AboutUs({ info }) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -40,42 +39,18 @@ export default function AboutUs() {
             </section>
             <section className="p-[--padding] pt-0">
                 <div className="container flex justify-center text-[--color1-txt1] font-title">
-                    <div className="-translate-y-14 flex flex-col max-w-[900px] items-center rounded-3xl  p-10 pt-5 gap-5 sm:gap-14 bg-[--color1-bg] shadow-[0_3px_15px_2px_var(--color2-bg1)]">
-                        <p className="text-xl sm:text-3xl text-center">
-                            Our team has years of experience that guarantee the work we do with each
-                            of our clients, in each specialty, we have personnel in constant
-                            training to carry out their work.
-                        </p>
-                        <div className="flex flex-col sm:flex-row sm:gap-10 lg:gap-32 ">
-                            <div className="flex flex-col items-center gap-2">
-                                <FontAwesomeIcon
-                                    icon={faBullseye}
-                                    className=" text-7xl lg:text-9xl "
-                                />
-                                <h3 className="text-xl lg:text-3xl text-center">MISSION</h3>
-                            </div>
-                            <div className="flex flex-col items-center gap-2">
-                                <FontAwesomeIcon icon={faEye} className="text-7xl lg:text-9xl " />
-                                <h3 className="text-xl lg:text-3xl text-center">VISION</h3>
-                            </div>
-                            <div className="flex flex-col items-center gap-2">
-                                <FontAwesomeIcon
-                                    icon={faHouseCircleCheck}
-                                    className="text-7xl lg:text-9xl "
-                                />
-                                <h3 className="flex text-xl lg:text-3xl text-center max-w-24 lg:max-w-40 ">
-                                    TRUSTED SERVICES
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+                    <ConcepsSection
+                        mision={info.mission}
+                        vision={info.vision}
+                        trustedServices={info.trusted_services}
+                    />
                 </div>
             </section>
             <section className="relative p-[--pading]">
                 <div className="md:absolute w-full">
                     <div className="relative z-10 container flex flex-col md:flex-row font-title gap-10 lg:gap-32 justify-center items-center">
                         <div className="max-w-96 w-full  h-full flex border-solid border-4 border-[--color1-bg] rounded-md">
-                            <img src="./team/2.jpg" alt="" />
+                            <img src="./team/2.png" alt="" className="bg-white" />
                         </div>
                         <div className="flex flex-col gap-10">
                             <div className="flex flex-col items-center">
@@ -103,10 +78,10 @@ export default function AboutUs() {
                         <path d="M0,192L48,186.7C96,181,192,171,288,165.3C384,160,480,160,576,154.7C672,149,768,139,864,138.7C960,139,1056,149,1152,144C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                     <div className="bg-[var(--color2-bg)] p-5 md:pt-48">
-                        <div className="container flex flex-col justify-center gap-5">
-                            <div>
+                        <div className="container flex flex-col justify-center">
+                            <div className="min-h-[395px]">
                                 <Swiper
-                                    spaceBetween={0}
+                                    spaceBetween={80}
                                     slidesPerView={4}
                                     modules={[Autoplay]}
                                     autoplay={{ delay: 5000 }}
@@ -124,12 +99,12 @@ export default function AboutUs() {
                                 >
                                     {teams.map((team) => (
                                         <SwiperSlide key={team.id}>
-                                            <TeamItemCard {...team} type="2" />
+                                            <TeamItemCard {...team} type="3" />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
                             </div>
-                            <Button to="/about-us" style="4" type="2" className="mt-10 mx-auto">
+                            <Button to="/about-us" style="4" type="2" className="mx-auto">
                                 <span>learn more about us</span> <span>&rarr;</span>
                             </Button>
                         </div>
@@ -155,6 +130,40 @@ function Item({ title, icon }) {
                 <FontAwesomeIcon icon={icon} className="text-2xl text-green-500" />
             </div>
             <span className="text-xl md:text-2xl">{title}</span>
+        </div>
+    );
+}
+
+function ConcepsSection({ mision, vision, trustedServices }) {
+    const [selected, setSelected] = useState(mision);
+    return (
+        <div className="-translate-y-14 flex flex-col max-w-[900px] items-center rounded-3xl  p-10 pt-5 gap-5 sm:gap-14 bg-[--color1-bg] shadow-[0_3px_15px_2px_var(--color2-bg1)]">
+            <p className="text-xl sm:text-3xl text-center">{selected}</p>
+            <div className="flex flex-col sm:flex-row sm:gap-10 lg:gap-32 ">
+                <button
+                    onClick={() => setSelected(mision)}
+                    className="flex flex-col items-center gap-2"
+                >
+                    <FontAwesomeIcon icon={faBullseye} className=" text-7xl lg:text-9xl " />
+                    <h3 className="text-xl lg:text-3xl text-center">MISSION</h3>
+                </button>
+                <button
+                    onClick={() => setSelected(vision)}
+                    className="flex flex-col items-center gap-2"
+                >
+                    <FontAwesomeIcon icon={faEye} className="text-7xl lg:text-9xl " />
+                    <h3 className="text-xl lg:text-3xl text-center">VISION</h3>
+                </button>
+                <button
+                    onClick={() => setSelected(trustedServices)}
+                    className="flex flex-col items-center gap-2"
+                >
+                    <FontAwesomeIcon icon={faHouseCircleCheck} className="text-7xl lg:text-9xl " />
+                    <h3 className="flex text-xl lg:text-3xl text-center max-w-24 lg:max-w-40 ">
+                        TRUSTED SERVICES
+                    </h3>
+                </button>
+            </div>
         </div>
     );
 }

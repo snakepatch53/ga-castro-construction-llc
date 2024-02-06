@@ -2,14 +2,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import Button from "../landing.components/Button";
-import { Link } from "react-router-dom";
 import SectionContact from "../landing.components/SectionContact";
 import GallerySection from "../landing.components/GallerySection";
 import images from "../mooks/gallery.json";
 
-import info from "../mooks/info.json";
-
-export default function Gallery() {
+export default function Gallery({ info }) {
+    const { gallery } = info;
     const [filter, setFilter] = useState("all");
     const [filterImages, setFilterImages] = useState([]);
     useEffect(() => {
@@ -17,7 +15,7 @@ export default function Gallery() {
         else setFilterImages(images.filter((img) => img.tags.includes(filter)));
     }, [filter]);
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
@@ -30,16 +28,16 @@ export default function Gallery() {
 
                 <div className="relative z-10 container flex flex-col w-full  py-40 items-center gap-20">
                     {/* <h3 className="font-title text-white text-9xl">GALLERY</h3> */}
-                    <h2 className="flex text-nowrap">
-                        {info.gallery.title.map((letter, index) => (
+                    <div className="flex">
+                        {gallery.title.map((letter, index) => (
                             <Letter
                                 key={letter.id}
                                 src={letter.src}
                                 letter={letter.letter}
-                                delay={index / 2}
+                                delay={index / 3}
                             />
                         ))}
-                    </h2>
+                    </div>
                     <div className="flex  w-full justify-center ">
                         <Button
                             href="#photos"
@@ -113,25 +111,22 @@ export default function Gallery() {
                     </div>
                     <div className="flex flex-col md:flex-row py-20 gap-5 lg:gap-10">
                         <Item
-                            title="Roofing"
-                            subtitle="Av.Calle 1 y calle 3"
-                            alt=""
-                            to=""
-                            src="/image/ciudad.jpg"
+                            title={gallery?.work1?.title}
+                            subtitle={gallery?.work1?.address}
+                            alt={"work done in " + gallery?.work1?.address}
+                            src={gallery?.work1?.img}
                         />
                         <Item
-                            title="Roofing"
-                            subtitle="Av.Calle 1 y calle 3"
-                            alt=""
-                            to=""
-                            src="/image/ciudad.jpg"
+                            title={gallery?.work2?.title}
+                            subtitle={gallery?.work2?.address}
+                            alt={"work done in " + gallery?.work2?.address}
+                            src={gallery?.work2?.img}
                         />
                         <Item
-                            title="Roofing"
-                            subtitle="Av.Calle 1 y calle 3"
-                            alt=""
-                            to=""
-                            src="/image/ciudad.jpg"
+                            title={gallery?.work3?.title}
+                            subtitle={gallery?.work3?.address}
+                            alt={"work done in " + gallery?.work3?.address}
+                            src={gallery?.work3?.img}
                         />
                     </div>
                 </div>
@@ -194,18 +189,15 @@ function ItemButton({ text, value, valueSelected, onClick }) {
     );
 }
 
-function Item({ title, subtitle, to, src, alt }) {
+function Item({ title, subtitle, src, alt }) {
     return (
-        <Link
-            to={to}
-            className="group/item relative flex justify-center w-full px-10 pb-20 pt-36 rounded-2xl overflow-hidden font-bold shadow-[0_3px_15px_2px_var(--color2-bg1)] hover:scale-105 transition-all duration-300"
-        >
+        <div className="group/item relative flex justify-center w-full px-10 pb-20 pt-36 rounded-2xl overflow-hidden font-bold shadow-[0_3px_15px_2px_var(--color2-bg1)] hover:scale-105 transition-all duration-300">
             <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/10 group-hover/item:backdrop-blur-sm" />
             <div className="opacity-0 relative z-10 flex flex-col items-center py-2 px-5 gap-5 rounded-lg text-[--color1-txt1] bg-[#ff9500]/70 group-hover/item:opacity-100 transition-all duration-300">
                 <h3 className=" sm:text-3xl font-title opacity-80">{title}</h3>
                 <span className="text-center  sm:text-xl font-title opacity-80">{subtitle}</span>
             </div>
-        </Link>
+        </div>
     );
 }

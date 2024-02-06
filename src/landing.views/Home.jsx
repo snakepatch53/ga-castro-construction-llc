@@ -98,14 +98,16 @@ export default function Home({ info }) {
                         <path d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,144C800,160,880,224,960,218.7C1040,213,1120,139,1200,90.7C1280,43,1360,21,1400,10.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
                     </svg>
                     <div className="bg-[var(--color2-bg)] p-5">
-                        <div className="container flex flex-col justify-center gap-5">
-                            <h2 className="text-3xl text-center font-title2">Our Team</h2>
-                            <p className="text-center text-sm font-content opacity-90 tracking-wide text-[var(--color2-txt)]">
+                        <div className="container flex flex-col justify-center">
+                            <h2 className="text-3xl sm:text-5xl text-center font-title">
+                                Our Team
+                            </h2>
+                            <p className="text-center sm:text-2xl font-content opacity-90 tracking-wide text-[var(--color2-txt)] mt-5">
                                 We are a team of professionals who are passionate about what we do.
                             </p>
-                            <div>
+                            <div className="min-h-[395px]">
                                 <Swiper
-                                    spaceBetween={0}
+                                    spaceBetween={80}
                                     slidesPerView={4}
                                     modules={[Autoplay]}
                                     autoplay={{ delay: 5000 }}
@@ -119,16 +121,16 @@ export default function Home({ info }) {
                                         1280: { slidesPerView: 4 },
                                     }}
                                     grabCursor={true}
-                                    className="pt-14 pb-5"
+                                    className="pt-16"
                                 >
                                     {teams.map((team) => (
                                         <SwiperSlide key={team.id}>
-                                            <TeamItemCard {...team} type="2" />
+                                            <TeamItemCard {...team} type="3" />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
                             </div>
-                            <Button to="/about-us" style="4" type="2" className="mt-10 mx-auto">
+                            <Button to="/about-us" style="4" type="2" className=" mx-auto">
                                 <span>learn more about us</span> <span>&rarr;</span>
                             </Button>
                         </div>

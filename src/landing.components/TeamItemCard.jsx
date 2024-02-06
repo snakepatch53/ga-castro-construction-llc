@@ -1,3 +1,4 @@
+import info from "../mooks/info.json";
 export default function TeamItemCard({ name, rol, description = "", photo, social, type = 1 }) {
     if (type == 1)
         return (
@@ -72,6 +73,65 @@ export default function TeamItemCard({ name, rol, description = "", photo, socia
                 </div>
             </div>
         );
+    if (type == 3)
+        return (
+            <div className="relative bg-white text-black group/card font-content flex flex-col  pb-5 mt-10  items-center rounded-lg transition-all ">
+                <img
+                    src={photo}
+                    className="absolute bg-[#b50318] -t-10 max-w-24 aspect-square -translate-y-10 rounded-md shadow-xl group-hover/card:max-w-36 transition-all duration-200"
+                />
+
+                <div className="flex flex-col items-center pt-16 group-hover/card:pt-28 transition-all">
+                    <h1 className="font-title2">{name}</h1>
+                    <span className="text-sm opacity-80">{rol}</span>
+                </div>
+                <div className="flex flex-col gap-3 items-center  max-h-0 group-hover/card:max-h-48 group-hover/card:pt-3 group-hover/card:px-5 overflow-hidden transition-all duration-200">
+                    <div className="flex flex-row gap-2">
+                        <Item num={info.posts} text="Posts" />
+                        <Item num={info.followers} text="Followers" />
+                        <Item num={info.likes} text="Likes" />
+                    </div>
+                    <div className="flex flex-row gap-5 mb-1">
+                        <Button
+                            text="Follow"
+                            className="bg-red-600 text-white"
+                            href={info.facebook_url}
+                            target="_blank"
+                            rel="noreferer"
+                        />
+                        <Button
+                            text="Message"
+                            className="bg-white border-solid border border-gray-500"
+                            href={info.facebook_url}
+                            target="_blank"
+                            rel="noreferer"
+                        />
+                    </div>
+                </div>
+            </div>
+        );
 
     return "The type is not declared";
+}
+
+function Button({ text, className, ...props }) {
+    return (
+        <a
+            className={
+                " py-1 px-4 rounded-md hover:scale-105 transition-all  shadow-sm " + className
+            }
+            {...props}
+        >
+            <span className="font-title2 opacity-85">{text}</span>
+        </a>
+    );
+}
+
+function Item({ num, text }) {
+    return (
+        <div className="flex flex-col items-center">
+            <h3 className="font-title2">{num}</h3>
+            <span className="text-xs opacity-90">{text}</span>
+        </div>
+    );
 }

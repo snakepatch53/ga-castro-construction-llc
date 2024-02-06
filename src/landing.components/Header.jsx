@@ -52,29 +52,22 @@ export default function Header({ withSliderIn = [] }) {
                         `}
                     >
                         <Option name="Home" to="/" />
-                        <Option name="Insurance Claims" to="/services/insurance-claims">
-                            <Option
-                                name="Wind Damage"
-                                to="/services/insurance-claims/wind-damage"
-                            />
-                            <Option
-                                name="Water Damage"
-                                to="/services/insurance-claims/water-damage"
-                            />
-                            <Option
-                                name="Restoration"
-                                to="/services/insurance-claims/restoration"
-                            />
-                        </Option>
-                        <Option name="Services Areas" to="/services-areas" />
-                        <Option name="Services" to="/services">
+                        <Option name="Improvement" to="/services">
                             <Option name="Roofing" to="/services/roofing" />
                             <Option name="Siding" to="/services/siding" />
                             <Option name="Gutter" to="/services/gutter" />
                             <Option name="Carpentry" to="/services/carpentry" />
-                            <Option name="Paint" to="/services/paint" />
+                            <Option name="Painting" to="/services/paint" />
                             <Option name="Remodelation" to="/services/remodelation" />
                         </Option>
+                        {/* <Option name="Insurance Claims" to="/services/insurance-claims"> */}
+                        <Option name="Restoration" to="/services/restoration">
+                            <Option name="Wind Damage" to="/services/restoration/wind-damage" />
+                            <Option name="Water Damage" to="/services/restoration/water-damage" />
+                            <Option name="Tree Damage" to="/services/restoration/tree-damage" />
+                        </Option>
+                        {/* <Option name="Services Areas" to="/services-areas" /> */}
+
                         <Option name="Financing" to="/financing" />
                         <Option name="Gallery" to="/gallery" />
                         <Option name="About Us" to="/about-us" />
@@ -124,7 +117,7 @@ function Option({ children, name, to, ...props }) {
         >
             <Link
                 to={to}
-                className={`flex gap-1 text-md transition-all px-2 rounded-full duration-200 hover:opacity-100 text-nowrap justify-center items-center ${
+                className={`flex gap-1 text-md transition-all px-2 rounded-full duration-200 hover:opacity-100 text-nowrap uppercase justify-center items-center ${
                     isLocation ? "opacity-100 bg-[#ef8f17]" : "opacity-90"
                 }`}
             >

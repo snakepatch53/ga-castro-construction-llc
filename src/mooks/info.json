@@ -4,6 +4,13 @@
     "initials": "G.A.C.C.",
     "phone": "+1 (800) 838-8186",
     "email": "info@gacastroconstructionllc.com",
+    "mission": "Our mission is to offer premium, durable roofing with a focus on client satisfaction and safety.",
+    "vision": "Our vision is to be industry-leading roofers known for quality, integrity, and service excellence.",
+    "trusted_services": "Roofing vision refers to the overall purpose or mission that a roofing companys to achieve",
+    "facebook_url": "https://www.facebook.com/roofinggcastro/",
+    "followers": "1k",
+    "likes": "929",
+    "posts": "243",
     "branch1": {
         "name": "Main Office",
         "address": "39 hubbard Ave, STAMFORD, CT 06905",
@@ -60,6 +67,21 @@
                 "src": "./gallery_title/7.jpg",
                 "letter": "Y"
             }
-        ]
+        ],
+        "work1": {
+            "title": "Roofing",
+            "address": "39 hubbard Ave, STAMFORD, CT 06905",
+            "img": "./works/1.jpg"
+        },
+        "work2": {
+            "title": "Roofing",
+            "address": "1300 Boston Post Rd, Guilford, CT 06437",
+            "img": "./works/2.jpg"
+        },
+        "work3": {
+            "title": "Roofing",
+            "address": "39 hubbard Ave, STAMFORD, CT 06905",
+            "img": "./works/3.jpg"
+        }
     }
 }

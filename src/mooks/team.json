@@ -4,7 +4,7 @@
         "name": "German Castro",
         "rol": "Founder & CEO",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/2.jpg",
+        "photo": "./team/2.png",
         "social": [
             {
                 "id": 1,
@@ -21,7 +21,7 @@
         "name": "Jeison Castro",
         "rol": "Senior Manager",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/3.jpg",
+        "photo": "./team/3.png",
         "social": [
             {
                 "id": 1,
@@ -38,7 +38,7 @@
         "name": "Deivis Castro",
         "rol": "Sales Manager",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/4.jpg",
+        "photo": "./team/4.png",
         "social": [
             {
                 "id": 1,
@@ -55,7 +55,7 @@
         "name": "Diana Castro",
         "rol": "Sales Representative",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/5.jpg",
+        "photo": "./team/5.png",
         "social": [
             {
                 "id": 1,
@@ -72,7 +72,7 @@
         "name": "Jonathan Aquino",
         "rol": "Sales Representative",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/6.jpg",
+        "photo": "./team/6.png",
         "social": [
             {
                 "id": 1,
@@ -89,7 +89,7 @@
         "name": "Cristian Villavicencio",
         "rol": "Advertisament",
         "description": "At GA Castro Construction LLC, roofing is our passion, and quality is our promise. As experts in the field, we are committed to excellence and reliability. We've built our reputation on these principles.",
-        "photo": "./team/7.jpg",
+        "photo": "./team/7.png",
         "social": [
             {
                 "id": 1,

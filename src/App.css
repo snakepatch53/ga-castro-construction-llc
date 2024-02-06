@@ -7,6 +7,7 @@
 
 body {
     margin-top: -1px !important;
+    top: 0 !important;
 }
 
 .icon svg {
@@ -31,4 +32,41 @@ body {
     to {
         background-position: 500px;
     }
+}
+
+/* Style for roofing Swiper */
+.swipper-roofing-component-container .swiper-button-prev,
+.swipper-roofing-component-container .swiper-button-next {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    font-size: 1rem !important;
+    border-radius: 50%;
+}
+
+.swipper-roofing-component-container .swiper-button-prev:after,
+.swipper-roofing-component-container .swiper-button-next:after {
+    font-size: 2rem !important;
+    color: white !important;
+}
+
+/* select of google translate */
+.goog-te-combo {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    color: black;
+    width: 100%;
+}
+
+.skiptranslate {
+    padding: 0 !important;
+}
+
+.skiptranslate iframe {
+    display: none !important;
 }
