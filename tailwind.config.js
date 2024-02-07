@@ -4,7 +4,7 @@ export default {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
         screens: {
-            xs: "430px",
+            xs: "335px",
             ...defaultTheme.screens,
         },
         extend: {

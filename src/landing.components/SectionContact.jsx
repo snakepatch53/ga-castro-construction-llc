@@ -17,8 +17,8 @@ export default function SectionContact({ isCol = false }) {
         >
             <div className="flex-1 flex flex-col gap-10 items-center justify-center bg">
                 <h3 className="text-3xl ">Contact Us</h3>
-                <div className="px-5 sm:px-10">
-                    <div className="container flex flex-col xs:flex-row justify-center items-center gap-5">
+                <div className="px-1 sm:px-10">
+                    <div className="container flex flex-col xs:flex-row justify-center items-center gap-1 md:gap-5">
                         {socials.map(({ ...social }) => (
                             <SocialItem key={social.id} type="3" {...social} />
                         ))}
