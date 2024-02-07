@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Restoration() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>

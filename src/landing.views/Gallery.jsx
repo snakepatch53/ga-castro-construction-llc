@@ -15,7 +15,7 @@ export default function Gallery({ info }) {
         else setFilterImages(images.filter((img) => img.tags.includes(filter)));
     }, [filter]);
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         <AnimatedElement>
