@@ -3,15 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import FormConsult from "./Formconsult";
+import { clsx } from "clsx";
 
-export default function Header({ withSliderIn = [] }) {
+export default function Header({
+    withSliderIn = [],
+    isVisibleModalFormConsult,
+    setIsVisibleModalFormConsult,
+}) {
     const closeElement = useRef(null);
     const { pathname } = useLocation();
     const isSliderIn = withSliderIn.find((path) => path.includes(pathname)) ? true : false;
     // console.log(pathname);
 
     const [isOpen, setIsOpen] = useState(false);
-    const [isVisibleModalFormConsult, setIsVisibleModalFormConsult] = useState(false);
     // const [isTop, setIsTop] = useState(true);
     // useEffect(() => {
     //     window.onscroll = (e) => {
@@ -26,10 +30,10 @@ export default function Header({ withSliderIn = [] }) {
     return (
         <>
             <div
-                className={
-                    "top-0 z-50 pt-3 w-full px-[var(--padding)] " +
-                    (isSliderIn ? "fixed" : "sticky")
-                }
+                className={clsx("top-0 z-50 pt-3 w-full px-[var(--padding)] ", {
+                    fixed: isSliderIn,
+                    sticky: !isSliderIn,
+                })}
             >
                 <div className="container flex justify-between items-center gap-1 sm:gap-5">
                     <Link to="/" className="h-full">
@@ -41,15 +45,18 @@ export default function Header({ withSliderIn = [] }) {
                     </Link>
                     <div
                         ref={closeElement}
-                        className={`
+                        className={clsx(
+                            `
                             fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-screen rounded-none flex-col bg-[#050504]/90 backdrop-blur-sm
                             flex gap-4 xl:gap-0 justify-center items-center  xl:py-3
-                            xl:px-5 xl:static xl:w-auto xl:h-auto xl:flex-row xl:rounded-full xl:overflow-visible xl:left-0 xl:top-0 xl:translate-y-0 xl:translate-x-0 xl:max-h-none xl:backdrop-blur-0 
-                            ${/*isTop && isSliderIn ? "bg-transparent" : "xl:bg-[#050504]" */ ""} 
-                            xl:bg-[#050504] 
-                            transition-all duration-200 overflow-hidden xl:backdrop-blur-0 
-                            ${isOpen ? "max-h-screen" : "max-h-0"} 
-                        `}
+                            xl:px-5 xl:static xl:w-auto xl:h-auto xl:flex-row xl:rounded-full xl:overflow-visible xl:left-0 xl:top-0 xl:translate-y-0 xl:translate-x-0 xl:max-h-none xl:backdrop-blur-0 xl:bg-[#050504] 
+                            transition-all duration-200 overflow-hidden
+                        `,
+                            {
+                                "max-h-screen": isOpen,
+                                "max-h-0": !isOpen,
+                            }
+                        )}
                     >
                         <Option name="Home" to="/" />
                         <Option name="Improvement" to="/services">
@@ -61,10 +68,10 @@ export default function Header({ withSliderIn = [] }) {
                             <Option name="Remodelation" to="/services/remodelation" />
                         </Option>
                         {/* <Option name="Insurance Claims" to="/services/insurance-claims"> */}
-                        <Option name="Restoration" to="/services/restoration">
-                            <Option name="Wind Damage" to="/services/restoration/wind-damage" />
-                            <Option name="Water Damage" to="/services/restoration/water-damage" />
-                            <Option name="Tree Damage" to="/services/restoration/tree-damage" />
+                        <Option name="Restoration" to="/restoration">
+                            <Option name="Wind Damage" to="/restoration/wind-damage" />
+                            <Option name="Water Damage" to="/restoration/water-damage" />
+                            <Option name="Tree Damage" to="/restoration/tree-damage" />
                         </Option>
                         {/* <Option name="Services Areas" to="/services-areas" /> */}
 

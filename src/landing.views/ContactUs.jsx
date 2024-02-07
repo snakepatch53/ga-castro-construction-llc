@@ -1,9 +1,9 @@
 import AnimatedElement from "../components/AnimatedElement";
 import MapaItem from "../landing.components/MapaItem";
-import FormConsult from "../landing.components/FormConsult";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHandPointer } from "@fortawesome/free-solid-svg-icons";
+import FormConsult from "../landing.components/Formconsult";
 
 export default function ContactUs() {
     useEffect(() => {

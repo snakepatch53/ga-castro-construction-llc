@@ -1,15 +1,24 @@
+import { clsx } from "clsx";
 import Button from "../landing.components/Button";
 import SocialItem from "../landing.components/SocialItem";
 import socials from "./../mooks/social.json";
 import FormContact from "./FormContact";
 
-export default function SectionContact() {
+export default function SectionContact({ isCol = false }) {
     return (
-        <div className="flex flex-col sm:p-[--padding] items-center w-full gap-5 lg:flex-row font-title2">
+        <div
+            className={clsx(
+                "flex flex-col sm:p-[--padding] items-center w-full gap-5 font-title2",
+                {
+                    "lg:flex-col-reverse": isCol,
+                    "lg:flex-row": !isCol,
+                }
+            )}
+        >
             <div className="flex-1 flex flex-col gap-10 items-center justify-center bg">
                 <h3 className="text-3xl ">Contact Us</h3>
                 <div className="px-5 sm:px-10">
-                    <div className="container flex  flex-col sm:flex-row justify-center items-center gap-5">
+                    <div className="container flex flex-col xs:flex-row justify-center items-center gap-5">
                         {socials.map(({ ...social }) => (
                             <SocialItem key={social.id} type="3" {...social} />
                         ))}

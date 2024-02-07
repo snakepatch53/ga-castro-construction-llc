@@ -1,7 +1,12 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
+        screens: {
+            xs: "430px",
+            ...defaultTheme.screens,
+        },
         extend: {
             fontFamily: {
                 link: ["link", "sans-serif"],

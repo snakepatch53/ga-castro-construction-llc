@@ -11,6 +11,9 @@ export default function BannerItem({
     imgAlt,
     buttonText = "Contact us now",
     buttonIcon = faRightLong,
+    buttonTo = "/contact-us",
+    buttonType = "2",
+    buttonProps = {},
     showButton = true,
     imgTextClassName = "",
     titleClassName = "",
@@ -33,10 +36,11 @@ export default function BannerItem({
                     </div>
                     {showButton && (
                         <Button
-                            to="/contact-us"
+                            to={buttonTo}
                             style="3"
-                            type="2"
+                            type={buttonType}
                             className="mt-2 mr-auto sm:gap-3 py-5 px-5 items-center"
+                            {...buttonProps}
                         >
                             <span className=" sm:text-xl font-title2">{buttonText}</span>{" "}
                             <FontAwesomeIcon className=" sm:text-xl " icon={buttonIcon} />
