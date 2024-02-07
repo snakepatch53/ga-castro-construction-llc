@@ -59,13 +59,12 @@ export default function Header({
                         )}
                     >
                         <Option name="Home" to="/" />
-                        <Option name="Improvement" to="/services">
+                        <Option name="Services" to="/services">
                             <Option name="Roofing" to="/services/roofing" />
                             <Option name="Siding" to="/services/siding" />
                             <Option name="Gutter" to="/services/gutter" />
                             <Option name="Carpentry" to="/services/carpentry" />
                             <Option name="Painting" to="/services/paint" />
-                            <Option name="Remodelation" to="/services/remodelation" />
                         </Option>
                         {/* <Option name="Insurance Claims" to="/services/insurance-claims"> */}
                         <Option name="Restoration" to="/restoration">

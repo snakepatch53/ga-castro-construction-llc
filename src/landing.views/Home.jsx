@@ -1,7 +1,7 @@
 import AnimatedElement from "../components/AnimatedElement";
 import Carousel from "../landing.components/Carousel";
 import TeamItemCard from "../landing.components/TeamItemCard";
-
+import GoogleItems from "../landing.components/GoogleItems";
 import slides from "./../mooks/slider.json";
 import teams from "./../mooks/team.json";
 import { useEffect } from "react";
@@ -92,11 +92,32 @@ export default function Home({ info }) {
                         <OurServices />
                     </div>
                 </div>
-
-                <div className="flex flex-col mt-24 sm:mt-5 fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
-                    <svg viewBox="0 0 1440 220" className="">
-                        <path d="M0,192L40,181.3C80,171,160,149,240,149.3C320,149,400,171,480,165.3C560,160,640,128,720,144C800,160,880,224,960,218.7C1040,213,1120,139,1200,90.7C1280,43,1360,21,1400,10.7L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                    className="translate-y-1"
+                >
+                    <path
+                        fill="#ff9500"
+                        d="M0,288L80,266.7C160,245,320,203,480,192C640,181,800,203,960,197.3C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+                    ></path>
+                </svg>
+                <div className=" bg-[#ff9500]">
+                    <div className=" container p-[--padding] pb-0">
+                        <GoogleItems />
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1440 320"
+                        className="translate-y-1"
+                    >
+                        <path
+                            fill="#141422"
+                            d="M0,288L40,277.3C80,267,160,245,240,240C320,235,400,245,480,234.7C560,224,640,192,720,197.3C800,203,880,245,960,250.7C1040,256,1120,224,1200,181.3C1280,139,1360,85,1400,58.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+                        ></path>
                     </svg>
+                </div>
+                <div className="flex flex-col  fill-[var(--color2-bg)] text-[var(--color2-txt1)]">
                     <div className="bg-[var(--color2-bg)] p-5">
                         <div className="container flex flex-col justify-center">
                             <h2 className="text-3xl sm:text-5xl text-center font-title">

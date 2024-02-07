@@ -13,7 +13,6 @@ import ServiceRoofing from "./landing.views/ServiceRoofing";
 import ServiceSiding from "./landing.views/ServiceSiding";
 import ServicePaint from "./landing.views/ServicePaint";
 import ServiceGutter from "./landing.views/ServiceGutter";
-import ServiceRemodelation from "./landing.views/ServiceRemodelation";
 import Gallery from "./landing.views/Gallery";
 import Financing from "./landing.views/Financing";
 import info from "./mooks/info.json";
@@ -103,10 +102,6 @@ export default function LandingRouter() {
                                 element={<ServiceGutter info={info} />}
                             />
                             <Route path="/services/paint" element={<ServicePaint info={info} />} />
-                            <Route
-                                path="/services/remodelation"
-                                element={<ServiceRemodelation info={info} />}
-                            />
 
                             <Route path="/financing" element={<Financing info={info} />} />
                             <Route path="/gallery" element={<Gallery info={info} />} />

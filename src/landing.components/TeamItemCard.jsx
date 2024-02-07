@@ -78,7 +78,7 @@ export default function TeamItemCard({ name, rol, description = "", photo, socia
             <div className="relative bg-white text-black group/card font-content flex flex-col  pb-5 mt-10  items-center rounded-lg transition-all ">
                 <img
                     src={photo}
-                    className="absolute bg-[#b50318] -t-10 max-w-24 aspect-square -translate-y-10 rounded-md shadow-xl group-hover/card:max-w-36 transition-all duration-200"
+                    className="absolute bg-[--color1-bg] -t-10 max-w-24 aspect-square -translate-y-10 rounded-md shadow-xl group-hover/card:max-w-36 transition-all duration-200"
                 />
 
                 <div className="flex flex-col items-center pt-16 group-hover/card:pt-28 transition-all">
@@ -94,7 +94,7 @@ export default function TeamItemCard({ name, rol, description = "", photo, socia
                     <div className="flex flex-row gap-5 mb-1">
                         <Button
                             text="Follow"
-                            className="bg-red-600 text-white"
+                            className="bg-[--color1-bg] text-white"
                             href={info.facebook_url}
                             target="_blank"
                             rel="noreferer"

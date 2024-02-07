@@ -1,5 +1,6 @@
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { clsx } from "clsx";
 import { useMemo, useRef, useState } from "react";
 
 export default function GallerySection({ images = [] }) {
@@ -18,9 +19,9 @@ export default function GallerySection({ images = [] }) {
     }, [images]);
     return (
         <>
-            <div className="grid md:grid-cols-3 rounded-md overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-5 rounded-md overflow-hidden">
                 {arr.map((row) => (
-                    <div key={row.img1?.id + "-" + row.img2?.id} className="grid w-full ">
+                    <div key={row.img1?.id + "-" + row.img2?.id} className="grid gap-5 w-full ">
                         {row.img1 && (
                             <Image
                                 onClick={() => setSelectedImage(row.img1?.src)}
@@ -45,7 +46,10 @@ export default function GallerySection({ images = [] }) {
 
 function Image({ src, alt = "Image of 'GA Castro Constructions LLC' gallery", ...props }) {
     return (
-        <div className="w-full h-full max-w-full cursor-pointer" {...props}>
+        <div
+            className="w-full h-full max-w-full cursor-pointer rounded-xl overflow-hidden"
+            {...props}
+        >
             <img className="h-full w-full object-cover" src={src} alt={alt} />
         </div>
     );
@@ -61,9 +65,10 @@ function ImageModal({ src = null, setSrc = null }) {
     window.onkeydown = (e) => (e.key === "Escape" ? setSrc(null) : null);
     return (
         <div
-            className={
-                "fixed inset-0 z-50 flex justify-center items-center " + (src ? "block" : "hidden")
-            }
+            className={clsx("fixed inset-0 z-50 flex justify-center items-center rounded-xl", {
+                block: src,
+                hidden: !src,
+            })}
         >
             <div
                 ref={_window}
