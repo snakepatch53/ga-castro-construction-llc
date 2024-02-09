@@ -22,6 +22,7 @@ export default function Home({ info }) {
     }, []);
     return (
         <>
+            holi
             <AnimatedElement>
                 <div className="w-full h-screen">
                     <Carousel info={info} data={slides} withSlider={true} />
@@ -34,7 +35,9 @@ export default function Home({ info }) {
                                     <div className="flex flex-col gap-3 pl-2">
                                         <h3 className="font-title text-5xl sm:text-6xl">
                                             Be the{" "}
-                                            <span className="text-[--color2-txt1]">Difference</span>
+                                            <span className="text-[--color2-txt1]">
+                                                Difference
+                                            </span>
                                         </h3>
                                         <p className="font-title text-3xl sm:text-4xl">
                                             Just a sample of our changees
@@ -48,7 +51,9 @@ export default function Home({ info }) {
                                             className="mt-2 mr-auto font-title2 px-5  items-center text-xl text-balance"
                                         >
                                             <span>Let&apos;s go for more</span>{" "}
-                                            <FontAwesomeIcon icon={faRightLong} />
+                                            <FontAwesomeIcon
+                                                icon={faRightLong}
+                                            />
                                         </Button>
                                     </div>
                                 </div>
@@ -63,7 +68,8 @@ export default function Home({ info }) {
                                 </div>
                                 <div className="flex w-full">
                                     <span className="w-full text-end font-content">
-                                        Project done for family somewhere in New Haven
+                                        Project done for family somewhere in New
+                                        Haven
                                     </span>
                                 </div>
                             </div>
@@ -124,7 +130,8 @@ export default function Home({ info }) {
                                 Our Team
                             </h2>
                             <p className="text-center sm:text-2xl font-content opacity-90 tracking-wide text-[var(--color2-txt)] mt-5">
-                                We are a team of professionals who are passionate about what we do.
+                                We are a team of professionals who are
+                                passionate about what we do.
                             </p>
                             <div className="min-h-[395px]">
                                 <Swiper
@@ -151,8 +158,14 @@ export default function Home({ info }) {
                                     ))}
                                 </Swiper>
                             </div>
-                            <Button to="/about-us" style="4" type="2" className=" mx-auto">
-                                <span>learn more about us</span> <span>&rarr;</span>
+                            <Button
+                                to="/about-us"
+                                style="4"
+                                type="2"
+                                className=" mx-auto"
+                            >
+                                <span>learn more about us</span>{" "}
+                                <span>&rarr;</span>
                             </Button>
                         </div>
                     </div>
