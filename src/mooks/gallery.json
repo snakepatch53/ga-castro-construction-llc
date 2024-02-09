@@ -70,5 +70,35 @@
         "src": "./gallery/12.jpg",
         "alt": "",
         "tags": []
+    },
+    {
+        "id": 13,
+        "src": "./new/1.jpg",
+        "alt": "",
+        "tags": ["carpentry"]
+    },
+    {
+        "id": 14,
+        "src": "./new/2.jpg",
+        "alt": "",
+        "tags": ["carpentry"]
+    },
+    {
+        "id": 15,
+        "src": "./new/3.jpg",
+        "alt": "",
+        "tags": ["carpentry"]
+    },
+    {
+        "id": 16,
+        "src": "./new/4.jpg",
+        "alt": "",
+        "tags": ["carpentry"]
+    },
+    {
+        "id": 17,
+        "src": "./new/5.jpg",
+        "alt": "",
+        "tags": ["carpentry"]
     }
 ]

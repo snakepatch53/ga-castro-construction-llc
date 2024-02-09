@@ -31,14 +31,14 @@
         "id": 5,
         "title": "Siding",
         "description": "",
-        "image": "./slider/5.jpg",
+        "image": "./new/Siding.jpg",
         "to": "/services/siding"
     },
     {
         "id": 6,
         "title": "Gutters",
         "description": "",
-        "image": "./slider/6.jpg",
+        "image": "./new/gutters.jpg",
         "to": "/services/gutter"
     }
 ]

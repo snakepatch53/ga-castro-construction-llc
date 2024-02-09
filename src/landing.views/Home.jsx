@@ -22,7 +22,6 @@ export default function Home({ info }) {
     }, []);
     return (
         <>
-            holi
             <AnimatedElement>
                 <div className="w-full h-screen">
                     <Carousel info={info} data={slides} withSlider={true} />

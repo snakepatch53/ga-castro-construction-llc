@@ -47,7 +47,9 @@ export default function ServiceRoofing() {
                     </div>
                     <div
                         className="relative flex h-auto bg-[#fc8811] flex-1"
-                        style={{ boxShadow: "inset -10px 0px 20px 20px #fc8811" }}
+                        style={{
+                            boxShadow: "inset -10px 0px 20px 20px #fc8811",
+                        }}
                     >
                         <div
                             className="absolute top-[50%] translate-y-[-50%] w-full bg-[#fc8811]"
@@ -72,25 +74,31 @@ export default function ServiceRoofing() {
                             <div className="flex flex-col w-full items-center gap-3">
                                 <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
                                     <ReactCompareImage
-                                        leftImage="/img/before.png"
-                                        rightImage="/img/after.png"
+                                        leftImage="/new/Roof beforew.jpg"
+                                        rightImage="/new/Roof.jpg"
                                         className="w-full h-full [&:hover>img]:scale-110"
+                                        leftImageLabel="Before"
+                                        rightImageLabel="After"
                                     />
                                 </div>
                                 <span className="text-lg font-content">
-                                    Project done for a family somew here in New Haven
+                                    Project done for a family somew here in New
+                                    Haven
                                 </span>
                             </div>
                             <div className="flex flex-col w-full items-center gap-3">
                                 <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
                                     <ReactCompareImage
-                                        leftImage="/img/before.png"
-                                        rightImage="/img/after.png"
+                                        leftImage="/new/roof befor.jpg"
+                                        rightImage="/new/Roof2.jpg"
                                         className="w-full h-full [&:hover>img]:scale-110"
+                                        leftImageLabel="Before"
+                                        rightImageLabel="After"
                                     />
                                 </div>
                                 <span className="text-lg font-content">
-                                    Project done for a family somew here in New Haven
+                                    Project done for a family somew here in New
+                                    Haven
                                 </span>
                             </div>
                         </div>
@@ -155,8 +163,13 @@ function ItemBanner({ name, icon }) {
     return (
         <div className="flex flex-col  content-center items-center py-1  sm:px-5 rounded-xl sm:gap-2 shadow-3xl">
             {/* <FontAwesomeIcon className="text-4xl md:text-6xl" icon={icon} /> */}
-            <div dangerouslySetInnerHTML={{ __html: icon }} className="icon h-16 fill-white" />
-            <h3 className="text-center text-balance text-lg md:text-xl sm:max-w-36">{name}</h3>
+            <div
+                dangerouslySetInnerHTML={{ __html: icon }}
+                className="icon h-16 fill-white"
+            />
+            <h3 className="text-center text-balance text-lg md:text-xl sm:max-w-36">
+                {name}
+            </h3>
         </div>
     );
 }
