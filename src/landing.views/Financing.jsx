@@ -7,12 +7,8 @@ import {
     faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../landing.components/Button";
-import { useEffect } from "react";
 
 export default function Financing() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative ">

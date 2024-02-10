@@ -53,6 +53,24 @@ body {
     color: white !important;
 }
 
+/* Style for google reviews Swiper */
+.swipper-google-reviews-component-container .swiper-button-prev,
+.swipper-google-reviews-component-container .swiper-button-next {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.swipper-google-reviews-component-container .swiper-button-prev:after,
+.swipper-google-reviews-component-container .swiper-button-next:after {
+    font-size: 1rem !important;
+    color: white !important;
+}
+
 /* select of google translate */
 .goog-te-combo {
     cursor: pointer;
@@ -69,4 +87,30 @@ body {
 
 .skiptranslate iframe {
     display: none !important;
+}
+
+/* ICON EMERGENCY CALL */
+.emergency-call-svg .cls-1 {
+    fill: #f53939;
+}
+.emergency-call-svg .cls-2 {
+    stroke-miterlimit: 10;
+    fill: url(#Degradado_sin_nombre_275);
+    stroke: url(#Degradado_sin_nombre_2);
+}
+.emergency-call-svg .cls-3 {
+    fill: url(#Degradado_sin_nombre_277);
+}
+.emergency-call-svg .cls-4 {
+    fill: #2e2d2e;
+}
+.emergency-call-svg .cls-5 {
+    fill: #fefefe;
+}
+.emergency-call-svg .cls-6 {
+    fill: none;
+    stroke: #2e2d2e;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 15px;
 }

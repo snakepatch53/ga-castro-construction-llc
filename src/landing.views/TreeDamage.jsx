@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,9 +6,6 @@ import SectionContact from "../landing.components/SectionContact";
 import { clsx } from "clsx";
 
 export default function TreeDamage() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="px-[--padding]">

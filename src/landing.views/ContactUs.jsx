@@ -1,14 +1,10 @@
 import AnimatedElement from "../components/AnimatedElement";
 import MapaItem from "../landing.components/MapaItem";
-import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHandPointer } from "@fortawesome/free-solid-svg-icons";
 import FormConsult from "../landing.components/Formconsult";
 
 export default function ContactUs() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden">
@@ -54,8 +50,8 @@ export default function ContactUs() {
                     <MapaItem />
                 </div>
             </section>
-            <section className="pb-20">
-                <div className="flex container pt-0 p-[--padding] justify-center md:-translate-y-20">
+            <section className="pb-20 xl:pb-0">
+                <div className="flex container px-[--padding] justify-center sm:-translate-y-10 md:-translate-y-20 xl:-translate-y-36 ">
                     <FormConsult />
                 </div>
             </section>

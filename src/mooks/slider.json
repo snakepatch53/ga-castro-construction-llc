@@ -14,13 +14,6 @@
         "to": "/services/roofing"
     },
     {
-        "id": 3,
-        "title": "We are experts in ensurance claims",
-        "description": "",
-        "image": "./slider/3.jpg",
-        "to": "/services/insurance-claims"
-    },
-    {
         "id": 4,
         "title": "Roofing",
         "description": "",

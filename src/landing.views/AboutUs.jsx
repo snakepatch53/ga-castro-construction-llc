@@ -1,5 +1,5 @@
 import AnimatedElement from "../components/AnimatedElement";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,9 +12,6 @@ import SectionContact from "../landing.components/SectionContact";
 import TeamItemCard from "../landing.components/TeamItemCard";
 
 export default function AboutUs({ info }) {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden p-[--padding]">
@@ -79,7 +76,7 @@ export default function AboutUs({ info }) {
                     </svg>
                     <div className="bg-[var(--color2-bg)] p-5 md:pt-48">
                         <div className="container flex flex-col justify-center">
-                            <div className="min-h-[395px]">
+                            <div className="min-h-[380px]">
                                 <Swiper
                                     spaceBetween={80}
                                     slidesPerView={4}
@@ -92,10 +89,10 @@ export default function AboutUs({ info }) {
                                         320: { slidesPerView: 1 },
                                         640: { slidesPerView: 2 },
                                         1024: { slidesPerView: 3 },
-                                        1280: { slidesPerView: 4 },
+                                        // 1280: { slidesPerView: 4 },
                                     }}
                                     grabCursor={true}
-                                    className="pt-14 pb-5"
+                                    className="pt-20 pb-5"
                                 >
                                     {teams.map((team) => (
                                         <SwiperSlide key={team.id}>
@@ -109,13 +106,19 @@ export default function AboutUs({ info }) {
                             </Button>
                         </div>
                     </div>
-                    <svg viewBox="0 0 1440 320" className="-translate-y-1">
+                    {/* <svg viewBox="0 0 1440 320" className="-translate-y-1">
                         <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-                    </svg>
+                    </svg> */}
                 </div>
             </section>
-            <section className="p-[--padding] pt-0">
-                <div className="container w-full">
+            <section className="relative px-[var(--padding)] ">
+                <svg
+                    viewBox="0 0 1440 320"
+                    className="-translate-y-1 absolute z-10 top-0 left-0 right-0 fill-[#141422]"
+                >
+                    <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+                </svg>
+                <div className="container pt-14 sm:pt-24 lg:pt-40">
                     <SectionContact />
                 </div>
             </section>

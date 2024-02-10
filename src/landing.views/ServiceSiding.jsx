@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
@@ -8,9 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GoogleItems from "../landing.components/GoogleItems";
 
 export default function ServiceSiding() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative shadow-xl font-title p-[--padding]">
@@ -68,7 +64,7 @@ export default function ServiceSiding() {
                 </div>
             </section>
             <section className="relative bg-[#ff9500]">
-                <div className="relative z-10 container">
+                <div className="relative z-10 container pb-10 sm:pb-32 lg:pb-40">
                     <BannerItem
                         title="Protection and"
                         subtitle="A modern finish for your facade"
@@ -79,7 +75,7 @@ export default function ServiceSiding() {
                         titleClassName="lg:pb-28"
                     />
                 </div>
-                <div className=" w-full ">
+                <div className=" w-full absolute left-0 right-0 -bottom-0 xl:-bottom-20 ">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1440 320"
@@ -93,15 +89,15 @@ export default function ServiceSiding() {
                 <GoogleItems />
             </section>
 
-            <section>
+            <section className="relative">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                    className="fill-[#0b0c1e] -translate-y-1"
+                    className="fill-[#0b0c1e] -translate-y-1 absolute left-0 right-0 -top-0 md:-top-10 lg:-top-20 -z-10"
                 >
                     <path d="M0,288L48,277.3C96,267,192,245,288,224C384,203,480,181,576,176C672,171,768,181,864,181.3C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
-                <div className="container w-full p-[var(--padding)]">
+                <div className="container w-full px-[var(--padding)] pt-20 sm:pt-28 lg:pt-40">
                     <SectionContact />
                 </div>
             </section>

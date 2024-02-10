@@ -8,7 +8,7 @@ export default function SectionContact({ isCol = false }) {
     return (
         <div
             className={clsx(
-                "flex flex-col sm:p-[--padding] items-center w-full gap-5 font-title2",
+                "flex flex-col sm:px-[--padding]  items-center w-full gap-5 font-title2",
                 {
                     "lg:flex-col-reverse": isCol,
                     "lg:flex-row": !isCol,

@@ -7,16 +7,20 @@ import info from "../mooks/info.json";
 export default function MapaItem() {
     const [map, setMap] = useState(info.branch1.map);
     return (
-        <div className="">
-            <div className="container flex flex-col items-center font-title ">
+        <div className="relative">
+            <div className=" container flex flex-col items-center font-title ">
                 <h3 className="text-5xl sm:text-6xl text-center">
                     We&apos;ve got you <span className="text-[--color2-txt1]">covered!</span>
                 </h3>
             </div>
-            <svg viewBox="0 0 1440 320" className="w-full fill-[var(--color1-bg)] translate-y-1">
-                <path d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,133.3C672,139,768,117,864,122.7C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>{" "}
-            </svg>
-            <div className="bg-[--color1-bg] ">
+
+            <div className="relative bg-[--color1-bg] mt-10 xs:mt-20 sm:mt-32">
+                <svg
+                    viewBox="0 0 1440 320"
+                    className="absolute -z-10 -top-24 xs:-top-32 sm:-top-40 md:-top-52 lg:-top-60 lefth-0 right-0 w-full mt-14 fill-[var(--color1-bg)] translate-y-1"
+                >
+                    <path d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,133.3C672,139,768,117,864,122.7C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>{" "}
+                </svg>
                 <div className="container px-[--padding]">
                     <div className="flex flex-col gap-10 md:flex-row w-full items-center justify-center">
                         <div className="flex flex-col w-full md:w-1/2 items-center gap-5">
@@ -82,7 +86,7 @@ export default function MapaItem() {
                     </div>
                 </div>
             </div>
-            <svg viewBox="0 0 1440 320" className="w-full fill-[var(--color1-bg)] -translate-y-1">
+            <svg viewBox="0 0 1440 320" className=" w-full fill-[var(--color1-bg)] -translate-y-1">
                 <path d="M0,160L80,138.7C160,117,320,75,480,58.7C640,43,800,53,960,58.7C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>{" "}
             </svg>
         </div>

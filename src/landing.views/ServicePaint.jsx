@@ -1,12 +1,8 @@
-import { useEffect } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import SectionContact from "../landing.components/SectionContact";
 
 export default function ServicePaint() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section>
@@ -37,7 +33,7 @@ export default function ServicePaint() {
                 </div>
             </section>
             <section className="p-[var(--padding)]">
-                <div className="container w-full mt-10  lg:mt-32">
+                <div className="container w-full mt-10  lg:mt-20">
                     <SectionContact />
                 </div>
             </section>

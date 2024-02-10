@@ -14,9 +14,6 @@ export default function Gallery({ info }) {
         if (filter === "all") setFilterImages(null);
         else setFilterImages(images.filter((img) => img.tags.includes(filter)));
     }, [filter]);
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden p-[--padding]" id="header">
@@ -91,7 +88,7 @@ export default function Gallery({ info }) {
                             onClick={setFilter}
                         />
                     </div>
-                    <div className="flex py-9" id="photos">
+                    <div className="flex flex-col py-9" id="photos">
                         <GallerySection images={filterImages || images} />
                     </div>
                 </div>
@@ -132,7 +129,7 @@ export default function Gallery({ info }) {
                 </div>
             </section>
 
-            <section className="p-[--padding]">
+            <section>
                 <div className="container w-full">
                     <SectionContact />
                 </div>

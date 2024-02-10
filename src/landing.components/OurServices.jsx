@@ -21,7 +21,7 @@ export default function OurServices() {
                         ))}
                         <Item
                             src="/img/services2.jpg"
-                            to="/services/insurance-claims"
+                            to="/restoration"
                             title="See more"
                             description="We have a wide range of services that we offer to our clients."
                         />

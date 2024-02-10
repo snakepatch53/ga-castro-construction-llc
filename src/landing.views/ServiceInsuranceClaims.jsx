@@ -3,12 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import SectionContact from "../landing.components/SectionContact";
 import BannerItem from "../landing.components/BannerItem";
-import { useEffect } from "react";
 
 export default function ServiceInsuranceClaims() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section>
@@ -49,7 +45,7 @@ export default function ServiceInsuranceClaims() {
                     </div>
                 </div>
             </section>
-            <section className="p-[var(--padding)]">
+            <section>
                 <div className="container w-full">
                     <SectionContact />
                 </div>

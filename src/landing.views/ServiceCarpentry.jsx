@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import BannerItem from "../landing.components/BannerItem";
 import Button from "../landing.components/Button";
@@ -7,9 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServiceCarpentry() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden">
@@ -58,7 +54,7 @@ export default function ServiceCarpentry() {
                 </div>
             </section>
             <section className="bg-[--color1-bg]">
-                <div className="relative z-10 container  font-title p-[var(--padding)] pt-0">
+                <div className="relative z-10 container  font-title px-[var(--padding)] pt-0">
                     <div className="flex flex-col items-center  md:px-60 gap-8">
                         <p className="text-center text-5xl">
                             We have expert staff in remodelin and changing siding both outdoors and
@@ -87,8 +83,8 @@ export default function ServiceCarpentry() {
                     </svg>
                 </div>
             </section>
-            <section className="p-[var(--padding)]">
-                <div className="container w-full">
+            <section>
+                <div className="container w-full lg:-translate-y-20">
                     <SectionContact />
                 </div>
             </section>

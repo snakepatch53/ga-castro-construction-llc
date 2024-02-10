@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import slides from "./../mooks/slider.json";
 import Carousel from "../landing.components/Carousel";
@@ -7,10 +6,6 @@ import { faTrowelBricks, faUsersGear, faStopwatch } from "@fortawesome/free-soli
 import OurServices from "../landing.components/OurServices";
 
 export default function Services({ info }) {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <>
             <div className="">

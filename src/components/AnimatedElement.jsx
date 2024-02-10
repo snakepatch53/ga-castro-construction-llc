@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function AnimatedElement({ fade = true, ...props }) {
+    useEffect(() => {
+        // window.scrollTo(0, 0);
+    }, []);
     let initial = { opacity: 0 };
     let animate = { opacity: 1 };
     let transition = { duration: 0.5 };

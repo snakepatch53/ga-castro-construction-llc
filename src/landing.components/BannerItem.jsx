@@ -19,7 +19,7 @@ export default function BannerItem({
     titleClassName = "",
 }) {
     return (
-        <div className="flex flex-col p-[--padding] sm:px-20 pt-16">
+        <div className="flex flex-col px-[--padding] sm:px-20 pt-8">
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">
