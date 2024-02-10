@@ -22,7 +22,7 @@ export default function MapaItem() {
                     <path d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,133.3C672,139,768,117,864,122.7C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>{" "}
                 </svg>
                 <div className="container px-[--padding]">
-                    <div className="flex flex-col gap-10 md:flex-row w-full items-center justify-center">
+                    <div className="flex flex-col gap-10 md:flex-row w-full items-center justify-center pb-5">
                         <div className="flex flex-col w-full md:w-1/2 items-center gap-5">
                             <h3 className="text-[--color2-txt] text-4xl text-center font-title max-w-[500px]">
                                 Get to know our locations and contacts{" "}

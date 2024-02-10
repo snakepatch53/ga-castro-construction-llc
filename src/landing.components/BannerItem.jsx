@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import Button from "../landing.components/Button";
+import { clsx } from "clsx";
 
 export default function BannerItem({
     title,
@@ -17,9 +18,10 @@ export default function BannerItem({
     showButton = true,
     imgTextClassName = "",
     titleClassName = "",
+    classNameWrapper = "",
 }) {
     return (
-        <div className="flex flex-col px-[--padding] sm:px-20 pt-8">
+        <div className={clsx("flex flex-col px-[--padding] sm:px-20 pt-8", classNameWrapper)}>
             <div className="flex flex-col gap-5 w-full lg:flex-row">
                 <div className="flex-1 flex flex-col gap-5 justify-center font-title">
                     <div className="flex flex-col gap-5 pl-3">

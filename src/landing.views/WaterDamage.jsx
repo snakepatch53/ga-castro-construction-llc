@@ -50,11 +50,7 @@ export default function WaterDamage({ setIsVisibleModalFormConsult }) {
                         }}
                     />
                 </div>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1440 320"
-                    className="absolute bottom-0 translate-y-1"
-                >
+                <svg viewBox="0 0 1440 320" className="absolute -z-10 bottom-0 translate-y-1">
                     <path
                         fill="#ff9500"
                         d="M0,288L80,266.7C160,245,320,203,480,192C640,181,800,203,960,197.3C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
@@ -63,7 +59,7 @@ export default function WaterDamage({ setIsVisibleModalFormConsult }) {
             </section>
             <section className="relative bg-[#ff9500]">
                 <div className=" container p-[--padding] sm:pb-24">
-                    <GoogleItems />
+                    <GoogleItems classNameWrapper="relative z-20" />
                 </div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

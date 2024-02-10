@@ -8,10 +8,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import reviews from "../mooks/reviews.json";
 import { formatDistanceToNow } from "date-fns";
+import { clsx } from "clsx";
 
-export default function GoogleItems() {
+export default function GoogleItems({ classNameWrapper }) {
     return (
-        <div className="flex flex-col">
+        <div className={clsx("flex flex-col", classNameWrapper)}>
             <div className="container flex flex-col">
                 {/* <iframe
                     src="https://3355e6ae747c4911ba0c97c856b4d52f.elf.site"
