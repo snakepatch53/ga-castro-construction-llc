@@ -8,8 +8,6 @@ export default function FormConsult({ className = "" }) {
     const {
         name,
         setName,
-        lastName,
-        setLastName,
         email,
         setEmail,
         phone,
@@ -21,7 +19,6 @@ export default function FormConsult({ className = "" }) {
         terms,
         setTerms,
         nameError,
-        lastNameError,
         emailError,
         phoneError,
         addressError,
@@ -42,20 +39,13 @@ export default function FormConsult({ className = "" }) {
                 }
             >
                 <h3 className="font-title text-4xl mb-5 text-center">Leave us your concerns</h3>
-                <div className="flex flex-col md:flex-row w-full gap-5">
-                    <Input
-                        value={name}
-                        onChange={({ target }) => setName(target.value)}
-                        error={nameError}
-                        placeholder="*First name"
-                    />
-                    <Input
-                        value={lastName}
-                        error={lastNameError}
-                        onChange={({ target }) => setLastName(target.value)}
-                        placeholder="Last name"
-                    />
-                </div>
+
+                <Input
+                    value={name}
+                    onChange={({ target }) => setName(target.value)}
+                    error={nameError}
+                    placeholder="*Full name"
+                />
                 <Input
                     value={email}
                     onChange={({ target }) => setEmail(target.value)}

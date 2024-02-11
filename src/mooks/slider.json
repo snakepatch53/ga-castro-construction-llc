@@ -8,7 +8,7 @@
     },
     {
         "id": 2,
-        "title": "Do you need a replace you roof",
+        "title": "Do you need to replace your roof?",
         "description": "",
         "image": "./slider/2.jpg",
         "to": "/services/roofing"

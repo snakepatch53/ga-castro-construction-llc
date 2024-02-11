@@ -4,7 +4,6 @@ import { sendContactForm } from "../services/mail";
 
 export default function useFormContact2() {
     const [name, setName] = useState(null);
-    const [lastName, setLastName] = useState(null);
     const [email, setEmail] = useState(null);
     const [phone, setPhone] = useState(null);
     const [address, setAddress] = useState(null);
@@ -12,7 +11,6 @@ export default function useFormContact2() {
     const [terms, setTerms] = useState(null);
 
     const [nameError, setNameError] = useState("");
-    const [lastNameError, setLastNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [phoneError, setPhoneError] = useState("");
     const [addressError, setAddressError] = useState("");
@@ -28,7 +26,7 @@ export default function useFormContact2() {
         }
 
         validation();
-    }, [name, lastName, email, phone, address, message, terms]); // eslint-disable-line
+    }, [name, email, phone, address, message, terms]); // eslint-disable-line
 
     const validation = () => {
         let isError = false;
@@ -36,10 +34,7 @@ export default function useFormContact2() {
             isError = true;
             setNameError("Name is required");
         } else setNameError("");
-        if (!lastName) {
-            isError = true;
-            setLastNameError("Last name is required");
-        } else setLastNameError("");
+
         if (!isEmail(email)) {
             isError = true;
             setEmailError("Email is invalid");
@@ -69,7 +64,7 @@ export default function useFormContact2() {
         if (validation()) return;
         setLoading(true);
         const data = {
-            name: name + " " + lastName,
+            name,
             email,
             phone,
             address,
@@ -79,7 +74,6 @@ export default function useFormContact2() {
             setLoading(false);
             if (res.success) {
                 setName(null);
-                setLastName(null);
                 setEmail(null);
                 setPhone(null);
                 setAddress(null);
@@ -87,7 +81,6 @@ export default function useFormContact2() {
                 setTerms(null);
 
                 setNameError("");
-                setLastNameError("");
                 setEmailError("");
                 setPhoneError("");
                 setAddressError("");
@@ -102,8 +95,6 @@ export default function useFormContact2() {
     return {
         name: name || "",
         setName,
-        lastName: lastName || "",
-        setLastName,
         email: email || "",
         setEmail,
         phone: phone || "",
@@ -115,7 +106,6 @@ export default function useFormContact2() {
         terms: terms || false,
         setTerms,
         nameError,
-        lastNameError,
         emailError,
         phoneError,
         addressError,
