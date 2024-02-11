@@ -6,7 +6,7 @@ export default function PopupEmergencyCall({ url }) {
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="fixed z-20 bottom-[85px] right-3 flex h-16 animate-pulse cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out hover:animate-none"
+            className="fixed z-20 bottom-[85px] right-[15px] flex h-16 animate-pulse cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out hover:animate-none"
         >
             <Svg className="w-full h-full" />
         </a>
