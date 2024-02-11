@@ -78,6 +78,7 @@
     left: 100px;
     flex-direction: column;
     width: 500px;
+    max-width: 100vw;
     text-wrap: balance;
     text-align: left;
     user-select: default;
