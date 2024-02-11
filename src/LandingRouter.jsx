@@ -8,7 +8,6 @@ import AboutUs from "./landing.views/AboutUs";
 import NotFound from "./components/NotFound";
 import Services from "./landing.views/Services";
 import ServiceCarpentry from "./landing.views/ServiceCarpentry";
-import ServiceInsuranceClaims from "./landing.views/ServiceInsuranceClaims";
 import ServiceRoofing from "./landing.views/ServiceRoofing";
 import ServiceSiding from "./landing.views/ServiceSiding";
 import ServicePaint from "./landing.views/ServicePaint";
@@ -85,10 +84,10 @@ export default function LandingRouter() {
                                 element={<ServiceCarpentry info={info} />}
                             />
 
-                            <Route
+                            {/* <Route
                                 path="/services/insurance-claims"
                                 element={<ServiceInsuranceClaims info={info} />}
-                            />
+                            /> */}
                             <Route
                                 path="/services/roofing"
                                 element={<ServiceRoofing info={info} />}

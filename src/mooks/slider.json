@@ -1,37 +1,58 @@
 [
     {
         "id": 1,
-        "title": "Do you need a new roof",
-        "description": "",
-        "image": "./slider/1.jpg",
-        "to": "/services/roofing"
+        "title": "Financing",
+        "description": "Finance your projects",
+        "image": "/new/financing.jpg",
+        "to": "/financing"
     },
     {
         "id": 2,
-        "title": "Do you need to replace your roof?",
-        "description": "",
-        "image": "./slider/2.jpg",
-        "to": "/services/roofing"
-    },
-    {
-        "id": 4,
         "title": "Roofing",
-        "description": "",
-        "image": "./slider/4.jpg",
+        "description": "Need a new roof?",
+        "image": "/new/Roof2.jpg",
         "to": "/services/roofing"
     },
     {
-        "id": 5,
+        "id": 3,
         "title": "Siding",
-        "description": "",
-        "image": "./new/Siding.jpg",
+        "description": "Protect your home’s siding",
+        "image": "/new/Siding.jpg",
         "to": "/services/siding"
     },
     {
-        "id": 6,
+        "id": 4,
         "title": "Gutters",
-        "description": "",
-        "image": "./new/gutters.jpg",
+        "description": "Gutter solutions for water control",
+        "image": "/new/gutters.jpg",
         "to": "/services/gutter"
+    },
+    {
+        "id": 5,
+        "title": "Wind Damage",
+        "description": "Repair wind damage",
+        "image": "/new/Wind%20Damage.jpeg",
+        "to": "/restoration/wind-damage"
+    },
+    {
+        "id": 6,
+        "title": "Water Damage",
+        "description": "Solutions for water damage",
+        "image": "/new/5.jpg",
+        "to": "/restoration/water-damage"
+    },
+    {
+        "id": 7,
+        "title": "Tree Damage",
+        "description": "Mitigation for tree damage to homes",
+        "image": "/new/Tree%20Damage.jpg",
+        "to": "/restoration/tree-damage"
+    },
+    {
+        "id": 8,
+        "title": "Mitigation",
+        "description": "Damage mitigation services",
+        "image": "/new/mitigation.jpg",
+        "to": "/restoration/water-damage"
     }
 ]

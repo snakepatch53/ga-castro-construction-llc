@@ -95,6 +95,7 @@
 
 .carousel-component .item .name {
     font-size: 50px;
+    font-family: title;
     font-weight: bold;
     opacity: 0;
     text-shadow: 1px 0 1px var(--color1-txt), 0 1px 1px var(--color1-txt),
@@ -106,12 +107,16 @@
 }
 
 .carousel-component .item .des {
-    font-size: 1rem;
-    margin: 20px 0;
+    font-family: content;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     opacity: 0;
-    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 
