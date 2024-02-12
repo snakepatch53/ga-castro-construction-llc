@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import socials from "./../mooks/social.json";
 
-export default function Footer() {
+export default function Footer({ info }) {
     return (
         <footer className="bg-[--color2-bg] px-[var(--padding)]">
             <div className="container text-[--color2-txt] font-title2">
@@ -34,6 +34,14 @@ export default function Footer() {
                         <Link className="hover:underline opacity-70" to="/about-us">
                             About us
                         </Link>
+                        <a
+                            href={info.business_email}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:underline opacity-70"
+                        >
+                            Email Access
+                        </a>
                     </div>
                     <div className="mx-auto lg:ml-auto lg:mx-0 opacity-70 w-full max-w-48">
                         {/* <select className="text-black cursor-pointer rounded-sm">

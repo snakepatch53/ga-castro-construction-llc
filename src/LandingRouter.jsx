@@ -129,7 +129,7 @@ export default function LandingRouter() {
                         </Routes>
                     </AnimatePresence>
                 </div>
-                <Footer />
+                <Footer info={info} />
             </Router>
         </>
     );
