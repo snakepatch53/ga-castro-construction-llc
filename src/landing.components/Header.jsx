@@ -1,4 +1,4 @@
-import { faBars, faMinus, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleUp, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -73,11 +73,12 @@ export default function Header({
                             <Option name="Tree Damage" to="/restoration/tree-damage" />
                         </Option>
                         {/* <Option name="Services Areas" to="/services-areas" /> */}
-
                         <Option name="Financing" to="/financing" />
                         <Option name="Gallery" to="/gallery" />
-                        <Option name="About Us" to="/about-us" />
-                        <Option name="Contact Us" to="/contact-us" />
+                        <Option name="Help" to="">
+                            <Option name="About Us" to="/about-us" />
+                            <Option name="Contact Us" to="/contact-us" />
+                        </Option>
                     </div>
                     <div className="flex justify-center items-center">
                         <button
@@ -131,11 +132,11 @@ function Option({ children, name, to, ...props }) {
                 {children && (
                     <div className={`relative w-[0.7rem] hidden xl:block`}>
                         <FontAwesomeIcon
-                            icon={faPlus}
+                            icon={faAngleDown}
                             className="w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-300"
                         />
                         <FontAwesomeIcon
-                            icon={faMinus}
+                            icon={faAngleUp}
                             className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         />
                     </div>

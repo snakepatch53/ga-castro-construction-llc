@@ -50,9 +50,9 @@ export default function Restoration() {
                         <Item src="/new/Tree Damage.jpg" title="Tree Damage" to="./tree-damage" />
                     </div>
                     <BannerItem
-                        title="Stamford y"
-                        title2="Fairfield"
-                        subtitle="Maximize your coverage whith our expert help "
+                        title="Fairfield County"
+                        title2="Stamford"
+                        subtitle="Maximize your coverage with our expert help "
                         imgSrc="/img/1.png"
                         imgText="Claims couseling process"
                     />

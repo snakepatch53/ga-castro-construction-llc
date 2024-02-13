@@ -6,7 +6,7 @@ export default function Footer({ info }) {
         <footer className="bg-[--color2-bg] px-[var(--padding)]">
             <div className="container text-[--color2-txt] font-title2">
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start px-5 py-8 gap-5  border-b-[1px] border-gray-500">
-                    <span className="opacity-70">Follow us </span>
+                    <span className="opacity-70">Join our community </span>
                     <div className="flex gap-3 text-sm opacity-75 --color2-txt">
                         {socials.map((social) => (
                             <SocialItem key={social.id} type="2" {...social} />
