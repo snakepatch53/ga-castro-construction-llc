@@ -75,10 +75,11 @@ export default function Header({
                         {/* <Option name="Services Areas" to="/services-areas" /> */}
                         <Option name="Financing" to="/financing" />
                         <Option name="Gallery" to="/gallery" />
-                        <Option name="Help" to="">
+                        <Option name="Help" to="#">
                             <Option name="About Us" to="/about-us" />
                             <Option name="Contact Us" to="/contact-us" />
                         </Option>
+                        <Option name="Roof Designer" to="/roof-designer" />
                     </div>
                     <div className="flex justify-center items-center">
                         <button

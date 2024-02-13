@@ -1,10 +1,11 @@
-import { Suspense, lazy, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import info from "./mooks/info.json";
 import useGoogleTranslate from "./hooks/useGoogleTranslate";
 import PopupEmergencyCall from "./landing.components/PopupEmergencyCall";
 import Loading from "./components/Loading";
+import RoofDesigner from "./landing.views/RoofDesigner";
 
 // Lazy load the components
 const Home = lazy(() => import("./landing.views/Home"));
@@ -29,6 +30,22 @@ const TreeDamage = lazy(() => import("./landing.views/TreeDamage"));
 export default function LandingRouter() {
     const [isVisibleModalFormConsult, setIsVisibleModalFormConsult] = useState(false);
     useGoogleTranslate();
+
+    // detect if user close tab
+    useEffect(() => {
+        const window_mouseout = (obj, evt, fn) => {
+            if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+            else if (obj.attachEvent) obj.attachEvent("on" + evt, fn);
+        };
+
+        window_mouseout(document, "mouseout", (event) => {
+            event = event ? event : window.event;
+            var from = event.relatedTarget || event.toElement;
+            if (!from || from.nodeName === "HTML") {
+                console.log("Salio de la ventana");
+            }
+        });
+    }, []);
     return (
         <Suspense fallback={<Loading />}>
             <BrowserRouter>
@@ -81,6 +98,7 @@ export default function LandingRouter() {
                             <Route path="*" element={<NotFound info={info} />} />
 
                             <Route path="/restoration" element={<Restoration info={info} />} />
+                            <Route path="/roof-designer" element={<RoofDesigner info={info} />} />
                             <Route
                                 path="/restoration/wind-damage"
                                 element={<WindDamage info={info} />}

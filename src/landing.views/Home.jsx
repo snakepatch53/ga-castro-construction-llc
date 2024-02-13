@@ -22,6 +22,7 @@ export default function Home({ info }) {
                 <div className="w-full h-screen">
                     <Carousel info={info} data={slides} withSlider={true} />
                 </div>
+
                 <div className="w-full ">
                     <div className="container p-[var(--padding)]">
                         <div className="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center ">

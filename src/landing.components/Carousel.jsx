@@ -63,7 +63,7 @@ export default function Carousel({ data, autoPlay = true, delay = 5000, directio
                                     <div className="des">{item.description}</div>
                                     {/* <Link to={item.to}>See more</Link> */}
                                     <Button href={item.to} className="bg-white" type="3">
-                                        See more
+                                        {item.button}
                                     </Button>
                                 </div>
                             </div>

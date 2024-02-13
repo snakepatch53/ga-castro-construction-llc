@@ -4,55 +4,63 @@
         "title": "Financing",
         "description": "Finance your projects",
         "image": "/new/financing.jpg",
-        "to": "/financing"
+        "to": "/financing",
+        "button": "Apply Now"
     },
     {
         "id": 2,
         "title": "Roofing",
         "description": "Need a new roof?",
         "image": "/new/Roof2.jpg",
-        "to": "/services/roofing"
+        "to": "/services/roofing",
+        "button": "See More"
     },
     {
         "id": 3,
         "title": "Siding",
         "description": "Protect your home’s siding",
         "image": "/new/Siding.jpg",
-        "to": "/services/siding"
+        "to": "/services/siding",
+        "button": "See More"
     },
     {
         "id": 4,
         "title": "Gutters",
         "description": "Gutter solutions for water control",
         "image": "/new/gutters.jpg",
-        "to": "/services/gutter"
+        "to": "/services/gutter",
+        "button": "See More"
     },
     {
         "id": 5,
         "title": "Wind Damage",
         "description": "Repair wind damage",
-        "image": "/new/Wind%20Damage.jpeg",
-        "to": "/restoration/wind-damage"
+        "image": "/img/14.jpg",
+        "to": "/restoration/wind-damage",
+        "button": "See More"
     },
     {
         "id": 6,
         "title": "Water Damage",
         "description": "Solutions for water damage",
         "image": "/new/5.jpg",
-        "to": "/restoration/water-damage"
+        "to": "/restoration/water-damage",
+        "button": "See More"
     },
     {
         "id": 7,
         "title": "Tree Damage",
         "description": "Mitigation for tree damage to homes",
         "image": "/new/Tree%20Damage.jpg",
-        "to": "/restoration/tree-damage"
+        "to": "/restoration/tree-damage",
+        "button": "See More"
     },
     {
         "id": 8,
         "title": "Mitigation",
         "description": "Damage mitigation services",
         "image": "/new/mitigation.jpg",
-        "to": "/restoration/water-damage"
+        "to": "/restoration/water-damage",
+        "button": "See More"
     }
 ]
