@@ -3,7 +3,7 @@
     "name_min": "Castro Construcctions",
     "initials": "G.A.C.C.",
     "phone": "+1 (800) 838-8186",
-    "email": "info@gacastroconstructionllc.com",
+    "email": "g.a.castroconstructionllc@gmail.com",
     "mission": "Our mission is to offer premium, durable roofing with a focus on client satisfaction and safety.",
     "vision": "Our vision is to be industry-leading roofers known for quality, integrity, and service excellence.",
     "trusted_services": "Roofing vision refers to the overall purpose or mission that a roofing companys to achieve",
@@ -13,15 +13,19 @@
     "posts": "243",
     "business_email": "https://bh8972.banahosting.com:2096/webmaillogout.cgi",
     "branch1": {
-        "name": "Main Office",
+        "name": "Fairfield County (Stamfrod)",
         "address": "39 hubbard Ave, STAMFORD, CT 06905",
-        "phone": "203-570-4688",
+        "phone": "+1 (800) 838-8186",
+        "ext": "Ext 1",
+        "email": "g.a.castroconstructionllc@gmail.com",
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4171.982373498454!2d-73.55432682315829!3d41.057445016394865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac10d21f00928c31%3A0x74003c50fb12aae1!2sGA%20CASTRO%20CONSTRUCTION!5e1!3m2!1ses-419!2sec!4v1706294916286!5m2!1ses-419!2sec"
     },
     "branch2": {
-        "name": "Second Office",
+        "name": "New Haven County (Guilford)",
         "address": "'1300 Boston Post Rd, Guilford, CT 06437",
-        "phone": "203-570-4688",
+        "phone": "+1 (800) 838-8186",
+        "ext": "Ext 2",
+        "email": "guilford@gacastro.com",
         "map": "https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d716.6955975690599!2d-72.69303960100247!3d41.28857396246239!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e62b50d2f17f47%3A0x34229e7354d53e31!2sGA%20CASTRO%20CONSTRUCTION%20-%20GUILFORD!5e1!3m2!1ses-419!2sec!4v1706294853191!5m2!1ses-419!2sec"
     },
     "home": {

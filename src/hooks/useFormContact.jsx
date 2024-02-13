@@ -39,14 +39,23 @@ export default function useFormContact() {
         if (!phone) {
             isError = true;
             setPhoneError("Phone is required");
+        } else if (phone?.length < 10) {
+            isError = true;
+            setPhoneError("Phone is too short");
         } else setPhoneError("");
         if (!address) {
             isError = true;
             setAddressError("Address is required");
+        } else if (address?.length < 10) {
+            isError = true;
+            setAddressError("Address is too short");
         } else setAddressError("");
         if (!message) {
             isError = true;
             setMessageError("Message is required");
+        } else if (message?.length < 50) {
+            isError = true;
+            setMessageError("Minimum 50 characters");
         } else setMessageError("");
         return isError;
     };

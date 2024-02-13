@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import info from "../mooks/info.json";
 
 export default function MapaItem() {
-    const [map, setMap] = useState(info.branch1.map);
+    const [branch, setBranch] = useState(info.branch1);
     return (
         <div className="relative">
             <div className=" container flex flex-col items-center font-title ">
@@ -27,22 +27,22 @@ export default function MapaItem() {
                             <h3 className="text-[--color2-txt] text-4xl text-center font-title max-w-[500px]">
                                 Get to know our locations and contacts{" "}
                             </h3>
-                            <div className="flex flex-row gap-2 sm:gap-10">
+                            <div className="flex flex-row gap-1 sm:gap-10">
                                 <div className="flex flex-col items-center gap-10">
                                     <Option
                                         name={info.branch1.name}
                                         description={info.branch1.address}
                                         icon={faLocationDot}
-                                        onClick={() => setMap(info.branch1.map)}
+                                        onClick={() => setBranch(info.branch1)}
                                         className={
-                                            map === info.branch1.map
+                                            branch.name === info.branch1.name
                                                 ? "border md:border-2 border-solid border-black"
                                                 : ""
                                         }
                                     />
                                     <a
                                         className="flex bg-[--color3-bg] h-14 aspect-square items-center justify-center rounded-full shadow-xl"
-                                        href={"mailto:" + info.email}
+                                        href={"mailto:" + branch.email}
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -57,28 +57,35 @@ export default function MapaItem() {
                                         name={info.branch2.name}
                                         description={info.branch2.address}
                                         icon={faLocationDot}
-                                        onClick={() => setMap(info.branch2.map)}
+                                        onClick={() => setBranch(info.branch2)}
                                         icon2={faEnvelope}
                                         className={
-                                            map === info.branch2.map
+                                            branch.name === info.branch2.name
                                                 ? "border md:border-2 border-solid border-black"
                                                 : ""
                                         }
                                     />
                                     <a
-                                        className="flex bg-[--color3-bg] h-14 items-center justify-center rounded-full shadow-xl px-5 font-title text-center"
-                                        href={"tel:" + info.phone}
+                                        className="flex bg-[--color3-bg] h-14 items-center justify-center rounded-full shadow-xl font-content font-bold text-center text-nowrap aspect-square px-0 sm:px-5"
+                                        href={"tel:" + branch.phone}
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        {info.phone}
+                                        <FontAwesomeIcon
+                                            icon={faPhone}
+                                            className="text-[--color3-txt1] text-3xl block sm:hidden"
+                                        />
+                                        <span className="hidden sm:flex gap-1">
+                                            {branch.phone} |
+                                            <span className="font-title">{branch.ext}</span>
+                                        </span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <AnimatedElement className="flex-1 flex max-w-[500px] w-full aspect-[5/4]">
                             <iframe
-                                src={map}
+                                src={branch.map}
                                 loading="lazy"
                                 className="w-full h-full rounded-xl shadow-3xl"
                             />

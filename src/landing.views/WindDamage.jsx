@@ -9,7 +9,7 @@ export default function WindDamage() {
         <AnimatedElement>
             <section className="relative">
                 <div className="absolute inset-0 w-full h-full ">
-                    <img src="/img/7.png" className="w-full h-full object-cover" />
+                    <img src="/img/14.jpg" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
                 <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent" />

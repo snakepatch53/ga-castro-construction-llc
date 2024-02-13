@@ -10,6 +10,7 @@ import { Autoplay } from "swiper/modules";
 import teams from "./../mooks/team.json";
 import SectionContact from "../landing.components/SectionContact";
 import TeamItemCard from "../landing.components/TeamItemCard";
+import GoogleItems from "../landing.components/GoogleItems";
 
 export default function AboutUs({ info }) {
     return (
@@ -92,7 +93,8 @@ export default function AboutUs({ info }) {
                                         // 1280: { slidesPerView: 4 },
                                     }}
                                     grabCursor={true}
-                                    className="pt-20 pb-5"
+                                    // className="pt-20 pb-5 bg-red-200"
+                                    style={{ paddingTop: "70px", paddingBottom: "5px" }}
                                 >
                                     {teams.map((team) => (
                                         <SwiperSlide key={team.id}>
@@ -111,14 +113,17 @@ export default function AboutUs({ info }) {
                     </svg> */}
                 </div>
             </section>
-            <section className="relative px-[var(--padding)] ">
+            <section className="relative px-[var(--padding)] pt-48">
                 <svg
                     viewBox="0 0 1440 320"
                     className="-translate-y-1 absolute z-10 top-0 left-0 right-0 fill-[#141422]"
                 >
                     <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
                 </svg>
-                <div className="container pt-14 sm:pt-24 lg:pt-40">
+                <GoogleItems classNameWrapper="relative z-20" />
+            </section>
+            <section className="px-[var(--padding)]">
+                <div className="relative z-10 container pt-14 sm:pt-24 lg:pt-40">
                     <SectionContact />
                 </div>
             </section>

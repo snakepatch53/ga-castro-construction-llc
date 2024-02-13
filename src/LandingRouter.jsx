@@ -1,59 +1,37 @@
+import { Suspense, lazy, useState } from "react";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from "./landing.views/Home";
-import Header from "./landing.components/Header";
-import Footer from "./landing.components/Footer";
-import ContactUs from "./landing.views/ContactUs";
-import AboutUs from "./landing.views/AboutUs";
-import NotFound from "./components/NotFound";
-import Services from "./landing.views/Services";
-import ServiceCarpentry from "./landing.views/ServiceCarpentry";
-import ServiceRoofing from "./landing.views/ServiceRoofing";
-import ServiceSiding from "./landing.views/ServiceSiding";
-import ServicePaint from "./landing.views/ServicePaint";
-import ServiceGutter from "./landing.views/ServiceGutter";
-import Gallery from "./landing.views/Gallery";
-import Financing from "./landing.views/Financing";
 import info from "./mooks/info.json";
+import useGoogleTranslate from "./hooks/useGoogleTranslate";
 import PopupEmergencyCall from "./landing.components/PopupEmergencyCall";
-import { useEffect, useState } from "react";
-import Restoration from "./landing.views/Restoration";
-import WindDamage from "./landing.views/WindDamage";
-import WaterDamage from "./landing.views/WaterDamage";
-import TreeDamage from "./landing.views/TreeDamage";
+import Loading from "./components/Loading";
+
+// Lazy load the components
+const Home = lazy(() => import("./landing.views/Home"));
+const Header = lazy(() => import("./landing.components/Header"));
+const Footer = lazy(() => import("./landing.components/Footer"));
+const ContactUs = lazy(() => import("./landing.views/ContactUs"));
+const AboutUs = lazy(() => import("./landing.views/AboutUs"));
+const NotFound = lazy(() => import("./components/NotFound"));
+const Services = lazy(() => import("./landing.views/Services"));
+const ServiceCarpentry = lazy(() => import("./landing.views/ServiceCarpentry"));
+const ServiceRoofing = lazy(() => import("./landing.views/ServiceRoofing"));
+const ServiceSiding = lazy(() => import("./landing.views/ServiceSiding"));
+const ServicePaint = lazy(() => import("./landing.views/ServicePaint"));
+const ServiceGutter = lazy(() => import("./landing.views/ServiceGutter"));
+const Gallery = lazy(() => import("./landing.views/Gallery"));
+const Financing = lazy(() => import("./landing.views/Financing"));
+const Restoration = lazy(() => import("./landing.views/Restoration"));
+const WindDamage = lazy(() => import("./landing.views/WindDamage"));
+const WaterDamage = lazy(() => import("./landing.views/WaterDamage"));
+const TreeDamage = lazy(() => import("./landing.views/TreeDamage"));
 
 export default function LandingRouter() {
     const [isVisibleModalFormConsult, setIsVisibleModalFormConsult] = useState(false);
-    const googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-            {
-                pageLanguage: "en",
-                autoDisplay: false,
-                includedLanguages: "es,en",
-            },
-            "google_translate_element"
-        );
-    };
-    useEffect(() => {
-        var addScript = document.createElement("script");
-        addScript.setAttribute(
-            "src",
-            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        );
-        document.body.appendChild(addScript);
-        window.googleTranslateElementInit = googleTranslateElementInit;
-
-        return () => {
-            document.body.removeChild(addScript);
-            const $items = document.querySelectorAll(".skiptranslate");
-            $items.forEach((item) => {
-                item.remove();
-            });
-        };
-    }, []);
+    useGoogleTranslate();
     return (
-        <>
-            <Router>
+        <Suspense fallback={<Loading />}>
+            <BrowserRouter>
                 <Header
                     info={info}
                     withSliderIn={[
@@ -78,16 +56,10 @@ export default function LandingRouter() {
                         <Routes>
                             <Route path="/" element={<Home info={info} />} />
                             <Route path="/services" element={<Services info={info} />} />
-                            {/* <Route path="/services/:title" element={<ServiceInfo />} /> */}
                             <Route
                                 path="/services/carpentry"
                                 element={<ServiceCarpentry info={info} />}
                             />
-
-                            {/* <Route
-                                path="/services/insurance-claims"
-                                element={<ServiceInsuranceClaims info={info} />}
-                            /> */}
                             <Route
                                 path="/services/roofing"
                                 element={<ServiceRoofing info={info} />}
@@ -130,7 +102,7 @@ export default function LandingRouter() {
                     </AnimatePresence>
                 </div>
                 <Footer info={info} />
-            </Router>
-        </>
+            </BrowserRouter>
+        </Suspense>
     );
 }

@@ -34,7 +34,6 @@ export default function GoogleItems({ classNameWrapper }) {
                         spaceBetween={20}
                         loop={true}
                         grabCursor={true}
-                        className="grid"
                     >
                         {reviews.map((item) => (
                             <SwiperSlide key={item.id}>
@@ -43,7 +42,6 @@ export default function GoogleItems({ classNameWrapper }) {
                         ))}
                     </Swiper>
                 </div>
-
                 <Button
                     href="https://www.google.com/maps/place//data=!4m3!3m2!1s0xac10d21f00928c31:0x74003c50fb12aae1!12e1?source=g.page.m.kd._&laa=lu-desktop-review-solicitation"
                     target="_blank"

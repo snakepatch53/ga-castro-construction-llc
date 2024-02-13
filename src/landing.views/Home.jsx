@@ -33,7 +33,7 @@ export default function Home({ info }) {
                                             <span className="text-[--color2-txt1]">Difference</span>
                                         </h3>
                                         <p className="font-title text-3xl sm:text-4xl">
-                                            Just a sample of our changees
+                                            Just a sample of our changes
                                         </p>
                                     </div>
                                     <div className="flex ">
@@ -131,7 +131,8 @@ export default function Home({ info }) {
                                         // 1280: { slidesPerView: 4 },
                                     }}
                                     grabCursor={true}
-                                    className="pt-20 pb-5"
+                                    // className="pt-20 pb-5"
+                                    style={{ paddingTop: "70px", paddingBottom: "5px" }}
                                 >
                                     {teams.map((team) => (
                                         <SwiperSlide key={team.id}>

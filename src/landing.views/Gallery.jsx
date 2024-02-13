@@ -5,6 +5,7 @@ import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 import GallerySection from "../landing.components/GallerySection";
 import images from "../mooks/gallery.json";
+import works from "../mooks/works.json";
 
 export default function Gallery({ info }) {
     const { gallery } = info;
@@ -106,25 +107,16 @@ export default function Gallery({ info }) {
                             and see the process.
                         </p>
                     </div>
-                    <div className="flex flex-col md:flex-row py-20 gap-5 lg:gap-10">
-                        <Item
-                            title={gallery?.work1?.title}
-                            subtitle={gallery?.work1?.address}
-                            alt={"work done in " + gallery?.work1?.address}
-                            src={gallery?.work1?.img}
-                        />
-                        <Item
-                            title={gallery?.work2?.title}
-                            subtitle={gallery?.work2?.address}
-                            alt={"work done in " + gallery?.work2?.address}
-                            src={gallery?.work2?.img}
-                        />
-                        <Item
-                            title={gallery?.work3?.title}
-                            subtitle={gallery?.work3?.address}
-                            alt={"work done in " + gallery?.work3?.address}
-                            src={gallery?.work3?.img}
-                        />
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full py-20 gap-5 lg:gap-10">
+                        {works.map((item) => (
+                            <Item
+                                key={item.id}
+                                title={item.title}
+                                subtitle={item.address}
+                                alt={"work done in " + item.address}
+                                src={item.src}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

@@ -29,7 +29,7 @@ export default function Footer({ info }) {
                             Gallery
                         </Link>
                         <Link className="hover:underline opacity-70" to="/contact-us">
-                            Contac us
+                            Contact us
                         </Link>
                         <Link className="hover:underline opacity-70" to="/about-us">
                             About us
