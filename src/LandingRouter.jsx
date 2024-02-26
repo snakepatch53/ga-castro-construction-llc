@@ -47,26 +47,26 @@ export default function LandingRouter() {
         });
     }, []);
     return (
-        <Suspense fallback={<Loading />}>
-            <BrowserRouter>
-                <Header
-                    info={info}
-                    withSliderIn={[
-                        "/",
-                        "/services",
-                        "/services/siding",
-                        "/services/carpentry",
-                        "restoration",
-                        "/restoration/wind-damage",
-                        "/restoration/water-damage",
-                        "/financing",
-                        "/contact-us",
-                        "/gallery",
-                        "/about-us",
-                    ]}
-                    isVisibleModalFormConsult={isVisibleModalFormConsult}
-                    setIsVisibleModalFormConsult={setIsVisibleModalFormConsult}
-                />
+        <BrowserRouter>
+            <Header
+                info={info}
+                withSliderIn={[
+                    "/",
+                    "/services",
+                    "/services/siding",
+                    "/services/carpentry",
+                    "restoration",
+                    "/restoration/wind-damage",
+                    "/restoration/water-damage",
+                    "/financing",
+                    "/contact-us",
+                    "/gallery",
+                    "/about-us",
+                ]}
+                isVisibleModalFormConsult={isVisibleModalFormConsult}
+                setIsVisibleModalFormConsult={setIsVisibleModalFormConsult}
+            />
+            <Suspense fallback={<Loading />}>
                 <PopupEmergencyCall url={"tel:" + info.phone} />
                 <div className="min-h-[var(--heigh-not-header)]">
                     <AnimatePresence>
@@ -119,8 +119,8 @@ export default function LandingRouter() {
                         </Routes>
                     </AnimatePresence>
                 </div>
-                <Footer info={info} />
-            </BrowserRouter>
-        </Suspense>
+            </Suspense>
+            <Footer info={info} />
+        </BrowserRouter>
     );
 }
