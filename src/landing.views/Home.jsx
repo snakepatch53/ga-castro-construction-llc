@@ -10,10 +10,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import OurServices from "../landing.components/OurServices";
 import Button from "../landing.components/Button";
-import ReactCompareImage from "react-compare-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import SectionContact from "../landing.components/SectionContact";
+import InstantQuote from "../landing.components/InstantQuote";
 
 export default function Home({ info }) {
     return (
@@ -23,48 +21,12 @@ export default function Home({ info }) {
                     <Carousel info={info} data={slides} withSlider={true} />
                 </div>
 
-                <div className="w-full ">
-                    <div className="container p-[var(--padding)]">
-                        <div className="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center ">
-                            <div className="flex flex-col w-full h-full justify-center items-center gap-8">
-                                <div className="flex flex-col gap-8 max-w-72 ">
-                                    <div className="flex flex-col gap-3 pl-2">
-                                        <h3 className="font-title text-5xl sm:text-6xl">
-                                            Be the{" "}
-                                            <span className="text-[--color2-txt1]">Difference</span>
-                                        </h3>
-                                        <p className="font-title text-3xl sm:text-4xl">
-                                            Just a sample of our changes
-                                        </p>
-                                    </div>
-                                    <div className="flex ">
-                                        <Button
-                                            to="/about-us"
-                                            style="3"
-                                            type="2"
-                                            className="mt-2 mr-auto font-title2 px-5  items-center text-xl text-balance"
-                                        >
-                                            <span>Let&apos;s go for more</span>{" "}
-                                            <FontAwesomeIcon icon={faRightLong} />
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                <div className="w-full max-w-96 rounded-lg overflow-hidden shadow-2xl">
-                                    <ReactCompareImage
-                                        leftImage="/img/before.png"
-                                        rightImage="/img/after.png"
-                                        className="w-full h-full [&:hover>img]:scale-110"
-                                    />
-                                </div>
-                                <div className="flex w-full">
-                                    <span className="w-full text-end font-content">
-                                        Project done for family somewhere in New Haven
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                <div className="relative w-full">
+                    <div className="absolute inset-0 ">
+                        <img src="img/15.png" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="relative z-10 container p-[var(--padding)]">
+                        <InstantQuote />
                     </div>
                 </div>
 
