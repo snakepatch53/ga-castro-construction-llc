@@ -31,7 +31,7 @@ export default function InstantQuote() {
                         </span>
                         <FontAwesomeIcon
                             icon={faArrowRightLong}
-                            className="text-5xl sm:text-8xl animate-pulse"
+                            className="text-5xl sm:text-8xl animate-pulse "
                         />
                     </div>
                 </div>
