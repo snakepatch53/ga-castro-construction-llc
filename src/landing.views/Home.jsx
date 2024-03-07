@@ -25,7 +25,7 @@ export default function Home({ info }) {
                     <div className="absolute inset-0 ">
                         <img src="img/15.png" className="w-full h-full object-cover" />
                     </div>
-                    <div className="relative z-10 container p-[var(--padding)]">
+                    <div className="relative z-10 container p-[var(--padding)] md:px-0 ">
                         <InstantQuote />
                     </div>
                 </div>
