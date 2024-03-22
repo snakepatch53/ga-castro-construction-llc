@@ -110,14 +110,14 @@ export default function Home({ info }) {
                         </div>
                     </div>
                 </div>
-                <section className="relative px-[var(--padding)] ">
+                <section className="relative px-[var(--padding)]">
                     <svg
                         viewBox="0 0 1440 320"
                         className="-translate-y-1 absolute z-10 top-0 left-0 right-0 fill-[#141422]"
                     >
                         <path d="M0,224L60,197.3C120,171,240,117,360,101.3C480,85,600,107,720,101.3C840,96,960,64,1080,53.3C1200,43,1320,53,1380,58.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
                     </svg>
-                    <div className="container pt-14 sm:pt-24 lg:pt-40">
+                    <div className="relative z-10 container pt-14 sm:pt-24 lg:pt-40">
                         <SectionContact />
                     </div>
                 </section>

@@ -12,7 +12,7 @@ export default function TreeDamage() {
                 <div className="container">
                     <BannerItem
                         title="Fell free"
-                        title2="from pronblems"
+                        title2="from problems"
                         subtitle="Learn more about our risk assessment"
                         imgSrc="/img/9.png"
                         imgText="Claims couseling process"
@@ -58,7 +58,7 @@ export default function TreeDamage() {
             <section className="px-[--padding] py-20">
                 <div className="container flex flex-col justify-center items-center gap-10">
                     <h3 className="font-title text-2xl sm:text-4xl text-center">
-                        We proudly service <span className="text-[--color2-txt1]">Stanford</span> &
+                        We proudly service <span className="text-[--color2-txt1]">Stamford</span> &
                         the following towns in{" "}
                         <span className="text-[--color2-txt1]">Fairfield County</span> &{" "}
                         <span className="text-[--color2-txt1]">New Haven County</span>
@@ -71,18 +71,18 @@ export default function TreeDamage() {
                     <p className="font-content font-bold text-lg text-justify tracking-wide">
                         GA Castro Construction LLC has earned its reputation as a leading force in
                         Stamford, known for unmatched service, a highly trained team, and
-                        cuttinq—edge tree equipment supporting fifteen ground crews. Over the past
-                        decade, we&apos;ve retined our approach to tree work, building a peerless
-                        teamand met odology. Contactin GA Castro Construction LLC initiates a
-                        streamlined, punctual, and professional process. In tamford, we excel as an
+                        cutting-edge tree equipment supporting fifteen ground crews. Over the past
+                        decade, we&apos;ve refined our approach to tree work, building a peerless
+                        team and methodology. Contacting GA Castro Construction LLC initiates a
+                        streamlined, punctual, and professional process. In Stamford, we excel as an
                         emergency management team, collaborating with cities, states, homeowners,
                         and FEMA for weather-related tree removals, playing a crucial role in
-                        natural disaster relief. Emphasizin personalized customer service, our
-                        licensed arborists deeply care about trees, comprehen their growth patterns,
-                        and expertly assess tree health. GA Castro Construction LLC takes pride In
-                        its extensive knowledge of tree care, identifving specific deficiencies in
-                        various tree species. We welcome the opportunity to discuss our Stamford
-                        services.
+                        natural disaster relief. Emphasizing personalized customer service, our
+                        licensed arborists deeply care about trees, understand their growth
+                        patterns, and expertly assess tree health. GA Castro Construction LLC takes
+                        pride in its extensive knowledge of tree care, identifying specific
+                        deficiencies in various tree species. We welcome the opportunity to discuss
+                        our Stamford services.
                     </p>
                 </div>
             </section>
