@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import socials from "./../mooks/social.json";
+import { useContext } from "react";
+import { InfoContext } from "../context/info";
 
-export default function Footer({ info }) {
+export default function Footer() {
+    const { info } = useContext(InfoContext);
     return (
         <footer className="bg-[--color2-bg] px-[var(--padding)]">
             <div className="container text-[--color2-txt] font-title2">

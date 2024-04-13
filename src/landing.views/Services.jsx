@@ -4,8 +4,11 @@ import Carousel from "../landing.components/Carousel";
 
 import { faTrowelBricks, faUsersGear, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import OurServices from "../landing.components/OurServices";
+import { useContext } from "react";
+import { InfoContext } from "../context/info";
 
-export default function Services({ info }) {
+export default function Services() {
+    const { info } = useContext(InfoContext);
     return (
         <>
             <div className="">

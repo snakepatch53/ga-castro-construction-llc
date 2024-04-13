@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cls } from "../../lib/utils";
 
 export default function Button({
     children = false,
@@ -6,6 +7,7 @@ export default function Button({
     style = 1,
     type = 1,
     _type = null,
+    as,
     ...props
 }) {
     const className = props.className ? " " + props.className : "";
@@ -26,14 +28,26 @@ export default function Button({
     } else if (style == 5) {
         classStyle =
             "landing-button-component px-5 py-1 font-bold  shadow-[0_3px_15px_2px_var(--color2-bg1)] text-[var(--color2-bg)]  rounded-md  hover:bg-[var(--color2-bg)] hover:text-[var(--color2-txt)] hover:fill-[var(--color2-txt)] hover:opacity-100 transition-all duration-300 ";
+    } else if (style == 6) {
+        classStyle =
+            "flex gap-2 justify-center items-center px-5 py-2 bg-[--color1-bg] text-[--color1-txt] rounded-full font-bold cursor-pointer opacity-90 transition-all duration-300  hover:opacity-100 hover:scale-105";
     }
 
     classStyle += " shadow-[0_2px_10px_3px_rgba(0,0,0,0.6)]";
 
+    if (as) {
+        const As = as;
+        return (
+            <As {...props} className={cls(classStyle, className)}>
+                {children ? children : text}
+            </As>
+        );
+    }
+
     if (type == 1) {
         return (
             <>
-                <button {...props} type={_type} className={classStyle + " " + className}>
+                <button {...props} type={_type} className={cls(classStyle, className)}>
                     {children ? children : text}
                 </button>
             </>
@@ -41,7 +55,7 @@ export default function Button({
     } else if (type == 2) {
         return (
             <>
-                <Link {...props} className={classStyle + " " + className}>
+                <Link {...props} className={cls(classStyle, className)}>
                     {children ? children : text}
                 </Link>
             </>
@@ -49,7 +63,7 @@ export default function Button({
     } else if (type == 3) {
         return (
             <>
-                <a {...props} className={classStyle + " " + className} rel="noreferrer">
+                <a {...props} className={cls(classStyle, className)} rel="noreferrer">
                     {children ? children : text}
                 </a>
             </>

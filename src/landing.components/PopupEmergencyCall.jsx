@@ -1,6 +1,10 @@
 import { clsx } from "clsx";
+import { useContext } from "react";
+import { InfoContext } from "../context/info";
 
-export default function PopupEmergencyCall({ url }) {
+export default function PopupEmergencyCall() {
+    const { info } = useContext(InfoContext);
+    const url = "tel:" + info.phone;
     return (
         <a
             href={url}

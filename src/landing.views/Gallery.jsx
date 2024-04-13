@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AnimatedElement from "../components/AnimatedElement";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 import GallerySection from "../landing.components/GallerySection";
 import images from "../mooks/gallery.json";
 import works from "../mooks/works.json";
+import { InfoContext } from "../context/info";
 
-export default function Gallery({ info }) {
+export default function Gallery() {
+    const { info } = useContext(InfoContext);
     const { gallery } = info;
     const [filter, setFilter] = useState("all");
     const [filterImages, setFilterImages] = useState([]);

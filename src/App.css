@@ -114,3 +114,48 @@ body {
     stroke-linejoin: round;
     stroke-width: 15px;
 }
+
+/* swipper landing page */
+
+.swipper-landing-component .swiper-button-prev,
+.swipper-landing-component .swiper-button-next {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    background: var(--color1-bg);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    --sep: 60px;
+}
+
+.swipper-landing-component .swiper-button-prev:hover,
+.swipper-landing-component .swiper-button-next:hover {
+    opacity: 1;
+}
+
+.swipper-landing-component .swiper-button-prev {
+    left: var(--sep);
+}
+.swipper-landing-component .swiper-button-next {
+    right: var(--sep);
+}
+
+.swipper-landing-component .swiper-button-prev:after,
+.swipper-landing-component .swiper-button-next:after {
+    font-size: 1.4rem !important;
+    color: var(--color1-txt) !important;
+}
+
+.swipper-landing-component-dark .swiper-button-prev,
+.swipper-landing-component-dark .swiper-button-next {
+    background: black;
+    opacity: 1;
+}
+
+.swipper-landing-component-dark .swiper-button-prev:after,
+.swipper-landing-component-dark .swiper-button-next:after {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
