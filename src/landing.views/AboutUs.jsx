@@ -122,7 +122,7 @@ export default function AboutUs() {
                 <GoogleItems classNameWrapper="relative z-20" />
             </section> */}
 
-            <section className="px-[var(--padding)]">
+            {/* <section className="px-[var(--padding)]">
                 <div className="container flex flex-col gap-20">
                     <h3 className="font-title font-bold text-2xl sm:text-5xl text-center text-balance">
                         Here you have more information about our certificates
@@ -136,10 +136,10 @@ export default function AboutUs() {
                         <Item title="Insert document name here" url="https://www.google.com" />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="px-[var(--padding)]">
-                <div className="relative z-10 container pt-14 sm:pt-24 lg:pt-40">
+                <div className="container relative z-10">
                     <SectionContact />
                 </div>
             </section>
@@ -147,22 +147,22 @@ export default function AboutUs() {
     );
 }
 
-function Item({ title, url }) {
-    return (
-        <div className="flex flex-col gap-5">
-            <span className="font-title font-bold text-2xl text-center">{title}</span>
-            <Button
-                style="5"
-                as="a"
-                text="Download now"
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-                className="py-3 px-10 mx-auto text-lg text-center bg-black/20 shadow-[0_5px_10px_0_var(--color2-bg1)]"
-            />
-        </div>
-    );
-}
+// function Item({ title, url }) {
+//     return (
+//         <div className="flex flex-col gap-5">
+//             <span className="font-title font-bold text-2xl text-center">{title}</span>
+//             <Button
+//                 style="5"
+//                 as="a"
+//                 text="Download now"
+//                 href={url}
+//                 target="_blank"
+//                 rel="noreferrer"
+//                 className="py-3 px-10 mx-auto text-lg text-center bg-black/20 shadow-[0_5px_10px_0_var(--color2-bg1)]"
+//             />
+//         </div>
+//     );
+// }
 
 // function Item({ title, icon }) {
 //     return (

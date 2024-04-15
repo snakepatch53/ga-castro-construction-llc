@@ -15,10 +15,14 @@ export default function WorkAreas() {
                 <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-transparent" />
                 <div className="container p-[--padding] py-52 sm:py-60 flex w-full h-full items-center justify-center ">
-                    <div className="relative flex flex-row max-w-[700px] items-center bg-black/30 rounded-br-[60px] rounded-tl-[60px] gap-2 px-10 sm:px-10 py-7">
+                    <div className="relative flex flex-row max-w-[900px] items-center bg-black/30 rounded-br-[60px] rounded-tl-[60px] gap-2 px-10 sm:px-10 py-7">
                         <h1 className="text-2xl  sm:text-5xl text-center  font-title text-[--color2-txt]">
                             We work throughout the
-                            <span className="text-[--color1-bg]"> Fairfield County</span> area
+                            <span className="text-[--color1-bg]">
+                                {" "}
+                                Fairfield and New Haven County
+                            </span>{" "}
+                            area
                         </h1>
                     </div>
                 </div>
@@ -26,15 +30,21 @@ export default function WorkAreas() {
             <section>
                 <div className="container flex flex-col md:flex-row p-[--padding] py-10 w-full h-full items-center justify-center ">
                     <div className="flex w-full items-center justify-center">
-                        <img src="/img/17.png" alt="" />
+                        <img src="/img/13.png" />
                     </div>
                     <div className="flex flex-col w-full items-center gap-5">
-                        <p className="font-title text-5xl text-center">
-                            We cover each and every one of the cities in Fairfield
+                        <p
+                            className="font-title text-5xl text-center"
+                            style={{ textShadow: "0 1px 2px #000" }}
+                        >
+                            We provide construction services across all cities in{" "}
+                            <b className="text-[--color1-bg]">
+                                New Haven and Fairfield Counties, Connecticut
+                            </b>
                         </p>
-                        <spam className="font-title text-3xl text-center">
+                        {/* <spam className="font-title text-3xl text-center">
                             Learn more about our projects in each city
-                        </spam>
+                        </spam> */}
                         <Button
                             as="a"
                             href="#do-you-need-quote-job"
@@ -49,48 +59,84 @@ export default function WorkAreas() {
                 </div>
             </section>
 
-            <section>
+            <section className="px-[--padding]">
                 <div className="container flex  flex-col  px-[var(--padding)] py-16 items-center justify-center gap-10 lg:gap-16">
                     <p className="font-title text-4xl text-center px-5 sm:px-16">
                         Roofing, Siding, Gutter, Carpentry and Painting work in{" "}
                         <span className="text-[--color1-bg]">all these cities</span>
                     </p>
-                    <div className="flex flex-col md:flex-row w-full items-center justify-center font-title2 text-3xl gap-7 sm:gap-32 sm:leading-10 ">
-                        <ul>
-                            <li>Bridgeport</li>
-                            <li>Stamford</li>
-                            <li>Norwalk</li>
-                            <li>Danbury</li>
-                            <li>Fairfield</li>
-                            <li>Greenwich</li>
-                            <li>Shelton</li>
-                        </ul>
-                        <ul>
-                            <li>Bridgeport</li>
-                            <li>Stamford</li>
-                            <li>Norwalk</li>
-                            <li>Danbury</li>
-                            <li>Fairfield</li>
-                            <li>Greenwich</li>
-                            <li>Shelton</li>
-                        </ul>
-                        <ul>
-                            <li>Bridgeport</li>
-                            <li>Stamford</li>
-                            <li>Norwalk</li>
-                            <li>Danbury</li>
-                            <li>Fairfield</li>
-                            <li>Greenwich</li>
-                            <li>Shelton</li>
-                        </ul>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-32 list-none mx-auto font-title2 text-3xl sm:leading-10">
+                        <li>Bridgeport</li>
+                        <li>Stamford</li>
+                        <li>Norwalk</li>
+                        <li>Danbury</li>
+                        <li>Fairfield</li>
+                        <li>Greenwich</li>
+                        <li>Shelton</li>
+                        <li>Stratford</li>
+                        <li>Trumbull</li>
+                        <li>Westport</li>
+                        <li>Ridgefield</li>
+                        <li>Darien</li>
+                        <li>Newtown</li>
+                        <li>New Canaan</li>
+                        <li>Monroe</li>
+                        <li>Bethel</li>
+                        <li>Wilton</li>
+                        <li>Brookfield</li>
+                        <li>New Fairfield</li>
+                        <li>Weston</li>
+                        <li>Easton</li>
+                        <li>Redding</li>
+                        <li>Sherman</li>
                     </div>
                 </div>
             </section>
-            <section className="bg-[--color1-bg]">
+            <section className="bg-[--color1-bg] px-[--padding] py-20">
+                <div className="container flex  flex-col  px-[var(--padding)] py-16 items-center justify-center gap-10 lg:gap-16">
+                    <p
+                        className="font-title text-4xl text-center text-[--color1-txt1] px-5 sm:px-16"
+                        style={{ textShadow: "0 1px 2px #000" }}
+                    >
+                        Service available in Fairfield and{" "}
+                        <b className="text-[--color1-txt]">New Haven County</b>
+                    </p>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-32 list-none mx-auto font-title2 text-3xl text-[--color1-txt1] opacity-80 sm:leading-10">
+                        <li>New Haven</li>
+                        <li>Waterbury</li>
+                        <li>Meriden</li>
+                        <li>West Haven</li>
+                        <li>Milford</li>
+                        <li>Wallingford</li>
+                        <li>Naugatuck</li>
+                        <li>Cheshire</li>
+                        <li>East Haven</li>
+                        <li>Branford</li>
+                        <li>North Haven</li>
+                        <li>Guilford</li>
+                        <li>Southbury</li>
+                        <li>Madison</li>
+                        <li>Oxford</li>
+                        <li>Seymour</li>
+                        <li>Orange</li>
+                        <li>Ansonia</li>
+                        <li>Derby</li>
+                        <li>North Branford</li>
+                        <li>Woodbridge</li>
+                        <li>Beacon Falls</li>
+                        <li>Prospect</li>
+                        <li>Bethany</li>
+                        <li>Middlebury</li>
+                        <li>Hamden</li>
+                        <li>Wolcott</li>
+                    </div>
+                </div>
+            </section>
+            {/* <section className="bg-[--color1-bg]">
                 <div className="container flex  flex-col  px-[var(--padding)] py-16 items-center justify-center gap-5 lg:gap-16">
                     <article className="flex flex-col items-center text-[--color2-txt] gap-10">
                         <h3 className="font-title text-4xl text-center">
-                            Service available in Bridgeport
+                            Service available in Fairfield and New Haven County
                         </h3>
                         <div className="flex flex-col font-title2 text-xl gap-5">
                             <p className="text-center">
@@ -110,7 +156,7 @@ export default function WorkAreas() {
                         </div>
                     </article>
                 </div>
-            </section>
+            </section> */}
             <section className=" p-[var(--padding)] md:pt-20 ">
                 <div className="container ">
                     <SectionContact />

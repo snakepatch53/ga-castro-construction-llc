@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "url": "https://roofvisualizer.owenscorning.com/#",
+        "src": "/designers/1.jpg"
+    },
+    {
+        "id": 2,
+        "url": "https://www.gaf.com/en-us/plan-design/design-your-roof",
+        "src": "/designers/2.jpg"
+    },
+    {
+        "id": 3,
+        "url": "https://www.malarkeyroofing.com/roof-designer/",
+        "src": "/designers/3.jpg"
+    },
+    {
+        "id": 4,
+        "href": "https://davinci.renoworks.com/",
+        "src": "/designers/4.png"
+    },
+    {
+        "id": 5,
+        "url": "https://iko.chameleonpower.com/#",
+        "src": "/designers/5.jpg"
+    },
+    {
+        "id": 6,
+        "href": "https://colorview.certainteed.com/",
+        "src": "/designers/6.png"
+    },
+    {
+        "id": 7,
+        "url": "https://www.bbb.org/us/ct/stamford/profile/home-improvement/ga-castro-construction-llc-0111-110084464",
+        "src": "/designers/7.png"
+    }
+]

@@ -1,20 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AnimatedElement from "../components/AnimatedElement";
-import { faStar, faQuoteLeft, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import stories from "../mooks/customer_stories.json";
 import { cls } from "../../lib/utils";
 import { useState } from "react";
 import useExternalScripts from "../hooks/useExternalScripts";
+import { Link } from "react-router-dom";
+import GoogleItems from "../landing.components/GoogleItems";
+import Brands from "../landing.components/Brands";
+import OurComponentSection from "../landing.components/OurComponentSection";
+import faqsLanding from "./../mooks/faqs-landing.json";
 
 export default function Landing() {
     useExternalScripts({
         url: "https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=B5rx9uOVdIreP2QIxCFJp",
     });
+
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden">
@@ -22,74 +27,73 @@ export default function Landing() {
                     <img src="/img/22.png" className="w-full h-full object-cover object-top" />
                 </div>
 
-                <div className="relative container p-[--padding] pt-20 pb-10 flex flex-col justify-center  gap-5 w-full h-full">
-                    <div className="flex flex-col sm:flex-row items-center justify-between w-full">
-                        <img src="/img/logo.png" alt="Logo of GA Castro Constructions" />
+                <div className="relative container flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-5 p-[--padding] pt-32 pb-16 w-full h-full">
+                    <div className="flex flex-col justify-center gap-5">
+                        <h3 className="font-title text-white text-3xl sm:text-5xl text-center sm:text-left text-balance max-w-[500px]">
+                            Get a beautifull new roof that will last
+                        </h3>
                         <p
-                            className="max-w-80 font-content text-center text-white text-balance text-sm sm:text-lg opacity-90"
+                            className="max-w-[600px] font-content text-white text-pretty text-center sm:text-left text-lg"
                             style={{
                                 textShadow: "1px 1px 1px black, -1px -1px 1px black",
                             }}
                         >
-                            Start Your Roofing Project Today! 🚀 Get Your Instant Roof Quote
+                            We are the roofing construction experts, providing expert workmanship
+                            and project management to ensure a quality roof and stress-free
+                            experience for you. We use only high-quality materials and provide a
+                            level of profesionalism that&apos;s a cut above our competitors.
                         </p>
+                        <div className="flex flex-col md:flex-row items-center gap-5">
+                            <a
+                                className="flex justify-center items-center bg-[--color1-bg] font-bold font-title uppercase text-center text-[--color1-txt] max-w-96 px-5 py-3 rounded-full transition hover:scale-105"
+                                href="#section-instant-quote"
+                            >
+                                Instant online roof quote
+                            </a>
+                            <Link
+                                className="flex justify-center items-center border-2 border-[--color1-bg] font-bold font-title uppercase text-center text-white max-w-96 px-5 py-3 rounded-full transition hover:scale-105"
+                                style={{
+                                    textShadow: "1px 1px 1px black, -1px -1px 1px black",
+                                }}
+                                to="/roof-designer"
+                            >
+                                Visualize your new roof
+                            </Link>
+                        </div>
+                        <div className="flex flex-col sm:flex-row items-center gap-2">
+                            <div className="flex text-lg">
+                                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                            </div>
+                            <p
+                                className="font-content text-white text-center sm:text-left text-sm sm:text-base"
+                                style={{
+                                    textShadow: "1px 1px 1px black, -1px -1px 1px black",
+                                }}
+                            >
+                                300+ 5-star reviews (Google, Home, Advisor, BBB, Houz)
+                            </p>
+                        </div>
                     </div>
-                    <h3 className="font-title text-white text-3xl sm:text-5xl text-center sm:text-left text-balance max-w-[500px]">
-                        Get a beautifull new roof that will last
-                    </h3>
                     <p
-                        className="max-w-[600px] font-content text-white text-pretty text-center sm:text-left text-lg"
+                        className="max-w-80 font-content text-center text-white text-balance text-sm sm:text-lg opacity-8"
                         style={{
-                            textShadow: "1px 1px 1px black, -1px -1px 1px black",
+                            textShadow:
+                                "1px 0 1px black, -1px 0 1px black, 0 1px 1px black, 0 -1px 1px black",
                         }}
                     >
-                        We are the roofing construction experts, providing expert workmanship and
-                        project management to ensure a quality roof and stress-free experience for
-                        you. We use only high-quality materials and provide a level of
-                        profesionalism that&apos;s a cut above our competitors.
+                        Start Your Roofing Project Today! 🚀 Get Your Instant Roof Quote
                     </p>
-                    <div className="flex flex-col md:flex-row items-center gap-5">
-                        <a
-                            className="flex justify-center items-center bg-[--color1-bg] font-bold font-title uppercase text-center text-[--color1-txt] max-w-96 px-5 py-3 rounded-full transition hover:scale-105"
-                            href="#"
-                        >
-                            Instant online roof quote
-                        </a>
-                        <a
-                            className="flex justify-center items-center border-2 border-[--color1-bg] font-bold font-title uppercase text-center text-white max-w-96 px-5 py-3 rounded-full transition hover:scale-105"
-                            style={{
-                                textShadow: "1px 1px 1px black, -1px -1px 1px black",
-                            }}
-                            href="#"
-                        >
-                            Visualize your new roof
-                        </a>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center gap-2">
-                        <div className="flex text-lg">
-                            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                            <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                        </div>
-                        <p
-                            className="font-content text-white text-center sm:text-left text-sm sm:text-base"
-                            style={{
-                                textShadow: "1px 1px 1px black, -1px -1px 1px black",
-                            }}
-                        >
-                            300+ 5-star reviews (Google, Home, Advisor, BBB, Houz)
-                        </p>
-                    </div>
                 </div>
             </section>
 
-            <section className="relative overflow-hidden ">
+            {/* <section className="relative overflow-hidden" id="section-instant-quote">
                 <div className="absolute inset-0 w-full h-full ">
                     <img src="/img/23.jpg" className="w-full h-full object-cover" />
                 </div>
-                {/* <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" /> */}
                 <div
                     className="absolute inset-0"
                     style={{
@@ -110,6 +114,10 @@ export default function Landing() {
 
                     <div className="w-full h-full" id="roof-quote-pro-embedded" />
                 </div>
+            </section> */}
+
+            <section className="relative overflow-hidden" id="section-instant-quote">
+                <div className="w-full h-full" id="roof-quote-pro-embedded" />
             </section>
 
             <section className="relative">
@@ -156,16 +164,18 @@ export default function Landing() {
                             we&apos;d like the ooportunity to re-roof yours.
                         </p>
                     </article>
-                    <Banner />
-                    <div className="flex xflex-row w-full justify-between md:px-40 pt-10">
-                        <img src="/img/26.png" alt="" className="max-w-24 object-contain" />
-                        <img src="/img/27.png" alt="" className="max-w-24 object-contain " />
-                        <img src="/img/28.jpg" alt="" className=" max-w-20 object-contain " />
-                    </div>
+                    {/* <Banner /> */}
+                    <GoogleItems classNameWrapper="mt-10" />
                 </div>
             </section>
 
-            <section className="px-[--padding] pt-14 bg-[--color1-bg]">
+            <section className="px-[--padding]">
+                <div className="container">
+                    <Brands />
+                </div>
+            </section>
+
+            {/* <section className="px-[--padding] pt-14 bg-[--color1-bg]">
                 <div className="container flex flex-col gap-10">
                     <h3 className="font-title text-[--color1-txt] text-center text-3xl sm:text-5xl">
                         Our Services
@@ -183,6 +193,10 @@ export default function Landing() {
                         />
                     </div>
                 </div>
+            </section> */}
+
+            <section className="pt-14">
+                <OurComponentSection />
             </section>
 
             <section className="px-[--padding] py-10 bg-[--color4-bg]">
@@ -192,23 +206,9 @@ export default function Landing() {
                     </h3>
 
                     <div className="flex flex-col gap-5">
-                        <AccordionItem
-                            name="faqs"
-                            title="I''d Just like a quote, can you provide an estimate without an in-home or virtual consultation?"
-                            text="Every home and projects Is different. We can't recommend the best design and construction solutions until we truly understand your goals, budget, and timetable. Besides, purchasing remodeling and replacement services aren't like buying a commodity product. We both want to make sure we are a good fit."
-                        />
-                        <AccordionItem
-                            title="Does Home worx offer financing for roof replacement?"
-                            text="Every home and projects Is different. We can't recommend the best design and construction solutions until we truly understand your goals, budget, and timetable. Besides, purchasing remodeling and replacement services aren't like buying a commodity product. We both want to make sure we are a good fit."
-                        />
-                        <AccordionItem
-                            title="If I have storm damage to my roof, siding, windows and gutters and deck, will It be readlly apparent?"
-                            text="Every home and projects Is different. We can't recommend the best design and construction solutions until we truly understand your goals, budget, and timetable. Besides, purchasing remodeling and replacement services aren't like buying a commodity product. We both want to make sure we are a good fit."
-                        />
-                        <AccordionItem
-                            title="Will you fix roof leak?"
-                            text="Every home and projects Is different. We can't recommend the best design and construction solutions until we truly understand your goals, budget, and timetable. Besides, purchasing remodeling and replacement services aren't like buying a commodity product. We both want to make sure we are a good fit."
-                        />
+                        {faqsLanding.map((item) => (
+                            <AccordionItem key={item.id} title={item.ask} text={item.answer} />
+                        ))}
                     </div>
                 </div>
             </section>
@@ -248,15 +248,15 @@ function AccordionItem({ title, text }) {
     );
 }
 
-function OurServicesItem() {
-    return (
-        <div className="relative z-10 flex justify-center items-center text-center p-5 bg-black/20 rounded-xl font-content font-bold text-[--color1-txt] border-2 border-white/30">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perspiciatis dolorum
-            expedita natus impedit, cupiditate nihil, nostrum mollitia cum, corrupti voluptas quam
-            doloribus enim. Non accusamus quas dolorem architecto vitae!
-        </div>
-    );
-}
+// function OurServicesItem() {
+//     return (
+//         <div className="relative z-10 flex justify-center items-center text-center p-5 bg-black/20 rounded-xl font-content font-bold text-[--color1-txt] border-2 border-white/30">
+//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perspiciatis dolorum
+//             expedita natus impedit, cupiditate nihil, nostrum mollitia cum, corrupti voluptas quam
+//             doloribus enim. Non accusamus quas dolorem architecto vitae!
+//         </div>
+//     );
+// }
 
 function SlideItem({ src }) {
     return (
@@ -266,49 +266,49 @@ function SlideItem({ src }) {
     );
 }
 
-function Banner() {
-    return (
-        <div className="relative flex w-full pt-20">
-            <FontAwesomeIcon
-                icon={faQuoteLeft}
-                className="z-10 xl:-left-20 2xl:-left-36 top-5 absolute text-[150px] md:text-[180px]"
-            />
+// function Banner() {
+//     return (
+//         <div className="relative flex w-full pt-20">
+//             <FontAwesomeIcon
+//                 icon={faQuoteLeft}
+//                 className="z-10 xl:-left-20 2xl:-left-36 top-5 absolute text-[150px] md:text-[180px]"
+//             />
 
-            <Swiper
-                modules={[Autoplay, Navigation]}
-                navigation={true}
-                autoplay={{ delay: 5000 }}
-                speed={1500}
-                slidesPerView={3}
-                breakpoints={{
-                    0: { slidesPerView: 1 },
-                    320: { slidesPerView: 1 },
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                    1280: { slidesPerView: 3 },
-                }}
-                spaceBetween={30}
-                loop={true}
-                grabCursor={true}
-                className="swipper-landing-component swipper-landing-component-dark"
-            >
-                {stories.map((item) => (
-                    <SwiperSlide className="pt-12 " key={item.id}>
-                        <ItemCard {...item} />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-    );
-}
+//             <Swiper
+//                 modules={[Autoplay, Navigation]}
+//                 navigation={true}
+//                 autoplay={{ delay: 5000 }}
+//                 speed={1500}
+//                 slidesPerView={3}
+//                 breakpoints={{
+//                     0: { slidesPerView: 1 },
+//                     320: { slidesPerView: 1 },
+//                     640: { slidesPerView: 2 },
+//                     1024: { slidesPerView: 3 },
+//                     1280: { slidesPerView: 3 },
+//                 }}
+//                 spaceBetween={30}
+//                 loop={true}
+//                 grabCursor={true}
+//                 className="swipper-landing-component swipper-landing-component-dark"
+//             >
+//                 {stories.map((item) => (
+//                     <SwiperSlide className="pt-12 " key={item.id}>
+//                         <ItemCard {...item} />
+//                     </SwiperSlide>
+//                 ))}
+//             </Swiper>
+//         </div>
+//     );
+// }
 
-function ItemCard({ img, description }) {
-    return (
-        <div className="relative bg-[--color1-bg] w-full rounded-3xl pt-16 p-10 ">
-            <div className="absolute flex justify-center items-center w-24 h-24  -top-12 right-7 border-solid border-8 border-white bg-gray-400 rounded-full overflow-hidden">
-                <img src={img} className="w-full h-full object-cover" />
-            </div>
-            <p className=" font-title text-lg">{description}</p>
-        </div>
-    );
-}
+// function ItemCard({ img, description }) {
+//     return (
+//         <div className="relative bg-[--color1-bg] w-full rounded-3xl pt-16 p-10 ">
+//             <div className="absolute flex justify-center items-center w-24 h-24  -top-12 right-7 border-solid border-8 border-white bg-gray-400 rounded-full overflow-hidden">
+//                 <img src={img} className="w-full h-full object-cover" />
+//             </div>
+//             <p className=" font-title text-lg">{description}</p>
+//         </div>
+//     );
+// }

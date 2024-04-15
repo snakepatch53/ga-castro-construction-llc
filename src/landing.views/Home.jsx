@@ -12,6 +12,7 @@ import OurServices from "../landing.components/OurServices";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 import InstantQuote from "../landing.components/InstantQuote";
+import Brands from "../landing.components/Brands";
 
 export default function Home({ info }) {
     return (
@@ -119,6 +120,11 @@ export default function Home({ info }) {
                     </svg>
                     <div className="relative z-10 container pt-14 sm:pt-24 lg:pt-40">
                         <SectionContact />
+                    </div>
+                </section>
+                <section className="px-[--padding]">
+                    <div className="container flex items-center justify-center">
+                        <Brands />
                     </div>
                 </section>
             </AnimatedElement>

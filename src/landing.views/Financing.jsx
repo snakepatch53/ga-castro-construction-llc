@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
+import Brands from "../landing.components/Brands";
 
 export default function Financing() {
     return (
@@ -108,6 +109,11 @@ export default function Financing() {
             <section className="p-[var(--padding)]">
                 <div className="container w-full md:pt-20">
                     <SectionContact />
+                </div>
+            </section>
+            <section className="px-[--padding]">
+                <div className="container flex items-center justify-center">
+                    <Brands />
                 </div>
             </section>
         </AnimatedElement>

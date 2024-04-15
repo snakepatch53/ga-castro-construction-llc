@@ -75,7 +75,7 @@ export default function Header({
                         {/* <Option name="Services Areas" to="/services-areas" /> */}
                         <Option name="Financing" to="/financing" />
                         <Option name="Gallery" to="/gallery" />
-                        <Option name="Work Areas" to="/work-areas" />
+                        <Option name="Areas" to="/work-areas" />
                         <Option name="Help" to="#">
                             <Option name="About Us" to="/about-us" />
                             <Option name="Contact Us" to="/contact-us" />

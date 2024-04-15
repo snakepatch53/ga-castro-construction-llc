@@ -4,12 +4,24 @@ import { faArrowDown, faPhone, faQuoteLeft, faQuoteRight } from "@fortawesome/fr
 import { cls } from "../../lib/utils";
 import SectionContact from "../landing.components/SectionContact";
 import Button from "../landing.components/Button";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { InfoContext } from "../context/info";
+import _faqs from "../mooks/faqs.json";
 
 export default function Faq() {
     const { info } = useContext(InfoContext);
     const url = "tel:" + info.phone;
+
+    const [faqs, setFaqs] = useState([]);
+
+    useEffect(() => {
+        const mutedFaqs = _faqs.section1.map((faq) => {
+            faq.check = false;
+            return faq;
+        });
+        mutedFaqs[0].check = true;
+        setFaqs(mutedFaqs);
+    }, []);
     return (
         <AnimatedElement>
             <section className="relative overflow-hidden">
@@ -47,17 +59,22 @@ export default function Faq() {
                         Common FAQ&apos;s
                     </h3>
                     <div className="flex flex-wrap justify-center gap-10">
-                        <Item text="When should I replace my roof?" />
-                        <Item text="How much does a new roof cost?" />
-                        <Item text="What material should I choose?" />
-                        <Item text="How many bids should I get?" />
-                        <Item text="Can I get a new roof in winter?" check={true} />
-                        <Item text="What is your process for free estimates?" />
-                        <Item text="When can you start?" />
-                        <Item text="How long will it take to get a new roof?" />
-                        <Item text="Do you have your own crews?" />
-                        <Item text="What if my home currently has a leak?" />
-                        <Item text="What about gutters and skylights?" />
+                        {faqs.map((faq) => (
+                            <Item
+                                key={faq.id}
+                                onClick={() => {
+                                    const newFaqs = faqs.map((f) => {
+                                        if (f.id === faq.id) f.check = !f.check;
+                                        else f.check = false;
+                                        return f;
+                                    });
+
+                                    setFaqs(newFaqs);
+                                }}
+                                text={faq.ask}
+                                check={faq.check}
+                            />
+                        ))}
                     </div>
                     <div className="relative p-[--padding]">
                         <div className="absolute inset-0 bg-[--color1-bg] opacity-70 rounded-lg" />
@@ -67,12 +84,7 @@ export default function Faq() {
                                 icon={faQuoteLeft}
                             />
                             <p className="font-content text-2xl text-center text-pretty text-[--color1-txt1] opacity-90">
-                                Absolutely! We are a Maryland & Pennsylvania roofing company that
-                                works year-round and knows how to deal with challenging weather. We
-                                normally only need one decent weather day to tear off and &quot;dry
-                                in&quot; your roof. After that, it can rain & snow all it wants and
-                                your home will stay cozy and dry while we finish installing your new
-                                roof.
+                                {faqs.find((faq) => faq.check)?.answer}
                             </p>
                         </div>
                         <FontAwesomeIcon
@@ -89,7 +101,10 @@ export default function Faq() {
                         Others FAQ&apos;s
                     </h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <Item2
+                        {_faqs.section2.map((faq) => (
+                            <Item2 key={faq.id} title={faq.ask} text={faq.answer} />
+                        ))}
+                        {/* <Item2
                             title="Is vinyl siding maintenance free?"
                             text="not exactly. Vinyl siding doesn't need to be painted or re-caulked, but it could use occasional washing. You can use a garden hose or a power washer on a gentle settin to remove dirt and debris from siding at least once a year. Be carefu not to dislodge the panels or get water underneath them."
                         />
@@ -113,7 +128,7 @@ export default function Faq() {
                         <Item2
                             title="Is it true that quotes are free?"
                             text="Yes, that's right, quotes through our system are completely free, you can make quotes for all the properties you need, soon you are ready our advisors Will contact you to provide you with more information."
-                        />
+                        /> */}
                     </div>
                 </div>
             </section>
@@ -140,15 +155,16 @@ export default function Faq() {
     );
 }
 
-function Item({ text, check = false }) {
+function Item({ text, onClick, check = false }) {
     return (
-        <div
+        <button
             className={cls(
                 "relative flex justify-center items-center w-full sm:w-72 bg-white/60 p-5 rounded-xl",
                 {
                     "bg-[--color1-bg]": check,
                 }
             )}
+            onClick={onClick}
         >
             <p
                 className={cls("font-content font-bold text-lg text-center", {
@@ -158,7 +174,7 @@ function Item({ text, check = false }) {
             >
                 {text}
             </p>
-        </div>
+        </button>
     );
 }
 

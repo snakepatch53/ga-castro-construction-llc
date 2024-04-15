@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "ask": "I'd just like a quote, can you provide an estimate without an in-home or virtual consultation?",
+        "answer": "Every home and project is different. We can’t recommend the best design and construction solutions until we truly understand your goals, budget, and timetable. Besides, purchasing remodeling and replacement services aren’t like buying a commodity product.  We both want to make sure we are a good fit."
+    },
+    {
+        "id": 2,
+        "ask": "Does Home Worx offer financing for roof replacement?",
+        "answer": "Home Worx works with a number of major finance companies to offer its clients the best rates available. Take advantage of current financing offers like up to 60 months with no interest and no payments. Home Worx also allows homeowners to finance insurance claim projects, so you can keep the full amount of your claim and make monthly payments instead."
+    },
+    {
+        "id": 3,
+        "ask": "If I have storm damage to my roof, siding, windows and gutters and deck, will it be readily apparent?",
+        "answer": "Home Worx’s storm specialists are trained to identify surface damage from severe weather that may not be apparent initially but will continue to deteriorate over time. These telltale signs of storm damage may not be visible from the ground. Homeowners expose themselves to unnecessary risks when they climb onto their roofs and attempt to photograph storm damage."
+    },
+    {
+        "id": 4,
+        "ask": "Will you fix my roof leak?",
+        "answer": "Roofs can leak from storm damage, faulty details or age. And you don’t need to see indoor water spots to have a problem. Hidden leaks can rot wood sheathing and framing, degrade insulation and fill wall and ceiling cavities with dangerous mold. Let the pros at Home Worx find the source and fix it for good."
+    },
+    {
+        "id": 5,
+        "ask": "What brands of roofing products does Home Worx sell and install?",
+        "answer": "Home Worx is a preferred installer for GAF, IKO, Certainteed, Malarky, Owens Corning, Tamko, Edco, Boral and DECRA brands of roofing.  These products range from architectural shingles, shakes, clay tile and slate and are available in many colors. We will help match you with the perfect product for your home with an unbiased and educational approach."
+    },
+    {
+        "id": 6,
+        "ask": "How long should an asphalt shingle roof last on a Texas home?",
+        "answer": "Due to the harsh conditions of our weather, an average roof in Texas will last about 20 years. It's at the end of the roof's life when the problems begin. Moisture intrusion usually starts with the flashing on your roof."
+    },
+    {
+        "id": 7,
+        "ask": "What could shorten the life of an asphalt shingle roof?",
+        "answer": "Inadequate attic ventilation or excess moisture can deteriorate roof sheathing and shingles from below. Overhanging trees that drop debris and slow drying can lead to moss and mold that can deteriorate roofing. Walking on a roof in extremely hot or cold weather can damage shingles."
+    },
+    {
+        "id": 8,
+        "ask": "How does steel roofing compare to asphalt shingle, cedar shake and slate and tile roofing?",
+        "answer": "Steel roofing is more expensive than asphalt shingles but less expensive than slate or tile. Steel roofs last two to three times as long as other types of roofing. Transferable warranties can be 50 years to life and are not prorated."
+    }
+]
