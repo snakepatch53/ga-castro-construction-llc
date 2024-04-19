@@ -41,18 +41,23 @@ export default function RoofDesigner() {
 }
 function Item({ href, src }) {
     return (
-        <div className="relative aspect-square p-10 rounded-lg overflow-hidden shadow-xl transition hover:scale-[1.02]">
-            <div className="absolute inset-0 flex justify-center items-center bg-black/20">
-                <a
+        <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="relative aspect-square p-10 rounded-lg overflow-hidden shadow-xl transition hover:scale-[1.02]"
+        >
+            <div className="absolute inset-0 flex justify-center items-center bg-black/10">
+                {/* <a
                     className="bg-[--color1-bg] font-title font-bold text-lg text-[--color1-txt] px-3 py-2 rounded-full"
                     href={href}
                     target="_blank"
                     rel="noreferrer"
                 >
                     DESIGN
-                </a>
+                </a> */}
             </div>
             <img className="w-full h-full rounded-md overflow-hidden object-contain" src={src} />
-        </div>
+        </a>
     );
 }

@@ -22,12 +22,12 @@ export default function Landing() {
 
     return (
         <AnimatedElement>
-            <section className="relative overflow-hidden">
+            <section className="relative overflow-hidden px-[--padding]">
                 <div className="absolute inset-0 w-full h-full ">
                     <img src="/img/22.png" className="w-full h-full object-cover object-top" />
                 </div>
 
-                <div className="relative container flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-5 p-[--padding] pt-32 pb-16 w-full h-full">
+                <div className="relative container flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-5 pt-32 pb-16 w-full h-full">
                     <div className="flex flex-col justify-center gap-5">
                         <h3 className="font-title text-white text-3xl sm:text-5xl text-center sm:text-left text-balance max-w-[500px]">
                             Get a beautifull new roof that will last

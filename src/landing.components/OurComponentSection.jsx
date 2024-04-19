@@ -10,7 +10,7 @@ export default function OurComponentSection() {
                         className="h-full w-full object-cover"
                         alt="Imagen de los servicios de GA Castro Constructions LLC"
                     />
-                    <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-black/10 backdrop-blur-[1.5px]" />
                 </div>
             </div>
             <div className="container relative z-10 ">

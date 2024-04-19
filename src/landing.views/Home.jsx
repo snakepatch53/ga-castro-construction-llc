@@ -8,11 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import OurServices from "../landing.components/OurServices";
 import Button from "../landing.components/Button";
 import SectionContact from "../landing.components/SectionContact";
 import InstantQuote from "../landing.components/InstantQuote";
 import Brands from "../landing.components/Brands";
+import OurComponentSection from "../landing.components/OurComponentSection";
 
 export default function Home({ info }) {
     return (
@@ -31,27 +31,7 @@ export default function Home({ info }) {
                     </div>
                 </div>
 
-                <div className="relative px-[--padding] flex flex-col">
-                    <div className="absolute inset-0 w-full max-h-96">
-                        <div className="relative w-full h-full">
-                            <img
-                                src="/img/services.jpg"
-                                className="h-full w-full object-cover"
-                                alt="Imagen de los servicios de GA Castro Constructions LLC"
-                            />
-                            <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
-                        </div>
-                    </div>
-                    <div className="container relative z-10 ">
-                        <h2
-                            className="mb-24 mt-44 text-5xl text-center font-title font'bold text-[--color1-txt1]"
-                            style={{ textShadow: "0 2px 5px #000" }}
-                        >
-                            Our Services
-                        </h2>
-                        <OurServices />
-                    </div>
-                </div>
+                <OurComponentSection />
 
                 <div className="relative bg-[#ff9500] mt-5 sm:mt-36">
                     <svg

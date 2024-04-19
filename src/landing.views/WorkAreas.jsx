@@ -4,6 +4,7 @@ import CircleDown from "../icons/CircleDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import SectionContact from "../landing.components/SectionContact";
+import GoogleItems from "../landing.components/GoogleItems";
 
 export default function WorkAreas() {
     return (
@@ -61,9 +62,9 @@ export default function WorkAreas() {
 
             <section className="px-[--padding]">
                 <div className="container flex  flex-col  px-[var(--padding)] py-16 items-center justify-center gap-10 lg:gap-16">
-                    <p className="font-title text-4xl text-center px-5 sm:px-16">
+                    <p className="font-title text-4xl text-center text-balance px-5 sm:px-16">
                         Roofing, Siding, Gutter, Carpentry and Painting work in{" "}
-                        <span className="text-[--color1-bg]">all these cities</span>
+                        <span className="text-[--color1-bg]">Fairfield County</span>
                     </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-32 list-none mx-auto font-title2 text-3xl sm:leading-10">
                         <li>Bridgeport</li>
@@ -95,11 +96,10 @@ export default function WorkAreas() {
             <section className="bg-[--color1-bg] px-[--padding] py-20">
                 <div className="container flex  flex-col  px-[var(--padding)] py-16 items-center justify-center gap-10 lg:gap-16">
                     <p
-                        className="font-title text-4xl text-center text-[--color1-txt1] px-5 sm:px-16"
+                        className="font-title text-4xl text-center text-[--color1-txt1] text-balance px-5 sm:px-16"
                         style={{ textShadow: "0 1px 2px #000" }}
                     >
-                        Service available in Fairfield and{" "}
-                        <b className="text-[--color1-txt]">New Haven County</b>
+                        Service Available in <b className="text-[--color1-txt]">New haven County</b>
                     </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-32 list-none mx-auto font-title2 text-3xl text-[--color1-txt1] opacity-80 sm:leading-10">
                         <li>New Haven</li>
@@ -157,15 +157,23 @@ export default function WorkAreas() {
                     </article>
                 </div>
             </section> */}
-            <section className=" p-[var(--padding)] md:pt-20 ">
+
+            <section className="relative px-[--padding] mt-5 sm:mt-36">
+                <div className="container pb-10 sm:pb-20">
+                    <GoogleItems classNameWrapper="relative z-20" />
+                </div>
+            </section>
+
+            <section className="px-[--padding]">
                 <div className="container ">
                     <SectionContact />
                 </div>
             </section>
+
             <section className="bg-[--color2-bg]">
                 <div
                     id="do-you-need-quote-job"
-                    className="container flex  flex-col sm:flex-row px-[var(--padding)] py-10 items-center justify-center gap-5 lg:gap-10"
+                    className="container flex  flex-col sm:flex-row px-[var(--padding)] p-10 items-center justify-center gap-5 lg:gap-10"
                 >
                     <h2 className="sm:w-3/4 font-title text-center text-balance lg:text-wrap sm:text-start text-4xl md:text-5xl text-[--color1-txt1] ">
                         Do you need to quote a job? Contact us
