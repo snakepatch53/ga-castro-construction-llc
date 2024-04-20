@@ -2,23 +2,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AnimatedElement from "../components/AnimatedElement";
 import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
+// import { Autoplay, Navigation } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/navigation";
+
 import { cls } from "../../lib/utils";
 import { useState } from "react";
-import useExternalScripts from "../hooks/useExternalScripts";
+// import useExternalScripts from "../hooks/useExternalScripts";
 import { Link } from "react-router-dom";
 import GoogleItems from "../landing.components/GoogleItems";
 import Brands from "../landing.components/Brands";
 import OurComponentSection from "../landing.components/OurComponentSection";
 import faqsLanding from "./../mooks/faqs-landing.json";
+import CardsCarousel from "../landing.components/CardsCarousel";
 
 export default function Landing() {
-    useExternalScripts({
-        url: "https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=B5rx9uOVdIreP2QIxCFJp",
-    });
+    // useExternalScripts({
+    //     url: "https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=B5rx9uOVdIreP2QIxCFJp",
+    // });
 
     return (
         <AnimatedElement>
@@ -120,7 +122,7 @@ export default function Landing() {
                 <div className="w-full h-full" id="roof-quote-pro-embedded" />
             </section>
 
-            <section className="relative">
+            {/* <section className="relative">
                 <div
                     className="absolute z-10 top-0 left-0 w-full h-48"
                     style={{
@@ -151,6 +153,12 @@ export default function Landing() {
                         <SlideItem src="/works/3.jpg" />
                     </SwiperSlide>
                 </Swiper>
+            </section> */}
+
+            <section className="p-[--padding] ">
+                <div className="container">
+                    <CardsCarousel />
+                </div>
             </section>
 
             <section className="px-[--padding] py-10">
@@ -258,13 +266,13 @@ function AccordionItem({ title, text }) {
 //     );
 // }
 
-function SlideItem({ src }) {
-    return (
-        <div className="w-full h-full">
-            <img src={src} className="w-full h-full object-cover" />
-        </div>
-    );
-}
+// function SlideItem({ src }) {
+//     return (
+//         <div className="w-full h-full">
+//             <img src={src} className="w-full h-full object-cover" />
+//         </div>
+//     );
+// }
 
 // function Banner() {
 //     return (
