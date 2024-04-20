@@ -9,7 +9,7 @@ import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 import { cls } from "../../lib/utils";
 import { useState } from "react";
-// import useExternalScripts from "../hooks/useExternalScripts";
+import useExternalScripts from "../hooks/useExternalScripts";
 import { Link } from "react-router-dom";
 import GoogleItems from "../landing.components/GoogleItems";
 import Brands from "../landing.components/Brands";
@@ -18,9 +18,9 @@ import faqsLanding from "./../mooks/faqs-landing.json";
 import CardsCarousel from "../landing.components/CardsCarousel";
 
 export default function Landing() {
-    // useExternalScripts({
-    //     url: "https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=B5rx9uOVdIreP2QIxCFJp",
-    // });
+    useExternalScripts({
+        url: "https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=B5rx9uOVdIreP2QIxCFJp",
+    });
 
     return (
         <AnimatedElement>
