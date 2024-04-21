@@ -24,7 +24,7 @@ export default function Landing() {
 
     return (
         <AnimatedElement>
-            <section className="relative overflow-hidden px-[--padding]">
+            <section className="relative overflow-hidden flex items-center px-[--padding] min-h-screen">
                 <div className="absolute inset-0 w-full h-full ">
                     <img src="/img/22.png" className="w-full h-full object-cover object-top" />
                 </div>
