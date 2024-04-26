@@ -50,10 +50,10 @@ export default function CardsCarousel() {
     }, []); // eslint-disable-line
 
     return (
-        <Div className="w-full aspect-[4/2]">
+        <Div className="flex items-center w-full aspect-[4/2]">
             <ul ref={carouselList} className="carousel__list">
                 {images.map((image, index) => (
-                    <li className="carousel__item" data-pos={index - 2} key={image.id}>
+                    <li className="carousel__item " data-pos={index - 2} key={image.id}>
                         <img
                             className="w-full h-full object-cover rounded-lg select-none"
                             src={image.src}
@@ -67,9 +67,6 @@ export default function CardsCarousel() {
 }
 
 const Div = styled.div`
-    display: flex;
-    align-items: center;
-
     & .carousel__list {
         display: flex;
         list-style: none;
@@ -81,12 +78,20 @@ const Div = styled.div`
     }
 
     & .carousel__item {
+        --gap: 100px;
+        @media (max-width: 800px) {
+            --gap: 50px;
+        }
+        @media (max-width: 400px) {
+            --gap: 25px;
+        }
+
         display: flex;
         align-items: center;
         justify-content: center;
+        width: calc(100% - var(--gap) * 4);
         color: #fff;
         font-size: 0px;
-        width: calc(100% - (100px * 4));
         height: 100%;
         border-radius: 12px;
         box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
@@ -124,12 +129,12 @@ const Div = styled.div`
         }
 
         &[data-pos="-1"] {
-            transform: translateX(-100px) scale(0.9);
+            transform: translateX(calc(var(--gap) * -1)) scale(0.9);
             z-index: 4;
         }
 
         &[data-pos="1"] {
-            transform: translateX(100px) scale(0.9);
+            transform: translateX(var(--gap)) scale(0.9);
             z-index: 4;
         }
 
@@ -140,12 +145,12 @@ const Div = styled.div`
         }
 
         &[data-pos="-2"] {
-            transform: translateX(-200px) scale(0.8);
+            transform: translateX(calc(var(--gap) * -2)) scale(0.8);
             z-index: 3;
         }
 
         &[data-pos="2"] {
-            transform: translateX(200px) scale(0.8);
+            transform: translateX(calc(var(--gap) * 2)) scale(0.8);
             z-index: 3;
         }
     }

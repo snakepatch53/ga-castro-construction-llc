@@ -166,10 +166,10 @@ export default function Landing() {
                     <article className="flex flex-col items-center gap-5">
                         <h3 className="w-full font-title text-4xl text-center">Customer Stories</h3>
                         <p className="font-title2 text-lg text-pretty text-center sm:px-20">
-                            Home Worx is the local roofer that homeowners, homeowner associations,
-                            and busi- nesses trust. Weave already replaced thousands of roofs for
-                            homeowners in the Dallas area and across the United States, and
-                            we&apos;d like the ooportunity to re-roof yours.
+                            Ga Castro Construction is the local roofer that homeowners, homeowner
+                            associations, and busi- nesses trust. Weave already replaced thousands
+                            of roofs for homeowners in the Dallas area and across the United States,
+                            and we&apos;d like the ooportunity to re-roof yours.
                         </p>
                     </article>
                     {/* <Banner /> */}
